@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willkommensbuch — 30 Sprachen Hotel Guide | André Salzmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0c0a08;--ink-soft:#161310;--paper:#f4ede0;--gold:#c9a227;--gold-bright:#e8c14f;--muted:#9b9085;--line:rgba(201,162,39,.22)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--paper);font-family:'Spline Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 80% -10%,rgba(201,162,39,.10),transparent 60%)}
+  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 26px}
+  header{padding:90px 0 50px}
+  .back{font-family:'Spline Sans Mono',monospace;font-size:.8rem;color:var(--gold);text-decoration:none;letter-spacing:.05em}
+  .back:hover{color:var(--gold-bright)}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:30px 0 18px}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.02em}
+  .lede{margin-top:20px;color:#d8cdbd;max-width:640px;font-size:1.08rem}
+  .hero-stat{margin-top:36px;padding:28px;background:linear-gradient(135deg,rgba(201,162,39,.12),rgba(201,162,39,.05));border:1px solid var(--line);border-radius:4px}
+  .hero-stat .big{font-family:'Fraunces',serif;font-size:3rem;color:var(--gold-bright);line-height:1}
+  .hero-stat .label{font-family:'Spline Sans Mono',monospace;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:10px}
+  section{padding:40px 0 30px;border-top:1px solid var(--line)}
+  h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.7rem;margin-bottom:8px}
+  .sub{color:var(--muted);font-size:.92rem;margin-bottom:24px}
+  .lang-grid{display:grid;gap:20px}
+  .lang-card{border:1px solid var(--line);border-radius:2px;padding:24px;background:linear-gradient(90deg,rgba(201,162,39,.05),transparent)}
+  .lang-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .flag{font-size:1.8rem}
+  .lang-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem}
+  .lang-en{font-family:'Spline Sans Mono',monospace;font-size:.85rem;color:var(--muted)}
+  .topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .topic-tag{display:inline-block;padding:6px 12px;background:rgba(201,162,39,.15);border-radius:2px;font-size:.8rem;color:#d8cdbd;font-family:'Spline Sans Mono',monospace}
+  .features{padding:20px 0;color:#cabfb0}
+  .features ul{list-style:none;margin-top:10px}
+  .features li{padding:6px 0;font-size:.95rem}
+  .features li::before{content:"✓ ";color:var(--gold);font-weight:600;margin-right:8px}
+  footer{padding:60px 0;text-align:center;color:var(--muted);font-size:.85rem;font-family:'Spline Sans Mono',monospace;border-top:1px solid var(--line)}
+  footer a{color:var(--gold);text-decoration:none}
+  @media(max-width:640px){header{padding:60px 0 30px}.hero-stat .big{font-size:2.2rem}.lang-grid{gap:14px}.lang-card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="./index.html" class="back">← zurück zum Portfolio</a>
+    <div class="eyebrow">Arbeitsprobe · Mehrsprachig · Hotellerie</div>
+    <h1>Willkommensbuch in 30 Sprachen</h1>
+    <p class="lede">Ein umfassendes Willkommensbuch für ein Frankfurter Hotel — verfasst in 30 Sprachen. Jede Sprache übersetzt nicht nur Wörter, sondern praktisches Wissen: Check-in, WiFi, Notfälle, Parkplätze, Verkehr, Frühstück, Zimmer, Rezeption, Business und Sehenswürdigkeiten. Für jeden Gast in seiner Sprache verständlich.</p>
+    <div class="hero-stat">
+      <div class="big">30</div>
+      <div class="label">Sprachen · Ein Dokument · Vollständig</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Warum dieses Willkommensbuch außergewöhnlich ist</h2>
+    <p class="sub">Nicht alle Hotels sprechen alle Sprachen ihrer Gäste. Aber die Gäste verdienen es.</p>
+    <div class="features">
+      <ul>
+        <li><strong>Vollständig lokalisiert:</strong> Nicht maschinell übersetzt — jede Sprache wurde handwerklich gemacht, mit Blick auf die Zielkultur.</li>
+        <li><strong>Praktisch strukturiert:</strong> Jede Sprache folgt der gleichen Logik (Ankommen, Kommunikation, Notfälle, Mobilität, Verpflegung, Logistik, Aktivitäten), damit Gäste schnell finden, was sie brauchen.</li>
+        <li><strong>Für den Alltag gemacht:</strong> Nicht höflich-distanziert, sondern nützlich — WiFi-Passwort, Notfallapps, Taxi-Nummern, nächste Apotheke.</li>
+        <li><strong>Mehrsprachiges Flaggen-System:</strong> Gäste sehen sofort ihre Flagge, ohne Menü-Tippen. Benutzerfreundlichkeit auf den ersten Blick.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sprachauszüge — Ein Beispiel aus zehn Sprachen</h2>
+    <p class="sub">So sieht die gleiche Information in verschiedenen Sprachen aus — kulturgerecht und natürlich für jeden Gast.</p>
+    
+    <div class="lang-grid">
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇩🇪</span>
+          <div><div class="lang-name">Deutsch</div><div class="lang-en">Germany</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„Dieses Willkommensbuch ist Ihr persönlicher Wegweiser für einen angenehmen Aufenthalt in unserem Hotel und in Frankfurt."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Check-in/out</span>
+          <span class="topic-tag">WLAN</span>
+          <span class="topic-tag">Notfälle</span>
+          <span class="topic-tag">Parken</span>
+          <span class="topic-tag">Mobilität</span>
+          <span class="topic-tag">Frühstück</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇬🇧</span>
+          <div><div class="lang-name">English</div><div class="lang-en">United Kingdom / USA</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„This guest book is your personal guide to a pleasant stay in our hotel and in Frankfurt."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Check-in/out</span>
+          <span class="topic-tag">Wi-Fi</span>
+          <span class="topic-tag">Emergencies</span>
+          <span class="topic-tag">Parking</span>
+          <span class="topic-tag">Mobility</span>
+          <span class="topic-tag">Breakfast</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇫🇷</span>
+          <div><div class="lang-name">Français</div><div class="lang-en">France</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„Ce livret d'accueil est votre guide personnel pour un séjour agréable dans notre hôtel et à Francfort."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Arrivée/départ</span>
+          <span class="topic-tag">Wi-Fi</span>
+          <span class="topic-tag">Urgences</span>
+          <span class="topic-tag">Parking</span>
+          <span class="topic-tag">Mobilité</span>
+          <span class="topic-tag">Petit-déjeuner</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇪🇸</span>
+          <div><div class="lang-name">Español</div><div class="lang-en">Spain / Latin America</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„Este libro de bienvenida es su guía personal para una estancia agradable en nuestro hotel y en Fráncfort."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Llegada/salida</span>
+          <span class="topic-tag">Wi-Fi</span>
+          <span class="topic-tag">Emergencias</span>
+          <span class="topic-tag">Parking</span>
+          <span class="topic-tag">Movilidad</span>
+          <span class="topic-tag">Desayuno</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇮🇹</span>
+          <div><div class="lang-name">Italiano</div><div class="lang-en">Italy</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„Questo libro di benvenuto è la vostra guida personale per un soggiorno piacevole nel nostro hotel e a Francoforte."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Check-in/out</span>
+          <span class="topic-tag">Wi-Fi</span>
+          <span class="topic-tag">Emergenze</span>
+          <span class="topic-tag">Parcheggio</span>
+          <span class="topic-tag">Mobilità</span>
+          <span class="topic-tag">Colazione</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇵🇱</span>
+          <div><div class="lang-name">Polski</div><div class="lang-en">Poland</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„Ta książeczka powitalna jest Państwa osobistym przewodnikiem do przyjemnego pobytu w naszym hotelu i we Frankfurcie."</em></p>
+        <div class="topics">
+          <span class="topic-tag">Check-in/out</span>
+          <span class="topic-tag">WiFi</span>
+          <span class="topic-tag">Nagłe wypadki</span>
+          <span class="topic-tag">Parking</span>
+          <span class="topic-tag">Transport</span>
+          <span class="topic-tag">Śniadanie</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇯🇵</span>
+          <div><div class="lang-name">日本語</div><div class="lang-en">Japan</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>「本書は、当ホテル およびフランクフルトでの快適な滞在のための個人ガイドです。」</em></p>
+        <div class="topics">
+          <span class="topic-tag">チェックイン/アウト</span>
+          <span class="topic-tag">WiFi</span>
+          <span class="topic-tag">緊急時</span>
+          <span class="topic-tag">駐車場</span>
+          <span class="topic-tag">交通</span>
+          <span class="topic-tag">朝食</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇨🇳</span>
+          <div><div class="lang-name">中文 (Simplified)</div><div class="lang-en">China</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>「本欢迎手册是您在我们酒店和法兰克福舒适入住的个人指南。」</em></p>
+        <div class="topics">
+          <span class="topic-tag">入住/退房</span>
+          <span class="topic-tag">WiFi</span>
+          <span class="topic-tag">紧急情况</span>
+          <span class="topic-tag">停车</span>
+          <span class="topic-tag">交通</span>
+          <span class="topic-tag">早餐</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇷🇺</span>
+          <div><div class="lang-name">Русский</div><div class="lang-en">Russia</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>«Эта книга приветствия — ваш личный путеводитель для приятного пребывания в нашем отеле и Франкфурте.»</em></p>
+        <div class="topics">
+          <span class="topic-tag">Заезд/выезд</span>
+          <span class="topic-tag">WiFi</span>
+          <span class="topic-tag">Чрезвычайные</span>
+          <span class="topic-tag">Парковка</span>
+          <span class="topic-tag">Транспорт</span>
+          <span class="topic-tag">Завтрак</span>
+        </div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="flag">🇸🇦</span>
+          <div><div class="lang-name">العربية</div><div class="lang-en">Saudi Arabia / Arabic world</div></div>
+        </div>
+        <p style="color:#d8cdbd;font-size:.95rem;margin-bottom:12px;"><em>„كتيب الترحيب هذا هو دليلك الشخصي للإقامة الممتعة في فندقنا وفي فرانكفورت."</em></p>
+        <div class="topics">
+          <span class="topic-tag">تسجيل الدخول</span>
+          <span class="topic-tag">واي فاي</span>
+          <span class="topic-tag">الطوارئ</span>
+          <span class="topic-tag">موقف سيارات</span>
+          <span class="topic-tag">النقل</span>
+          <span class="topic-tag">الإفطار</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Sprachenfamilien abgedeckt</h2>
+    <p class="sub">Das Willkommensbuch ist nicht nur zahlreich — es ist strategisch. Alle großen Herkunftsländer von Geschäftsreisenden und Touristen sind vertreten.</p>
+    <div class="features" style="margin-top:18px">
+      <ul>
+        <li><strong>Europäisch (10+):</strong> Deutsch, Englisch, Französisch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Polnisch, Tschechisch, Dänisch, Schwedisch, Norwegisch, Finnisch, Litauisch, Ungarisch, Rumänisch, Kroatisch, Serbisch, Mazedonisch, Bulgarisch, Griechisch</li>
+        <li><strong>Asiatisch (6+):</strong> Japanisch, Chinesisch (vereinfacht), Koreanisch, Thai, Vietnamesisch, Indonesisch</li>
+        <li><strong>Afrikanisch / Nahost (2+):</strong> Arabisch, Hebräisch</li>
+        <li><strong>Alle mit Nationalflagge und kulturgerechter Lokalisierung</strong> — nicht 1:1-Übersetzung.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Das Ergebnis für das Hotel</h2>
+    <p class="sub">Ein Willkommensbuch, das wirklich willkommen heißt.</p>
+    <div class="features">
+      <ul>
+        <li>Gäste verstehen wichtige Informationen sofort in ihrer Sprache.</li>
+        <li>Weniger Anfragen an die Rezeption. Mehr selbstständige Gäste.</li>
+        <li>Ein klares Statement: „Dieses Hotel schätzt seine internationalen Gäste."</li>
+        <li>Rezeptionspersonal kann es ausdrucken, zu jedem Zimmer mitgeben oder digital bereitstellen.</li>
+        <li>Größere Google-Bewertungen und positive Rückmeldungen auf Booking.com und Expedia.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+<footer><div class="wrap">André Salzmann · Willkommensbuch in 30 Sprachen · Hotellerie · <a href="./index.html">zurück zum Portfolio</a></div></footer>
+</body>
+</html>
