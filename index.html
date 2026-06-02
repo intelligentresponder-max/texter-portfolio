@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>André Salzmann — Verkaufstexter mit Vertriebs-DNA</title>
+<title>André Schwarz — Verkaufstexter mit Vertriebs-DNA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,6 +38,18 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* PDF BANNER */
+  .pdf-banner{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(201,162,39,.12);border:1px solid var(--line);
+    border-radius:2px;padding:10px 18px;text-decoration:none;
+    font-family:'Spline Sans Mono',monospace;font-size:.75rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
+    transition:.25s;
+  }
+  .pdf-banner:hover{background:rgba(201,162,39,.22);border-color:var(--gold)}
+  .pdf-banner svg{flex-shrink:0}
 
   /* HERO */
   header{padding:120px 0 90px;position:relative}
@@ -110,9 +122,11 @@
   .final{text-align:center;padding:100px 0 80px}
   .final h2{max-width:680px;margin:0 auto 18px}
   .final p{color:var(--muted);max-width:520px;margin:0 auto 36px}
+  .final-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center}
 
   footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;color:var(--muted);font-size:.85rem;font-family:'Spline Sans Mono',monospace}
   footer a{color:var(--gold);text-decoration:none}
+  .footer-pdf{margin-top:14px}
 
   @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
   @media(max-width:640px){header{padding:80px 0 60px}section{padding:50px 0}.card{padding:28px 24px}}
@@ -128,6 +142,11 @@
       <div class="cta-row">
         <a href="#kontakt" class="btn btn-gold">Projekt anfragen</a>
         <a href="#arbeiten" class="btn btn-ghost">Arbeitsproben ansehen</a>
+        <!-- PDF LINK 1: HEADER -->
+        <a href="./Portfolio_Andre_Schwarz_v2.pdf" target="_blank" class="pdf-banner">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M2 0h7l5 5v11H2V0z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 9h6M4 12h4" stroke="currentColor" stroke-width="1"/></svg>
+          Portfolio PDF
+        </a>
       </div>
     </header>
 
@@ -145,6 +164,15 @@
     <section id="arbeiten">
       <div class="sec-label">Ausgewählte Arbeiten</div>
       <h2>Arbeitsproben</h2>
+
+      <!-- PDF LINK 2: BEI DEN ARBEITSPROBEN -->
+      <div style="margin-top:28px">
+        <a href="./Portfolio_Andre_Schwarz_v2.pdf" target="_blank" class="pdf-banner">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M2 0h7l5 5v11H2V0z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 9h6M4 12h4" stroke="currentColor" stroke-width="1"/></svg>
+          Alle 10 Nischen als PDF — Portfolio herunterladen
+        </a>
+      </div>
+
       <div class="work">
 
         <article class="card">
@@ -234,13 +262,25 @@
       <div class="sec-label" style="justify-content:center">Zusammenarbeit</div>
       <h2>Ihr Text soll ein Ergebnis bringen —<br>kein hübsches Beiwerk.</h2>
       <p>Schreiben Sie mir kurz, worum es geht. Sie bekommen zeitnah eine ehrliche Einschätzung, ob und wie ich helfen kann.</p>
-      <a href="mailto:andre.schwarz1@t-online.de" class="btn btn-gold">Projekt anfragen</a>
+      <div class="final-actions">
+        <a href="mailto:andre.schwarz1@t-online.de" class="btn btn-gold">Projekt anfragen</a>
+        <!-- PDF LINK 3: KONTAKT -->
+        <a href="./Portfolio_Andre_Schwarz_v2.pdf" target="_blank" class="pdf-banner">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M2 0h7l5 5v11H2V0z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 9h6M4 12h4" stroke="currentColor" stroke-width="1"/></svg>
+          Portfolio PDF herunterladen
+        </a>
+      </div>
     </section>
 
   </div>
 
   <footer>
-    <div class="wrap">André Salzmann · Freier Texter · Frankfurt am Main · <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a></div>
+    <div class="wrap">
+      André Schwarz · Freier Texter · Frankfurt am Main · <a href="mailto:andre.schwarz1@t-online.de">E-Mail</a>
+      <div class="footer-pdf">
+        <a href="./Portfolio_Andre_Schwarz_v2.pdf" target="_blank" style="color:var(--gold)">📄 Portfolio als PDF</a>
+      </div>
+    </div>
   </footer>
 
 </body>
