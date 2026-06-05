@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>André Schwarz — Lebenslauf / CV</title>
+<meta name="description" content="Lebenslauf und Arbeitsproben von André Schwarz — Freier Texter, Copywriter, Frankfurt am Main. CV and portfolio of André Schwarz — Freelance Copywriter, Frankfurt.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://intelligentresponder-max.github.io/texter-portfolio/cv.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Spline+Sans+Mono:wght@400;500&family=Spline+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0c0a08;
+  --ink-soft: #161310;
+  --paper: #f4ede0;
+  --gold: #c9a227;
+  --gold-bright: #e8c14f;
+  --muted: #9b9085;
+  --line: rgba(201,162,39,.2);
+  --surface: rgba(255,255,255,.03);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Spline Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(12,10,8,.95); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-brand { font-family: 'Fraunces', serif; color: var(--gold); text-decoration: none; font-size: 1rem; }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a { color: var(--muted); text-decoration: none; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; font-family: 'Spline Sans Mono', monospace; transition: color .2s; }
+.nav-right a:hover { color: var(--gold); }
+
+/* ── LANG SWITCH ── */
+.lang-switch {
+  display: flex; gap: 2px;
+  background: rgba(255,255,255,.06); border: 1px solid var(--line);
+  border-radius: 3px; padding: 2px;
+}
+.lang-btn {
+  padding: 5px 14px; border-radius: 2px; cursor: pointer;
+  font-family: 'Spline Sans Mono', monospace; font-size: .75rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  border: none; background: transparent; color: var(--muted);
+  transition: .2s;
+}
+.lang-btn.active { background: var(--gold); color: var(--ink); font-weight: 600; }
+.lang-btn:hover:not(.active) { color: var(--gold); }
+
+/* ── LAYOUT ── */
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+/* ── HEADER ── */
+.cv-header {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between;
+  align-items: flex-start; flex-wrap: wrap; gap: 32px;
+}
+.cv-name { font-family: 'Fraunces', serif; font-size: clamp(2.2rem,5vw,3.4rem); font-weight: 400; line-height: 1.05; }
+.cv-name em { color: var(--gold); font-style: italic; }
+.cv-role { font-family: 'Spline Sans Mono', monospace; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-top: 10px; }
+.cv-contact { text-align: right; }
+.cv-contact p { font-size: .88rem; color: var(--muted); line-height: 1.9; }
+.cv-contact a { color: var(--gold); text-decoration: none; }
+.cv-contact a:hover { color: var(--gold-bright); }
+.cv-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; justify-content: flex-end; }
+.badge {
+  font-family: 'Spline Sans Mono', monospace; font-size: .65rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  border: 1px solid var(--line); padding: 4px 10px; border-radius: 2px;
+  color: var(--muted);
+}
+
+/* ── SECTIONS ── */
+.cv-section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+.cv-section:last-child { border-bottom: none; }
+.section-label {
+  font-family: 'Spline Sans Mono', monospace; font-size: .68rem;
+  letter-spacing: .28em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 28px; display: flex; align-items: center; gap: 12px;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+/* ── ENTRY (Job/Station) ── */
+.entry { display: grid; grid-template-columns: 160px 1fr; gap: 0 28px; margin-bottom: 28px; }
+.entry:last-child { margin-bottom: 0; }
+.entry-period { font-family: 'Spline Sans Mono', monospace; font-size: .75rem; color: var(--muted); padding-top: 3px; line-height: 1.5; }
+.entry-body {}
+.entry-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 400; color: var(--paper); margin-bottom: 2px; }
+.entry-company { font-size: .82rem; color: var(--gold); margin-bottom: 6px; font-family: 'Spline Sans Mono', monospace; letter-spacing: .04em; }
+.entry-desc { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+.entry-desc strong { color: var(--paper); font-weight: 500; }
+
+/* ── SKILLS GRID ── */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.skill-item { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 16px 18px; }
+.skill-label { font-family: 'Spline Sans Mono', monospace; font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.skill-value { font-size: .88rem; color: var(--muted); }
+
+/* ── ARBEITSPROBEN ── */
+.proben-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.probe {
+  border: 1px solid var(--line); border-radius: 3px; padding: 18px 20px;
+  text-decoration: none; color: inherit; transition: .25s; display: block;
+  background: var(--surface);
+}
+.probe:hover { border-color: var(--gold); transform: translateY(-2px); }
+.probe-tag { font-family: 'Spline Sans Mono', monospace; font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.probe-title { font-size: .92rem; color: var(--paper); font-weight: 500; margin-bottom: 4px; line-height: 1.4; }
+.probe-desc { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+.probe-link { font-family: 'Spline Sans Mono', monospace; font-size: .68rem; color: var(--gold); margin-top: 10px; display: block; }
+
+/* ── PDF DOWNLOAD ── */
+.dl-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+.dl-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: 2px;
+  padding: 10px 18px; text-decoration: none;
+  font-family: 'Spline Sans Mono', monospace; font-size: .75rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--gold);
+  transition: .2s;
+}
+.dl-btn:hover { background: rgba(201,162,39,.1); border-color: var(--gold); }
+.dl-btn.primary { background: var(--gold); color: var(--ink); border-color: var(--gold); font-weight: 600; }
+.dl-btn.primary:hover { background: var(--gold-bright); }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--line); padding: 32px 0;
+  text-align: center; color: var(--muted);
+  font-family: 'Spline Sans Mono', monospace; font-size: .75rem; line-height: 1.8;
+}
+footer a { color: var(--gold); text-decoration: none; }
+
+/* ── PRINT ── */
+@media print {
+  body { background: white; color: black; }
+  nav, .dl-row, footer { display: none; }
+  .cv-header, .cv-section { border-color: #ddd; }
+  .entry-period, .entry-company, .section-label,
+  .probe-tag, .probe-link, .badge, .skill-label { color: #888; }
+  .cv-name, .entry-title, .probe-title { color: black; }
+  .probe { border-color: #ddd; }
+}
+
+@media (max-width: 600px) {
+  nav { padding: 12px 20px; }
+  .wrap { padding: 0 18px; }
+  .cv-header { padding: 44px 0 36px; }
+  .cv-contact { text-align: left; }
+  .cv-badges { justify-content: flex-start; }
+  .entry { grid-template-columns: 1fr; gap: 4px; }
+  .entry-period { font-size: .72rem; }
+}
+
+/* ── LANGUAGE VISIBILITY ── */
+[data-lang] { display: none; }
+[data-lang].visible { display: block; }
+.entry[data-lang], .probe[data-lang] { display: none; }
+.entry[data-lang].visible, .probe[data-lang].visible { display: grid; }
+.probe[data-lang].visible { display: block; }
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation">
+  <a href="index.html" class="nav-brand">André Schwarz</a>
+  <div class="nav-right">
+    <a href="index.html">Portfolio</a>
+    <a href="arbeitsproben.html">Proben</a>
+    <div class="lang-switch" role="group" aria-label="Sprache wählen">
+      <button class="lang-btn active" onclick="setLang('de')" aria-pressed="true">DE</button>
+      <button class="lang-btn" onclick="setLang('en')" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ── HEADER ── -->
+  <header class="cv-header">
+    <div>
+      <h1 class="cv-name">André <em>Schwarz</em></h1>
+      <p class="cv-role" data-de="Freier Texter · Copywriter · Frankfurt am Main" data-en="Freelance Copywriter · Content Strategist · Frankfurt am Main"></p>
+    </div>
+    <div class="cv-contact">
+      <p>
+        andre.schwarz1@t-online.de<br>
+        +49 163 469 2255<br>
+        60435 Frankfurt am Main<br>
+        <a href="https://intelligentresponder-max.github.io/texter-portfolio/" target="_blank">Portfolio-Website</a>
+      </p>
+      <div class="cv-badges">
+        <span class="badge">Cambridge C1</span>
+        <span class="badge">100 % Homeoffice</span>
+        <span class="badge">DE / EN</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── PROFIL ── -->
+  <section class="cv-section">
+    <div class="section-label" data-de="Profil" data-en="Profile"></div>
+    <p data-lang="de" class="visible" style="font-size:.95rem;max-width:680px;color:#cabfb0;line-height:1.8;">
+      Freier Texter mit Direktvertrieb-Hintergrund und sieben Monaten täglicher KI-Praxis. Ich schreibe Texte, die nicht nur gut klingen, sondern konvertieren — von politischen Anträgen über Verkaufs-Landingpages bis zu juristischer Korrespondenz. Aktuell in ungekündigter Position (Hotelrezeption), <strong style="color:var(--paper)">innerhalb weniger Wochen vollständig verfügbar.</strong>
+    </p>
+    <p data-lang="en" style="font-size:.95rem;max-width:680px;color:#cabfb0;line-height:1.8;">
+      Freelance copywriter with a direct sales background and seven months of daily AI practice. I write texts that don't just sound good — they convert. From political motions to sales landing pages and legal correspondence. Currently employed (hotel reception), <strong style="color:var(--paper)">fully available within a few weeks.</strong>
+    </p>
+  </section>
+
+  <!-- ── BERUFSERFAHRUNG ── -->
+  <section class="cv-section">
+    <div class="section-label" data-de="Berufserfahrung" data-en="Experience"></div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2022 – heute</div>
+      <div class="entry-body">
+        <div class="entry-title">Empfangsmitarbeiter (ungekündigt)</div>
+        <div class="entry-company">Turmhotel Frankfurt am Main</div>
+        <p class="entry-desc">Internationale Gästekommunikation (DE/EN), Digitalisierungskonzept eigeninitiativ entwickelt, Willkommensbuch in 30+ Sprachen verfasst.</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2022 – present</div>
+      <div class="entry-body">
+        <div class="entry-title">Front Desk (currently employed)</div>
+        <div class="entry-company">Turmhotel Frankfurt am Main</div>
+        <p class="entry-desc">International guest communication (DE/EN), self-initiated digitalization concept, welcome book in 30+ languages.</p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2017 – heute</div>
+      <div class="entry-body">
+        <div class="entry-title">Politischer Texter & Ghostwriter</div>
+        <div class="entry-company">BFF / Freie Wähler Frankfurt · Ortsbeirat 10</div>
+        <p class="entry-desc">Offizielle Anträge, Wahlprogramm Kommunalwahl 2026 vollständig neu geschrieben. <strong>Die Version, die heute im Internet steht, ist meine.</strong></p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2017 – present</div>
+      <div class="entry-body">
+        <div class="entry-title">Political Copywriter & Ghostwriter</div>
+        <div class="entry-company">BFF / Freie Wähler Frankfurt · District Council 10</div>
+        <p class="entry-desc">Official motions, full rewrite of the 2026 local election manifesto. <strong>The version live online today is mine.</strong></p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2019 – heute</div>
+      <div class="entry-body">
+        <div class="entry-title">Selbstständiger Energieberater & Texter</div>
+        <div class="entry-company">frankfurt-energie.online · TELESON AG</div>
+        <p class="entry-desc">Verkaufstexte, SEO-Artikel, Tarifvergleiche. Copy, die nicht konvertiert, kostet mich direkt.</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2019 – present</div>
+      <div class="entry-body">
+        <div class="entry-title">Freelance Energy Consultant & Copywriter</div>
+        <div class="entry-company">frankfurt-energie.online · TELESON AG</div>
+        <p class="entry-desc">Sales copy, SEO articles, tariff comparisons. Copy that doesn't convert costs me directly.</p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2025 – 2026</div>
+      <div class="entry-body">
+        <div class="entry-title">Co-Founder & Copywriter</div>
+        <div class="entry-company">Copy Code Agency · mit Tomasz Szafrański</div>
+        <p class="entry-desc">Conversion Copy, Brand & SEO für drei digitale Produkte (KI-CV-Optimizer, Value Bet SaaS, Recruiting-Plattform).</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2025 – 2026</div>
+      <div class="entry-body">
+        <div class="entry-title">Co-Founder & Copywriter</div>
+        <div class="entry-company">Copy Code Agency · with Tomasz Szafrański</div>
+        <p class="entry-desc">Conversion copy, brand & SEO for three digital products (AI CV optimizer, Value Bet SaaS, recruiting platform).</p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2014 – 2016</div>
+      <div class="entry-body">
+        <div class="entry-title">MPU-Berater & Erste-Hilfe-Ausbilder</div>
+        <div class="entry-company">UPGRADE.EU GmbH, Frankfurt am Main</div>
+        <p class="entry-desc">Individuelle Argumentationsgerüste aus Verkehrsakten entwickelt, Kandidaten auf MPU vorbereitet, Erste-Hilfe-Kurse für Fahranfänger geleitet.</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2014 – 2016</div>
+      <div class="entry-body">
+        <div class="entry-title">MPU Advisor & First Aid Instructor</div>
+        <div class="entry-company">UPGRADE.EU GmbH, Frankfurt am Main</div>
+        <p class="entry-desc">Developed individual argumentation frameworks from case files, prepared candidates for psychological driving assessments, led first aid courses.</p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">2010 – 2013</div>
+      <div class="entry-body">
+        <div class="entry-title">Aufbau Moodle-Lernplattform</div>
+        <div class="entry-company">Führerscheinvorbereitung für Deutsche in Tschechien</div>
+        <p class="entry-desc">Tschechisches Fachbuch analysiert, in klares Deutsch überführt, Lernplattform mit Prüfungslogik aufgebaut.</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">2010 – 2013</div>
+      <div class="entry-body">
+        <div class="entry-title">E-Learning Platform (Moodle)</div>
+        <div class="entry-company">Driving license prep for Germans in Czech Republic</div>
+        <p class="entry-desc">Analysed Czech textbook, rewrote content in clear German, built learning platform with integrated quiz logic.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── KENNTNISSE ── -->
+  <section class="cv-section">
+    <div class="section-label" data-de="Kenntnisse" data-en="Skills"></div>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-label" data-de="Sprachen" data-en="Languages"></div>
+        <div class="skill-value">Deutsch (Muttersprache)<br>Englisch C1 (Cambridge)</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label" data-de="Textformate" data-en="Copy Formats"></div>
+        <div class="skill-value" data-de="Landing Pages · E-Mail · Ads · Politische Texte · Juristische Schreiben · Reports" data-en="Landing pages · Email · Ads · Political copy · Legal correspondence · Reports"></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">KI / AI</div>
+        <div class="skill-value" data-de="7 Monate täglich · Claude · ChatGPT · Prompt Engineering · GEO/AEO" data-en="7 months daily · Claude · ChatGPT · Prompt engineering · GEO/AEO"></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label" data-de="Technik" data-en="Tech"></div>
+        <div class="skill-value">GitHub Pages · HTML/CSS · Moodle · Gumroad · Termux</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label" data-de="Methode" data-en="Method"></div>
+        <div class="skill-value" data-de="Zielgruppen-Recherche · Argumentation · Iteration · Direktvertrieb" data-en="Audience research · Argumentation · Iteration · Direct sales"></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label" data-de="Arbeitsmodell" data-en="Work Model"></div>
+        <div class="skill-value" data-de="100 % Homeoffice möglich · Vollzeit · Frankfurt" data-en="100 % remote possible · Full-time · Frankfurt"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AUSBILDUNG ── -->
+  <section class="cv-section">
+    <div class="section-label" data-de="Ausbildung & Zertifikate" data-en="Education & Certificates"></div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">nach Abitur</div>
+      <div class="entry-body">
+        <div class="entry-title">Fernstudium Cambridge C1 Advanced (CAE)</div>
+        <div class="entry-company">Cambridge University Press & Assessment</div>
+        <p class="entry-desc">Eigenständig, diszipliniert, neben anderen Verpflichtungen — Sprachsicherheit als Werkzeug.</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">post A-levels</div>
+      <div class="entry-body">
+        <div class="entry-title">Cambridge C1 Advanced (CAE) — Distance Learning</div>
+        <div class="entry-company">Cambridge University Press & Assessment</div>
+        <p class="entry-desc">Self-directed study alongside other commitments. Language proficiency as a tool, not a goal.</p>
+      </div>
+    </div>
+
+    <div class="entry" data-lang="de">
+      <div class="entry-period">1999 – 2000</div>
+      <div class="entry-body">
+        <div class="entry-title">Werkschutzfachkraft</div>
+        <div class="entry-company">Sicherheit & Service</div>
+        <p class="entry-desc">Ausbildung Sicherheitsdienst, Sanitäter BRK/Wasserwacht, Bundeswehr Sanitätsdienst (1997–1998).</p>
+      </div>
+    </div>
+    <div class="entry" data-lang="en">
+      <div class="entry-period">1999 – 2000</div>
+      <div class="entry-body">
+        <div class="entry-title">Security Service Training</div>
+        <div class="entry-company">Safety & Service</div>
+        <p class="entry-desc">Security service training, paramedic BRK/Water Rescue, Bundeswehr medical service (1997–1998).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ARBEITSPROBEN ── -->
+  <section class="cv-section">
+    <div class="section-label" data-de="Ausgewählte Arbeitsproben" data-en="Selected Work Samples"></div>
+
+    <div class="proben-grid">
+      <a class="probe" href="./Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf" target="_blank">
+        <div class="probe-tag" data-de="Politik · Ghostwriting" data-en="Politics · Ghostwriting"></div>
+        <div class="probe-title" data-de="Wahlprogramm Freie Wähler Frankfurt 2026" data-en="Election Manifesto Frankfurt 2026"></div>
+        <p class="probe-desc" data-de="Vollständige Neuschreibung — die heutige Online-Version ist meine." data-en="Full rewrite — the version live online today is mine."></p>
+        <span class="probe-link">PDF →</span>
+      </a>
+
+      <a class="probe" href="./oekostrom-landingpage.pdf" target="_blank">
+        <div class="probe-tag" data-de="Conversion Copy · Energie" data-en="Conversion Copy · Energy"></div>
+        <div class="probe-title" data-de="Ökostrom-Landingpage Frankfurt" data-en="Green Energy Landing Page Frankfurt"></div>
+        <p class="probe-desc" data-de="Verkaufstext gegen Greenwashing, auf Abschluss optimiert." data-en="Sales copy against greenwashing, optimised for conversion."></p>
+        <span class="probe-link">PDF →</span>
+      </a>
+
+      <a class="probe" href="./antraege.html">
+        <div class="probe-tag" data-de="Verwaltungssprache · Politik" data-en="Official Language · Politics"></div>
+        <div class="probe-title" data-de="Politische Anträge Ortsbeirat 10" data-en="Political Motions District Council 10"></div>
+        <p class="probe-desc" data-de="Einstimmig angenommen — einer fraktionsübergreifend." data-en="Passed unanimously — one with cross-party support."></p>
+        <span class="probe-link" data-de="Showcase →" data-en="Showcase →"></span>
+      </a>
+
+      <a class="probe" href="./willkommensbuch.html">
+        <div class="probe-tag" data-de="Hotellerie · 30 Sprachen" data-en="Hospitality · 30 Languages"></div>
+        <div class="probe-title" data-de="Willkommensbuch Turmhotel Frankfurt" data-en="Welcome Book Turmhotel Frankfurt"></div>
+        <p class="probe-desc" data-de="Handwerklich lokalisiert — nicht maschinell übersetzt." data-en="Handcrafted localisation — not machine-translated."></p>
+        <span class="probe-link">Showcase →</span>
+      </a>
+
+      <a class="probe" href="https://intelligentresponder-max.github.io/copy-code-agency-website/" target="_blank">
+        <div class="probe-tag" data-de="Agentur · Conversion Copy" data-en="Agency · Conversion Copy"></div>
+        <div class="probe-title">Copy Code Agency</div>
+        <p class="probe-desc" data-de="Brand, SEO & Funnel-Copy für drei digitale Produkte." data-en="Brand, SEO & funnel copy for three digital products."></p>
+        <span class="probe-link">Live →</span>
+      </a>
+
+      <a class="probe" href="./arbeitsproben.html">
+        <div class="probe-tag" data-de="Alle Projekte" data-en="All Projects"></div>
+        <div class="probe-title" data-de="→ Vollständiges Portfolio" data-en="→ Full Portfolio"></div>
+        <p class="probe-desc" data-de="15 Projekte mit PDFs, Repos und Live-Links." data-en="15 projects with PDFs, repos and live links."></p>
+        <span class="probe-link" data-de="Alle ansehen →" data-en="View all →"></span>
+      </a>
+    </div>
+
+    <!-- PDF Downloads -->
+    <div class="dl-row">
+      <a href="./Lebenslauf_Andre_Schwarz_DE.pdf" class="dl-btn primary" target="_blank">
+        <svg width="13" height="15" viewBox="0 0 13 15" fill="none"><path d="M1.5 0h7l4.5 4.5V14.5h-11V0z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8.5 0v4.5h4.5" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M3.5 8h6M3.5 11h4" stroke="currentColor" stroke-width="1"/></svg>
+        <span data-de="Lebenslauf PDF (DE)" data-en="CV PDF (DE)"></span>
+      </a>
+      <a href="./Portfolio_Andre_Schwarz_v2.pdf" class="dl-btn" target="_blank">
+        <svg width="13" height="15" viewBox="0 0 13 15" fill="none"><path d="M1.5 0h7l4.5 4.5V14.5h-11V0z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8.5 0v4.5h4.5" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M3.5 8h6M3.5 11h4" stroke="currentColor" stroke-width="1"/></svg>
+        Portfolio PDF
+      </a>
+      <a href="mailto:andre.schwarz1@t-online.de" class="dl-btn">
+        ✉ <span data-de="Direkt kontaktieren" data-en="Contact directly"></span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    André Schwarz · Frankfurt am Main ·
+    <a href="mailto:andre.schwarz1@t-online.de">andre.schwarz1@t-online.de</a> ·
+    <a href="tel:+491634692255">+49 163 469 2255</a><br>
+    <a href="index.html">Portfolio</a> ·
+    <a href="arbeitsproben.html" data-de="Alle Arbeitsproben" data-en="All Work Samples"></a> ·
+    <a href="https://github.com/intelligentresponder-max" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<script>
+// ── LANGUAGE ENGINE ──────────────────────────────────────────
+let currentLang = 'de';
+
+function setLang(lang) {
+  currentLang = lang;
+
+  // HTML lang attr
+  document.getElementById('html-root').lang = lang;
+
+  // Buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const isActive = btn.textContent.toLowerCase() === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive);
+  });
+
+  // data-de / data-en textContent swap
+  document.querySelectorAll('[data-de], [data-en]').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val !== null) el.textContent = val;
+  });
+
+  // data-lang visibility (entries, probes)
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+  });
+
+  // Save preference
+  try { localStorage.setItem('cv-lang', lang); } catch(e) {}
+}
+
+// Init
+(function() {
+  let saved = 'de';
+  try { saved = localStorage.getItem('cv-lang') || 'de'; } catch(e) {}
+  const browserLang = navigator.language?.startsWith('en') ? 'en' : 'de';
+  setLang(saved || browserLang);
+})();
+</script>
+
+</body>
+</html>
