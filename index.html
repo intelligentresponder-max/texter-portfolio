@@ -6,198 +6,168 @@
 <title>André Schwarz — An Roman Mayer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --ink:    #0f0e0c;
-  --paper:  #f7f3ec;
-  --gold:   #9a7b2f;
-  --gold-l: #c4a24a;
-  --muted:  #7a7060;
-  --rule:   #d8d0c0;
-  --navy:   #0d1b2a;
-  --white:  #ffffff;
+  --ink:   #0f0e0c;
+  --paper: #f7f3ec;
+  --gold:  #9a7b2f;
+  --gold-l:#c4a24a;
+  --muted: #7a7060;
+  --rule:  #ddd5c4;
+  --navy:  #0d1b2a;
+  --white: #ffffff;
 }
-
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: 'Lora', Georgia, serif;
   font-size: 17px;
   line-height: 1.85;
-  min-height: 100vh;
 }
 
-/* ── PAPER TEXTURE ── */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 999;
-}
-
-/* ── LETTER WRAP ── */
+/* ── LETTER ── */
 .letter {
-  max-width: 680px;
+  max-width: 660px;
   margin: 0 auto;
-  padding: 80px 32px 100px;
+  padding: 72px 28px 96px;
+  opacity: 0;
+  animation: appear 0.7s 0.1s ease forwards;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── TOP META ── */
+/* ── META ── */
 .meta {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 1px;
-  margin-bottom: 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px 0;
+  gap: 2px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 48px;
 }
-.meta-right { text-align: right; }
+.meta-r { text-align: right; }
 
-/* ── GOLD RULE ── */
-.rule {
+/* ── RULES ── */
+.rule-gold {
   height: 1px;
-  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
-  margin: 40px 0;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 70%);
+  margin: 36px 0;
 }
-.rule-center {
+.rule-soft {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--rule), transparent);
-  margin: 48px 0;
+  margin: 44px 0;
 }
 
-/* ── SALUTATION ── */
-.salutation {
-  font-size: 20px;
+/* ── TYPE ── */
+.salut {
+  font-size: 19px;
   font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
-
-/* ── BODY TEXT ── */
-p {
-  margin-bottom: 22px;
-  color: var(--ink);
-}
-
+p { margin-bottom: 20px; }
 p.lead {
   font-size: 19px;
   font-style: italic;
-  color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
-
 strong { font-weight: 600; }
+em { font-style: italic; }
 
-.gold-text { color: var(--gold); font-style: italic; }
-
-/* ── PULL QUOTE ── */
+/* ── PULL ── */
 .pull {
   border-left: 3px solid var(--gold);
-  padding: 4px 0 4px 24px;
-  margin: 36px 0;
-  font-size: 18px;
+  padding: 2px 0 2px 22px;
+  margin: 32px 0;
+  font-size: 17.5px;
   font-style: italic;
-  color: var(--ink);
   line-height: 1.7;
 }
 
-/* ── BEWEIS-BLOCK ── */
-.beweise {
+/* ── DARK BLOCK ── */
+.dark {
   background: var(--navy);
-  border-radius: 4px;
-  padding: 32px 36px;
-  margin: 40px 0;
+  border-radius: 5px;
+  padding: 28px 32px;
+  margin: 36px 0;
 }
-.beweise-label {
+.dark-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--gold-l);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
-.beweis-item {
+.dark-item {
   display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 0 14px;
-  margin-bottom: 14px;
+  grid-template-columns: 16px 1fr;
+  gap: 0 12px;
+  margin-bottom: 12px;
   align-items: start;
 }
-.beweis-item:last-child { margin-bottom: 0; }
-.beweis-bullet {
+.dark-item:last-child { margin-bottom: 0; }
+.di-arrow {
   color: var(--gold-l);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  margin-top: 2px;
+  font-size: 11px;
+  margin-top: 3px;
 }
-.beweis-text {
-  font-family: 'Lora', serif;
+.di-text {
   font-size: 14px;
   line-height: 1.65;
-  color: rgba(247,243,236,0.8);
+  color: rgba(247,243,236,0.75);
   margin: 0;
 }
-.beweis-text strong { color: var(--white); }
+.di-text strong { color: var(--white); }
 
-/* ── ANTRAEGE MINI ── */
+/* ── ANTRÄGE ── */
 .antraege {
-  margin: 32px 0;
   border: 1px solid var(--rule);
   border-radius: 4px;
   overflow: hidden;
+  margin: 28px 0;
 }
-.antrag-row {
+.a-row {
   display: grid;
-  grid-template-columns: 80px 1fr auto;
-  gap: 0 16px;
-  padding: 12px 18px;
+  grid-template-columns: 78px 1fr auto;
+  gap: 0 14px;
+  padding: 11px 16px;
   border-bottom: 1px solid var(--rule);
   align-items: center;
 }
-.antrag-row:last-child { border-bottom: none; }
-.antrag-of {
+.a-row:last-child { border-bottom: none; }
+.a-of {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 9.5px;
   color: var(--gold);
   letter-spacing: 0.5px;
 }
-.antrag-title {
-  font-size: 13px;
-  color: var(--ink);
-  font-family: 'Lora', serif;
-}
-.antrag-result {
+.a-title { font-size: 13px; }
+.a-badge {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  padding: 3px 8px;
+  font-size: 9.5px;
+  padding: 2px 7px;
   border-radius: 2px;
   white-space: nowrap;
 }
-.r-ok { background: rgba(154,123,47,0.12); color: var(--gold); }
-.r-no { background: rgba(180,50,30,0.08); color: #a0402a; }
-.r-mod { background: rgba(13,27,42,0.07); color: var(--navy); border: 1px solid var(--rule); }
+.ok  { background: rgba(154,123,47,0.12); color: var(--gold); }
+.no  { background: rgba(180,50,30,0.08); color: #a0402a; }
+.mod { background: rgba(13,27,42,0.07); color: var(--navy); border: 1px solid var(--rule); }
 
-/* ── UNTERLAGEN ── */
-.unterlagen {
-  margin: 32px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.unterlage {
+/* ── DOCS ── */
+.docs { display: flex; flex-direction: column; gap: 6px; margin: 24px 0; }
+.doc {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 13px 16px;
+  padding: 12px 15px;
   border: 1px solid var(--rule);
   border-radius: 3px;
   text-decoration: none;
@@ -205,53 +175,52 @@ strong { font-weight: 600; }
   font-size: 14px;
   transition: border-color 0.2s, background 0.15s;
 }
-.unterlage:hover { border-color: var(--gold); background: rgba(154,123,47,0.04); }
-.unterlage-icon { font-size: 15px; flex-shrink: 0; }
-.unterlage-name { flex: 1; font-family: 'Lora', serif; }
-.unterlage-arrow {
+.doc:hover { border-color: var(--gold); background: rgba(154,123,47,0.04); }
+.doc-icon { font-size: 14px; flex-shrink: 0; width: 22px; text-align: center; }
+.doc-name { flex: 1; font-family: 'Lora', serif; }
+.doc-arr {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--gold);
   opacity: 0;
   transition: opacity 0.15s;
 }
-.unterlage:hover .unterlage-arrow { opacity: 1; }
+.doc:hover .doc-arr { opacity: 1; }
+.doc-group {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 16px;
+  margin-bottom: 2px;
+  padding-left: 2px;
+}
 
 /* ── SIGNATUR ── */
-.signatur {
-  margin-top: 52px;
-}
-.signatur-gruss {
-  color: var(--ink);
-  margin-bottom: 36px;
-}
-.signatur-name {
+.sig { margin-top: 48px; }
+.sig-gruss { margin-bottom: 32px; }
+.sig-name {
   font-family: 'Lora', serif;
-  font-size: 22px;
+  font-size: 21px;
   font-style: italic;
-  color: var(--ink);
   margin-bottom: 4px;
 }
-.signatur-kontakt {
+.sig-contact {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--muted);
   line-height: 1.9;
-  letter-spacing: 0.3px;
 }
-.signatur-kontakt a {
-  color: var(--gold);
-  text-decoration: none;
-}
-.signatur-kontakt a:hover { color: var(--gold-l); }
+.sig-contact a { color: var(--gold); text-decoration: none; }
+.sig-contact a:hover { color: var(--gold-l); }
 
 /* ── PS ── */
 .ps {
-  margin-top: 40px;
-  padding: 24px 28px;
+  margin-top: 36px;
+  padding: 20px 24px;
   background: rgba(154,123,47,0.07);
   border-left: 2px solid var(--gold);
-  border-radius: 0 3px 3px 0;
   font-size: 14px;
   line-height: 1.75;
   color: var(--muted);
@@ -261,270 +230,240 @@ strong { font-weight: 600; }
 /* ── FOOTER ── */
 footer {
   text-align: center;
-  padding: 32px;
+  padding: 28px 32px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--rule);
   letter-spacing: 1px;
   border-top: 1px solid var(--rule);
+  margin-top: 8px;
 }
 
-/* ── ANIMATIONS ── */
-.letter { opacity: 0; animation: appear 0.8s 0.1s ease forwards; }
-@keyframes appear {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
-  .letter { padding: 48px 22px 72px; }
+@media (max-width: 580px) {
+  .letter { padding: 44px 20px 72px; }
   body { font-size: 16px; }
   .meta { grid-template-columns: 1fr; }
-  .meta-right { text-align: left; }
-  .antrag-row { grid-template-columns: 1fr; gap: 4px; padding: 12px 14px; }
-  .antrag-result { width: fit-content; }
-  .beweise { padding: 24px 20px; }
+  .meta-r { text-align: left; }
+  .a-row { grid-template-columns: 1fr; gap: 3px; }
+  .dark { padding: 22px 18px; }
 }
 </style>
 </head>
 <body>
-
 <div class="letter">
 
-  <!-- META -->
   <div class="meta">
-    <div>André Schwarz<br>Frankfurt-Preungesheim, 60435</div>
-    <div class="meta-right">Juni 2026<br>Bewerbung Copywriting Traineeship</div>
+    <div>André Schwarz<br>Frankfurt-Preungesheim · 60435</div>
+    <div class="meta-r">Juni 2026<br>Bewerbung als Copywriter</div>
   </div>
 
-  <div class="rule"></div>
+  <div class="rule-gold"></div>
 
-  <!-- ANREDE -->
-  <div class="salutation">Sehr geehrter Herr Mayer,</div>
+  <div class="salut">Hallo Roman,</div>
 
-  <!-- ERÖFFNUNG -->
   <p class="lead">
-    ich bewerbe mich nicht mit einer Bewerbungsmappe. Ich bewerbe mich mit einem Argument.
+    ein Text, der nicht verkauft, ist teure Dekoration.<br>
+    Das ist die Grundlage, auf der ich seit 9 Jahren schreibe.
   </p>
 
   <p>
-    Sie suchen jemanden, der versteht, dass ein Satz entweder eine Handlung auslöst — oder nicht.
-    Der Psychologie nicht als Theorie behandelt, sondern als Werkzeug. Der Texte nicht schreibt,
-    um sie zu schreiben, sondern um etwas zu bewirken.
+    Du suchst jemanden, der versteht, dass Texte keine Dekoration sind —
+    sondern Werkzeuge mit messbarem Ergebnis.
+    Jemanden, der Verkaufspsychologie nicht aus dem Kurs kennt,
+    sondern aus der Praxis.
   </p>
 
   <p>
-    Ich tue das seit neun Jahren. Nur in einem anderen Kontext.
+    Ich komme aus einer Richtung, die du vermutlich selten siehst.
   </p>
 
-  <div class="rule-center"></div>
+  <div class="rule-soft"></div>
 
-  <!-- KERNARGUMENT 1 -->
+  <!-- WEINSTRASSE -->
   <p>
-    Von 2016 bis 2026 war ich als Redakteur und Antragsverfasser im
-    <strong>Ortsbeirat 10 Frankfurt am Main</strong> aktiv — zunächst für die BFF e.V.,
-    später als Mitgründer der Freien Wähler Frankfurt.
-    Sechs Anträge, alle öffentlich dokumentiert auf stvv.frankfurt.de,
-    alle unter echtem Abstimmungsdruck entstanden.
+    Von 2016 bis 2026 war ich Ghostwriter und Redakteur im
+    <strong>Ortsbeirat 10 Frankfurt</strong> — alle Texte öffentlich,
+    alle abstimmungsrelevant, alle auf stvv.frankfurt.de nachlesbar.
   </p>
 
   <div class="pull">
-    Texte, die scheitern konnten. Die öffentlich abgestimmt wurden.
-    Die im Stadtarchiv nachlesbar sind.<br>
-    Kein Schreiben im Schonraum.
+    Einer meiner Anträge wurde fünfmal vertagt.<br>
+    Ich habe ihn nicht erneut eingereicht —<br>
+    ich habe das <strong>Framing geändert.</strong><br>
+    Einstimmige Annahme.
   </div>
+
+  <p>
+    Nicht lauter werden. Das Framing ändern, bis der Widerstand bricht.
+    Das ist dasselbe Prinzip, das du deinen Kunden verkaufst —
+    ich hab's in der Praxis gelernt, bevor ich wusste, wie es heißt.
+  </p>
 
   <div class="antraege">
-    <div class="antrag-row">
-      <div class="antrag-of">OF 145/10</div>
-      <div class="antrag-title">Englische Begriffe in der Stadtverwaltung</div>
-      <div class="antrag-result r-no">Abgelehnt</div>
+    <div class="a-row">
+      <div class="a-of">OF 145/10</div>
+      <div class="a-title">Englische Begriffe in der Stadtverwaltung</div>
+      <div class="a-badge no">Abgelehnt</div>
     </div>
-    <div class="antrag-row">
-      <div class="antrag-of">OF 188/10</div>
-      <div class="antrag-title">Frühkindl. Deutschunterricht für Flüchtlingskinder</div>
-      <div class="antrag-result r-mod">Modifiziert angenommen</div>
+    <div class="a-row">
+      <div class="a-of">OF 188/10</div>
+      <div class="a-title">Frühkindl. Deutschunterricht Flüchtlingskinder</div>
+      <div class="a-badge mod">Modifiziert angenommen</div>
     </div>
-    <div class="antrag-row">
-      <div class="antrag-of">OF 232/10</div>
-      <div class="antrag-title">Weinstraße — 5× vertagt, dann strategisch neu gerahmt</div>
-      <div class="antrag-result r-ok">Nachfolger einstimmig</div>
+    <div class="a-row">
+      <div class="a-of">OF 232/10</div>
+      <div class="a-title">Weinstraße — 5× vertagt, dann neu gerahmt</div>
+      <div class="a-badge ok">Einstimmig angenommen</div>
     </div>
-    <div class="antrag-row">
-      <div class="antrag-of">OF 425/10</div>
-      <div class="antrag-title">Graffiti-Galerie GrünGürtel — Nachfassantrag</div>
-      <div class="antrag-result r-ok">Einstimmig angenommen</div>
+    <div class="a-row">
+      <div class="a-of">OF 425/10</div>
+      <div class="a-title">Graffiti-Galerie GrünGürtel — Nachfassantrag</div>
+      <div class="a-badge ok">Einstimmig angenommen</div>
     </div>
-    <div class="antrag-row">
-      <div class="antrag-of">OF 592/10</div>
-      <div class="antrag-title">Beschilderung Kreuzstraße / Alt-Preungesheim</div>
-      <div class="antrag-result r-mod">Zurückgezogen</div>
+    <div class="a-row">
+      <div class="a-of">OF 592/10</div>
+      <div class="a-title">Beschilderung Kreuzstraße</div>
+      <div class="a-badge mod">Zurückgezogen</div>
     </div>
-    <div class="antrag-row">
-      <div class="antrag-of">OF 805/10</div>
-      <div class="antrag-title">Frankfurt frischt auf — Balkone & Terrassen begrünen</div>
-      <div class="antrag-result r-ok">Einstimmig angenommen</div>
+    <div class="a-row">
+      <div class="a-of">OF 805/10</div>
+      <div class="a-title">Frankfurt frischt auf — Balkone begrünen</div>
+      <div class="a-badge ok">Einstimmig angenommen</div>
     </div>
   </div>
 
-  <p>
-    Der Antrag zur Weinstraße ist dabei der aufschlussreichste: Fünf Sitzungen lang vertagt.
-    Statt zu insistieren, habe ich den Antrag zurückgezogen und neu gerahmt —
-    nicht als Einschränkung für Autofahrer, sondern als Sicherheitsgewinn für Anwohner und
-    Kitakinder. Das Ergebnis: einstimmige Annahme.
-    <strong>Das ist kein politischer Trick. Das ist Conversion-Optimierung.</strong>
-  </p>
+  <div class="rule-soft"></div>
 
-  <div class="rule-center"></div>
-
-  <!-- KERNARGUMENT 2 -->
+  <!-- MINDFUL7777 -->
   <p>
-    Das zweite Argument heißt <strong>mindful7777</strong>. Eine Hypnose-Audio-Plattform,
-    die ich für den deutschsprachigen Markt entwickle. Jedes Skript folgt der
-    ABS-Formel: <em>Attention → Bypass → Stimulate.</em>
+    Dazu komme ich aus einer zweiten unerwarteten Richtung:
+    Ich habe eine <strong>Hypnose-Audio-Plattform</strong> für den DACH-Markt aufgebaut.
+    Jedes Skript folgt der ABS-Formel —
+    <em>Attention → Bypass → Stimulate.</em>
   </p>
 
   <p>
-    Der kritische Denkfilter des Hörers wird in Phase B gezielt umgangen —
-    durch Rhythmus, Fraktionierung, Metaphern — bevor die Kernbotschaft in Phase S gesetzt wird.
-    Das ist dasselbe Prinzip wie Pace-and-Lead, Pattern Interrupt und Benefit-Stack im Copywriting.
-    Nur in einem anderen Medium.
+    Phase B: kritischen Denkfilter des Hörers umgehen,
+    bevor die Kernbotschaft gesetzt wird —
+    durch Rhythmus, Metaphern, Fraktionierung.
+    Wenn das kein Conversion-Training ist, weiß ich es nicht.
+    Dasselbe System. Anderes Medium.
   </p>
 
-  <p>
-    Ich habe diesen Mechanismus nicht aus einem Buch. Ich wende ihn an.
-  </p>
+  <div class="rule-soft"></div>
 
-  <div class="rule-center"></div>
-
-  <!-- KERNARGUMENT 3 -->
+  <!-- PHYSIKER-TRIGGER -->
   <p>
-    Das dritte Argument ist für Sie als Physiker vielleicht das ehrlichste:
-    <strong>CROWN v10.</strong> Ein selbst entwickeltes Analyse-System —
-    SQLite-Datenbank, Multi-Threading, Telegram-API, Python.
-    Budgetoptimierung nach dem Kelly-Kriterium.
-  </p>
-
-  <p>
-    Ich erwähne es nicht, weil es beeindruckend klingt.
-    Ich erwähne es, weil es zeigt, wie ich denke:
+    Du liebst Messwerte. Ich auch.
+    Deshalb habe ich <strong>CROWN v10</strong> gebaut:
+    ein Analyse-System mit Kelly-Kriterium, SQLite, Multi-Threading, Telegram-API.
+    Budgetoptimierung nach mathematischem Modell.
     Hypothese → Test → Messung → Optimierung.
     Genau so behandle ich Texte.
   </p>
 
-  <div class="rule-center"></div>
+  <div class="rule-soft"></div>
 
   <!-- BEWEIS-BLOCK -->
-  <div class="beweise">
-    <div class="beweise-label">Was ich mitbringe — konkret</div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>9 Jahre öffentliches Schreiben</strong> unter Abstimmungsdruck — alle Anträge auf stvv.frankfurt.de nachprüfbar</p>
+  <div class="dark">
+    <div class="dark-label">Was ich konkret mitbringe</div>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>9 Jahre Texten unter Abstimmungsdruck</strong> — öffentlich, nachprüfbar, mit echten Konsequenzen</p>
     </div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>Conversion-Psychologie in der Praxis</strong> — mindful7777 ABS-Framework, Fraktionierung, Suggestion</p>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>Verkaufspsychologie aus der Praxis</strong> — ABS-Framework, Framing, Einwand-Absorption</p>
     </div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>Datengetriebenes Denken</strong> — Kelly-Kriterium, KPI-Tracking, messbare Optimierungsschleifen</p>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>Nischen-Vielseitigkeit</strong> — Energie, Politik, Hotellerie, Gesundheit, KI/SaaS. Nicht ausgebildet — durch echte Zielgruppen gelernt</p>
     </div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>Ghostwriting unter Druck</strong> — Wahlprogramm Freie Wähler Frankfurt 2026, juristische Korrespondenz, Behördentexte</p>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>Datengetriebenes Denken</strong> — Kelly-Kriterium, KPI-Tracking, messbare Optimierungsschleifen</p>
     </div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>7 Monate KI-Architektur täglich</strong> — Multi-Agent-Systeme, Prompt Engineering, Automatisierung</p>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>Cambridge CAE C1 Englisch</strong> — US-Direct-Response-Kanon im Original studiert</p>
     </div>
-    <div class="beweis-item">
-      <div class="beweis-bullet">→</div>
-      <p class="beweis-text"><strong>5 km Entfernung</strong> — Frankfurt-Preungesheim zur Ferdinand-Happ-Straße. Volle Präsenzverfügbarkeit. Kein Remote-Kompromiss.</p>
+    <div class="dark-item">
+      <div class="di-arrow">→</div>
+      <p class="di-text"><strong>5 km vom Büro</strong> — Ferdinand-Happ-Str., Frankfurt-Preungesheim. Vor Ort. Innerhalb von 4 Wochen vollständig verfügbar.</p>
     </div>
   </div>
 
-  <div class="rule-center"></div>
+  <div class="rule-soft"></div>
 
-  <!-- SCHLUSSTEIL -->
+  <!-- SCHLUSSSATZ -->
   <p>
     Ich bewerbe mich nicht, weil ich einen Job brauche.
-    Ich bewerbe mich, weil Ihr Traineeship der einzige mir bekannte Weg ist,
-    den Abstand zwischen dem, was ich intuitiv kann, und dem,
-    was ich handwerklich perfekt ausführen will, in kurzer Zeit zu schließen.
+    Ich bewerbe mich, weil du der einzige Copywriter in Frankfurt bist,
+    bei dem ich handwerkliche Meisterschaft lernen kann —
+    nicht in 8 Wochen, sondern mit System.
   </p>
 
   <p>
-    Neun Jahre Learning by Doing — unter öffentlichem Druck, mit echten Konsequenzen.
-    Jetzt will ich das System dahinter. Mit dem richtigen Mentor.
+    Lass uns in einem kurzen Gespräch herausfinden,
+    wie schnell ich für deine Kunden Texte schreibe, die verkaufen.
   </p>
 
   <!-- UNTERLAGEN -->
-  <p style="margin-bottom: 12px; font-size: 14px; color: var(--muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;">
-    UNTERLAGEN
-  </p>
-
-  <div class="unterlagen">
-    <a href="Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf" class="unterlage" target="_blank">
-      <span class="unterlage-icon">📄</span>
-      <span class="unterlage-name">Bewerbungs-Report im DMC-Stil — 6 Seiten PDF</span>
-      <span class="unterlage-arrow">→</span>
+  <div class="doc-group">Unterlagen</div>
+  <div class="docs">
+    <a href="Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf" class="doc" target="_blank">
+      <span class="doc-icon">📄</span>
+      <span class="doc-name">Bewerbungs-Report im DMC-Stil — 6 Seiten PDF</span>
+      <span class="doc-arr">→</span>
     </a>
-    <a href="cv.html" class="unterlage">
-      <span class="unterlage-icon">📋</span>
-      <span class="unterlage-name">Lebenslauf (DE/EN)</span>
-      <span class="unterlage-arrow">→</span>
+    <a href="portfolio.html" class="doc">
+      <span class="doc-icon">📁</span>
+      <span class="doc-name">Portfolio — 4 Nischen mit Storytelling</span>
+      <span class="doc-arr">→</span>
     </a>
-    <a href="arbeitsproben.html" class="unterlage">
-      <span class="unterlage-icon">✍️</span>
-      <span class="unterlage-name">Schreibarbeitsproben</span>
-      <span class="unterlage-arrow">→</span>
+    <a href="arbeitsproben.html" class="doc">
+      <span class="doc-icon">✍️</span>
+      <span class="doc-name">Alle Arbeitsproben</span>
+      <span class="doc-arr">→</span>
     </a>
-    <a href="antraege.html" class="unterlage">
-      <span class="unterlage-icon">🏛️</span>
-      <span class="unterlage-name">6 Ortsbeirat-Anträge — stvv.frankfurt.de</span>
-      <span class="unterlage-arrow">→</span>
+    <a href="cv.html" class="doc">
+      <span class="doc-icon">📋</span>
+      <span class="doc-name">Lebenslauf (DE/EN)</span>
+      <span class="doc-arr">→</span>
     </a>
-    <a href="Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf" class="unterlage" target="_blank">
-      <span class="unterlage-icon">🗳️</span>
-      <span class="unterlage-name">Wahlprogramm Freie Wähler Frankfurt 2026</span>
-      <span class="unterlage-arrow">→</span>
+    <a href="antraege.html" class="doc">
+      <span class="doc-icon">🏛️</span>
+      <span class="doc-name">6 Ortsbeirat-Anträge — stvv.frankfurt.de</span>
+      <span class="doc-arr">→</span>
     </a>
-    <a href="Portfolio_Andre_Schwarz_v2.pdf" class="unterlage" target="_blank">
-      <span class="unterlage-icon">📁</span>
-      <span class="unterlage-name">Portfolio PDF</span>
-      <span class="unterlage-arrow">→</span>
+    <a href="Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf" class="doc" target="_blank">
+      <span class="doc-icon">🗳️</span>
+      <span class="doc-name">Wahlprogramm Freie Wähler Frankfurt 2026</span>
+      <span class="doc-arr">→</span>
     </a>
   </div>
 
   <!-- SIGNATUR -->
-  <div class="signatur">
-    <p class="signatur-gruss">
-      Ich freue mich auf ein Gespräch — auch ein kurzes von 20 Minuten reicht,
-      um zu klären, ob das passt.
-    </p>
-
-    <p class="signatur-gruss">Mit freundlichen Grüßen,</p>
-
-    <div class="signatur-name">André Schwarz</div>
-    <div class="signatur-kontakt">
+  <div class="sig">
+    <p class="sig-gruss">Viele Grüße,</p>
+    <div class="sig-name">André Schwarz</div>
+    <div class="sig-contact">
       <a href="mailto:andre.schwarz1@t-online.de">andre.schwarz1@t-online.de</a><br>
       <a href="tel:+4915256044541">0152 5604 4541</a><br>
       Frankfurt-Preungesheim · 60435
     </div>
   </div>
 
-  <!-- PS -->
   <div class="ps">
-    <strong>P.S.</strong> — Diese Seite ist selbst eine Arbeitsprobe. Sie ist strukturiert wie ein
-    Überzeugungstext: klare These, belegbare Argumente, konkreter nächster Schritt.
-    Kein Fülltext. Kein Schönreden. Genau das, was ich für Ihre Klienten schreiben werde.
+    <strong>P.S.</strong> — Dieses Anschreiben ist selbst eine Arbeitsprobe.
+    Hook. Proof. Reframe. CTA.
+    Wenn es dich nicht überzeugt hat, brauchen wir kein Gespräch.
   </div>
 
 </div>
 
 <footer>
-  © André Schwarz · Frankfurt · Juni 2026 · github.com/intelligentresponder-max/texter-portfolio
+  © André Schwarz · Frankfurt · Juni 2026 · intelligentresponder-max.github.io/texter-portfolio
 </footer>
-
 </body>
 </html>
