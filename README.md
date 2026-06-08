@@ -1,77 +1,70 @@
-# Warum ich der Richtige für Ihr Traineeship bin.
+# Precision Scripting Vault: André Schwarz (2026)
 
-> **An:** Roman Mayer GmbH · Copywriting Traineeship · Frankfurt Ostend  
-> **Von:** André Schwarz · Frankfurt-Preungesheim · 5 km Entfernung  
-> **Stand:** Juni 2026
+> **„Sprache ist kein Selbstzweck, sondern ein Werkzeug mit messbarem Ergebnis."**
 
----
-
-## Die Kernthese
-
-Roman Mayer sucht jemanden, der versteht, dass ein Satz entweder eine Handlung auslöst — oder nicht.
-
-Ich bringe dieses Verständnis aus drei unerwarteten Quellen mit:
-
-- **9 Jahre öffentliches Schreiben** im Ortsbeirat 10 Frankfurt — Texte, die öffentlich abgestimmt wurden und scheitern konnten
-- **mindful7777** — eine Hypnose-Audio-Plattform, deren gesamte Architektur auf demselben Überzeugungsprinzip basiert wie High-End-Copywriting
-- **CROWN v10** — ein datengetriebenes System mit Kelly-Kriterium, das zeigt, wie ich in messbaren Optimierungsschleifen denke
+Dieses Repository dokumentiert die Schnittmenge aus **9 Jahren öffentlichem politischen Schreiben**, **hypnotischer Überzeugungs-Architektur** und **datengetriebener Optimierung**. Entwickelt als strategisches Beweisstück für das High-End-Copywriting Traineeship bei der Roman Mayer GmbH.
 
 ---
 
-## Die Unterlagen
+### 🚀 Die KPI-Bar (Zusammenfassung)
 
-### Bewerbung
-📄 **[Bewerbungs-Report im DMC-Stil (PDF)](Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf)**  
-6 Seiten. Strukturiert wie eines von Romans Kernprodukten. Kernthese, belegbare Argumente, Arbeitsprobe, konkreter Call to Action.
-
-### Portfolio & Lebenslauf
-📄 **[Portfolio André Schwarz v2](Portfolio_Andre_Schwarz_v2.pdf)**  
-📄 **[Lebenslauf (PDF)](Lebenslauf_Andre_Schwarz_DE.pdf)**  
-📄 **[Lebenslauf (Word)](Lebenslauf_Andre_Schwarz_DE.docx)**
-
-### Politische Schreibarbeit (2016–2026)
-🌐 **[6 dokumentierte Ortsbeirat-Anträge OBR 10](antraege.html)**  
-Alle öffentlich abrufbar auf stvv.frankfurt.de. Drei verschiedene Ausgänge: abgelehnt, angenommen, modifiziert. Texten unter echtem Abstimmungsdruck.
-
-📄 **[Wahlprogramm Freie Wähler Frankfurt 2026](Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf)**  
-Mitgegründet. Mitgeschrieben. Öffentlich eingesetzt.
-
-### Arbeitsproben
-🌐 **[Schreibarbeitsproben](arbeitsproben.html)**  
-🌐 **[CROWN v10 — Value-Bet-System](crown-valuebet.html)**  
-📄 **[Ökostrom-Landingpage](oekostrom-landingpage.pdf)**  
-📄 **[Recruiting 8 Sprachen](recruiting-8-sprachen.pdf)**  
-📄 **[Energiebranche Glossar](Energiebranche_Glossar.pdf)**
-
-### Weitere Referenzen
-📄 **[KfW-Businessplan Nachbarschaftshilfe](KfW_Businessplan_Nachbarschaftshilfe.pdf)**  
-📄 **[Satzung Nachbarschaftshilfe](Satzung_Nachbarschaftshilfe.pdf)**
+| Metrik | Wert | Relevanz |
+| :--- | :--- | :--- |
+| **Öffentliches Schreiben** | 9 Jahre (OBR 10 Frankfurt) | Texten unter maximalem Abstimmungsdruck |
+| **Conversion-Erfolg** | 100 % bei strategischen Pivots | Bsp. Weinstraße (Einstimmigkeit nach 5 Vertagungen) |
+| **Distanz zum Office** | 5 km (Frankfurt-Preungesheim) | Volle Präsenzverfügbarkeit im Frankfurter Ostend |
+| **Live-Systeme** | 2 (mindful7777 & CROWN v10) | Beweis für technische Tiefe & Psychologie |
 
 ---
 
-## Das Profil in 60 Sekunden
+### 🎯 Case Study: Der „Weinstraße-Pivot" (OF 380/10)
 
-| | |
-|---|---|
-| **2016–2026** | Redakteur & Kandidat, Ortsbeirat 10 Frankfurt |
-| **2020–2026** | Mitgründer Freie Wähler Frankfurt |
-| **Kommunalwahl 2026** | Listenplatz 2 OBR 10 · Listenplatz 4 StVV |
-| **mindful7777** | Hypnose-Audio-Plattform DACH — ABS-Framework |
-| **CROWN v10** | SQLite · Multi-Threading · Kelly-Kriterium |
-| **KI-Architektur** | 7 Monate täglich · Multi-Agent-Systeme |
-| **Entfernung zum Büro** | ~5 km · vollständige Präsenzverfügbarkeit |
+Dieses Projekt dient als primärer Beweis für **Conversion-Optimierung durch psychologisches Reframing**.
 
----
-
-## Die eine Frage, die Roman Mayer sich stellt
-
-*Kann dieser Mensch Texte schreiben, die Handlungen auslösen?*
-
-Hier ist die Antwort — dokumentiert, öffentlich, nachprüfbar.
+- **Herausforderung:** Ein Antrag zur Verkehrsberuhigung (OF 232/10) wurde **fünfmal in Folge vertagt**.
+- **Strategischer Eingriff:** Rückzug des blockierten Antrags und Neuvorlage als **OF 380/10** mit Fokus auf den Benefit für Anwohner der Homburger Landstraße.
+- **Resultat:** **Einstimmige Annahme** am 07.11.2017.
+- **Real-World Impact:**
+  - Die Verkehrssituation wurde durch die Einbahnstraßenregelung **spürbar verbessert**.
+  - Die Umsetzung führte zu ausdrücklichem **Dank von Anwohnern sowie allen politischen Fraktionen**.
+- **Transfer:** Ich optimiere das Framing, bis der Widerstand bricht und eine nachhaltige Akzeptanz entsteht.
 
 ---
 
-**André Schwarz** · Frankfurt-Preungesheim · 60435  
+### 🧠 Die Systeme (Psychologie & Daten)
+
+#### 1. mindful7777 — Hypnose als Überzeugungs-Architektur
+
+Anwendung des **ABS-Frameworks**, das direkt auf High-End-Copywriting übertragbar ist:
+
+- **A (Attention):** Pattern Interrupt und Fokuspunkt.
+- **B (Bypass):** Umgehung des kritischen Filters via Storytelling und Metaphern.
+- **S (Stimulate):** Einpflanzen der Kernbotschaft via Benefit-Stack.
+
+#### 2. CROWN v10 — Mathematische Präzision
+
+Ein datengetriebenes System, das die „Physiker-Mentalität" widerspiegelt:
+
+- **Optimierung:** Einsatz des **Kelly-Kriteriums** zur Risikogewichtung.
+- **Technik:** SQLite, Multi-Threading, Python, Telegram-API.
+
+---
+
+### 🛠 Technischer Stack & Skills
+
+- **Copywriting:** Psychologische Trigger, Storytelling, DMC-Style Reports.
+- **Programmierung:** Python (Automatisierung), SQLite, KI-Agenten-Architektur.
+- **Ghostwriting:** Erstellung des Wahlprogramms der Freien Wähler Frankfurt.
+- **Krisenempathie:** Erfahrung als Sanitäter & Erste-Hilfe-Ausbilder (Psychologie unter Druck).
+
+---
+
+### 📍 Standort & Kontakt
+
+Ansässig in **60435 Frankfurt-Preungesheim**. Nur **5 km** von der Ferdinand-Happ-Straße entfernt – bereit für sofortigen Start ohne Remote-Kompromiss.
+
 📧 andre.schwarz1@t-online.de · 📞 0152 5604 4541
 
-*Für ein 20-minütiges Gespräch stehe ich jederzeit zur Verfügung.*
+---
+
+*© 2026 André Schwarz – Dokumentiert für die Roman Mayer GmbH.*
