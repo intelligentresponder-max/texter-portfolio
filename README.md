@@ -1,40 +1,77 @@
-# André Schwarz — Texter-Portfolio
+# Warum ich der Richtige für Ihr Traineeship bin.
 
-**Conversion-Psychologie · Präzision · 9 Jahre öffentliches Schreiben**
-
-Dieses Repository enthält alle Bewerbungsunterlagen und Hintergrunddokumente für die Bewerbung bei der **Roman Mayer GmbH** (Copywriting Traineeship, Frankfurt Ostend) sowie das Research-Briefing für die Weiterentwicklung des **mindful7777**-Projekts.
+> **An:** Roman Mayer GmbH · Copywriting Traineeship · Frankfurt Ostend  
+> **Von:** André Schwarz · Frankfurt-Preungesheim · 5 km Entfernung  
+> **Stand:** Juni 2026
 
 ---
 
-## Dateien
+## Die Kernthese
 
-| Datei | Inhalt |
+Roman Mayer sucht jemanden, der versteht, dass ein Satz entweder eine Handlung auslöst — oder nicht.
+
+Ich bringe dieses Verständnis aus drei unerwarteten Quellen mit:
+
+- **9 Jahre öffentliches Schreiben** im Ortsbeirat 10 Frankfurt — Texte, die öffentlich abgestimmt wurden und scheitern konnten
+- **mindful7777** — eine Hypnose-Audio-Plattform, deren gesamte Architektur auf demselben Überzeugungsprinzip basiert wie High-End-Copywriting
+- **CROWN v10** — ein datengetriebenes System mit Kelly-Kriterium, das zeigt, wie ich in messbaren Optimierungsschleifen denke
+
+---
+
+## Die Unterlagen
+
+### Bewerbung
+📄 **[Bewerbungs-Report im DMC-Stil (PDF)](Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf)**  
+6 Seiten. Strukturiert wie eines von Romans Kernprodukten. Kernthese, belegbare Argumente, Arbeitsprobe, konkreter Call to Action.
+
+### Portfolio & Lebenslauf
+📄 **[Portfolio André Schwarz v2](Portfolio_Andre_Schwarz_v2.pdf)**  
+📄 **[Lebenslauf (PDF)](Lebenslauf_Andre_Schwarz_DE.pdf)**  
+📄 **[Lebenslauf (Word)](Lebenslauf_Andre_Schwarz_DE.docx)**
+
+### Politische Schreibarbeit (2016–2026)
+🌐 **[6 dokumentierte Ortsbeirat-Anträge OBR 10](antraege.html)**  
+Alle öffentlich abrufbar auf stvv.frankfurt.de. Drei verschiedene Ausgänge: abgelehnt, angenommen, modifiziert. Texten unter echtem Abstimmungsdruck.
+
+📄 **[Wahlprogramm Freie Wähler Frankfurt 2026](Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf)**  
+Mitgegründet. Mitgeschrieben. Öffentlich eingesetzt.
+
+### Arbeitsproben
+🌐 **[Schreibarbeitsproben](arbeitsproben.html)**  
+🌐 **[CROWN v10 — Value-Bet-System](crown-valuebet.html)**  
+📄 **[Ökostrom-Landingpage](oekostrom-landingpage.pdf)**  
+📄 **[Recruiting 8 Sprachen](recruiting-8-sprachen.pdf)**  
+📄 **[Energiebranche Glossar](Energiebranche_Glossar.pdf)**
+
+### Weitere Referenzen
+📄 **[KfW-Businessplan Nachbarschaftshilfe](KfW_Businessplan_Nachbarschaftshilfe.pdf)**  
+📄 **[Satzung Nachbarschaftshilfe](Satzung_Nachbarschaftshilfe.pdf)**
+
+---
+
+## Das Profil in 60 Sekunden
+
+| | |
 |---|---|
-| `Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf` | Bewerbungs-Report im DMC-Stil (6 Seiten) |
-| `NotebookLM_Briefing_Andre_Schwarz.md` | Vollständiges Research-Briefing für NotebookLM |
-| `Portfolio_Andre_Schwarz_v2.pdf` | Allgemeines Portfolio |
-| `Lebenslauf_Andre_Schwarz_DE.*` | Lebenslauf (verschiedene Versionen) |
-| `Wahlprogramm-Freie-Waehler-Fr...` | Wahlprogramm Freie Wähler Frankfurt (Textarbeit) |
-| `antraege.html` | 6 dokumentierte Ortsbeirat-Anträge OBR 10 |
-| `arbeitsproben.html` | Schreibarbeitsproben |
+| **2016–2026** | Redakteur & Kandidat, Ortsbeirat 10 Frankfurt |
+| **2020–2026** | Mitgründer Freie Wähler Frankfurt |
+| **Kommunalwahl 2026** | Listenplatz 2 OBR 10 · Listenplatz 4 StVV |
+| **mindful7777** | Hypnose-Audio-Plattform DACH — ABS-Framework |
+| **CROWN v10** | SQLite · Multi-Threading · Kelly-Kriterium |
+| **KI-Architektur** | 7 Monate täglich · Multi-Agent-Systeme |
+| **Entfernung zum Büro** | ~5 km · vollständige Präsenzverfügbarkeit |
 
 ---
 
-## Profil
+## Die eine Frage, die Roman Mayer sich stellt
 
-**2016–2026** — Ununterbrochen im Ortsbeirat 10 Frankfurt aktiv: zunächst als Redakteur/Antragsverfasser für die BFF e.V. (6 öffentlich dokumentierte Anträge auf [stvv.frankfurt.de](https://stvv.frankfurt.de)), dann als Mitgründer der Freien Wähler Frankfurt und Kandidat zur Kommunalwahl 2026 (Listenplatz 2 OBR 10 / Listenplatz 4 StVV).
+*Kann dieser Mensch Texte schreiben, die Handlungen auslösen?*
 
-**mindful7777** — Hypnose-Audio-Plattform für den DACH-Markt. Alle Skripte folgen der ABS-Formel (Attention → Bypass → Stimulate) — dem psychologischen Gegenstück zu Pace-and-Lead, Pattern Interrupt und CTA im Copywriting.
-
-**CROWN v10** — Datengetriebenes Analyse-System: SQLite, Multi-Threading, Telegram-API, Kelly-Kriterium zur Budgetoptimierung.
+Hier ist die Antwort — dokumentiert, öffentlich, nachprüfbar.
 
 ---
 
-## Kontakt
+**André Schwarz** · Frankfurt-Preungesheim · 60435  
+[E-Mail eintragen] · [Telefon eintragen]  
 
-André Schwarz · Frankfurt-Preungesheim · 60435
-[E-Mail eintragen] · [Telefon eintragen]
-
----
-
-*Stand: Juni 2026*
+*Für ein 20-minütiges Gespräch stehe ich jederzeit zur Verfügung.*
