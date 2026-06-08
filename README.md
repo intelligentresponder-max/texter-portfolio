@@ -72,6 +72,6 @@ Hier ist die Antwort — dokumentiert, öffentlich, nachprüfbar.
 ---
 
 **André Schwarz** · Frankfurt-Preungesheim · 60435  
-[E-Mail eintragen] · [Telefon eintragen]  
+📧 andre.schwarz1@t-online.de · 📞 0152 5604 4541
 
 *Für ein 20-minütiges Gespräch stehe ich jederzeit zur Verfügung.*
