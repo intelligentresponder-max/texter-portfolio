@@ -1,326 +1,936 @@
 <!DOCTYPE html>
-<html lang="de" id="html-root">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-<meta name="geo.region" content="DE-HE">
-<meta name="geo.placename" content="Frankfurt am Main">
-<!-- Meta-Tags werden per JS aus content.*.js gesetzt -->
-<title>André Schwarz — Freier Texter Frankfurt</title>
-<link rel="canonical" href="https://intelligentresponder-max.github.io/texter-portfolio/">
-
+<title>André Schwarz — Texter · Copy · Conversion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-:root{--ink:#0c0a08;--ink-soft:#161310;--paper:#f4ede0;--gold:#c9a227;--gold-bright:#e8c14f;--muted:#9b9085;--line:rgba(201,162,39,.22)}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--paper);font-family:'Spline Sans',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 80% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(700px 600px at -10% 100%,rgba(201,162,39,.06),transparent 60%)}
-body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
-.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px}
-nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
-.nav-brand{font-family:'Fraunces',serif;font-size:1rem;color:var(--gold);text-decoration:none}
-.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:rgba(201,162,39,.15);border:1px solid var(--line);color:var(--gold)!important;padding:6px 14px;border-radius:2px;transition:.2s!important}
-.nav-cta:hover{background:rgba(201,162,39,.25)!important;border-color:var(--gold)!important}
-.lang-btn{cursor:pointer;font-size:.85rem!important;border:1px solid var(--line);padding:4px 10px;border-radius:2px;transition:.2s!important}
-.lang-btn:hover{border-color:var(--gold)!important;color:var(--gold)!important}
-.pdf-banner{display:inline-flex;align-items:center;gap:10px;background:rgba(201,162,39,.12);border:1px solid var(--line);border-radius:2px;padding:10px 18px;text-decoration:none;font-family:'Spline Sans Mono',monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);transition:.25s}
-.pdf-banner:hover{background:rgba(201,162,39,.22);border-color:var(--gold)}
-header{padding:100px 0 90px}
-.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:rise .8s .1s forwards}
-h1{font-family:'Fraunces',serif;font-weight:600;line-height:1.02;font-size:clamp(2.8rem,7vw,5.4rem);letter-spacing:-.02em;opacity:0;animation:rise .9s .25s forwards}
-h1 em{font-style:italic;color:var(--gold-bright)}
-.lede{margin-top:30px;max-width:620px;font-size:clamp(1.05rem,2vw,1.3rem);color:#d8cdbd;opacity:0;animation:rise .9s .45s forwards}
-.cta-row{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;opacity:0;animation:rise .9s .6s forwards}
-.btn{display:inline-block;padding:15px 30px;border-radius:2px;font-weight:600;font-size:.95rem;text-decoration:none;transition:.25s}
-.btn-gold{background:var(--gold);color:var(--ink)}.btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
-.btn-ghost{border:1px solid var(--line);color:var(--paper)}.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
-.portfolio-link-hero{margin-top:16px;opacity:0;animation:rise .9s .75s forwards;font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--muted)}
-.portfolio-link-hero a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,162,39,.3);padding-bottom:1px;transition:.2s}
-.portfolio-link-hero a:hover{color:var(--gold-bright);border-color:var(--gold)}
-.ai-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:2px;padding:8px 14px;margin-top:14px;font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:#6b6560;opacity:0;animation:rise .9s .9s forwards}
-.ai-badge span{color:#9b9085}
-section{padding:70px 0}
-.sec-label{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:14px}
-.sec-label::before{content:"";width:34px;height:1px;background:var(--gold)}
-h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.01em;line-height:1.1}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;margin-top:46px;background:var(--line);border:1px solid var(--line)}
-.skill{background:var(--ink);padding:34px 28px;transition:.3s}.skill:hover{background:var(--ink-soft)}
-.skill .num{font-family:'Spline Sans Mono',monospace;color:var(--gold);font-size:.8rem;letter-spacing:.1em}
-.skill h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:14px 0 10px}
-.skill p{color:var(--muted);font-size:.93rem}
-.arbeitsproben-teaser{background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.03));border:1px solid var(--line);border-radius:4px;padding:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;margin-top:46px;transition:.3s}
-.arbeitsproben-teaser:hover{border-color:rgba(201,162,39,.45)}
-.teaser-count{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.teaser-title{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;color:var(--paper);margin-bottom:8px}
-.teaser-desc{font-size:.88rem;color:var(--muted);max-width:460px;line-height:1.7}
-.work{display:grid;gap:22px;margin-top:46px}
-.card{border:1px solid var(--line);border-radius:3px;padding:38px 36px;background:linear-gradient(180deg,rgba(255,255,255,.015),transparent);transition:.35s;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:.35s}
-.card:hover{border-color:rgba(201,162,39,.45);transform:translateY(-3px)}.card:hover::before{transform:scaleY(1)}
-.card .tag{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-.card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.55rem;margin:12px 0 12px;color:var(--paper)}
-.card p{color:#cabfb0;max-width:760px;line-height:1.75}
-.card .meta{margin-top:18px;font-size:.85rem;color:var(--muted);font-family:'Spline Sans Mono',monospace}
-.card .meta a{color:var(--gold);text-decoration:none;transition:.2s}.card .meta a:hover{color:var(--gold-bright)}
-.bewerbung-strip{background:rgba(201,162,39,.06);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:28px 32px;margin-top:46px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-.bewerbung-strip p{font-size:.9rem;color:var(--muted);max-width:500px;line-height:1.7}
-.bewerbung-strip strong{color:var(--paper)}
-.bewerbung-strip a{color:var(--gold);text-decoration:none}.bewerbung-strip a:hover{color:var(--gold-bright)}
-.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-top:46px}
-.value h3{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:1.4rem;color:var(--gold-bright);margin-bottom:10px}
-.value p{color:#cabfb0;font-size:.95rem}
-.final{text-align:center;padding:100px 0 80px}
-.final h2{max-width:680px;margin:0 auto 18px}
-.final p{color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.8}
-.final-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center}
-footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;color:var(--muted);font-size:.85rem;font-family:'Spline Sans Mono',monospace}
-footer a{color:var(--gold);text-decoration:none;transition:.2s}.footer a:hover{color:var(--gold-bright)}
-.footer-links{margin-top:12px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.footer-pdf{margin-top:14px}
-.footer-ai{margin-top:16px;font-size:.72rem;color:#4a4540;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:640px){nav{padding:12px 20px}.nav-cta{display:none}header{padding:70px 0 50px}section{padding:50px 0}.card{padding:28px 24px}.arbeitsproben-teaser,.bewerbung-strip{padding:24px}}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0d1b2a;
+  --navy2:  #111f30;
+  --gold:   #b8962e;
+  --gold-l: #d4af5a;
+  --cream:  #faf7f2;
+  --muted:  #8a8070;
+  --ink:    #0d0d0d;
+  --rule:   #d0c8bc;
+  --white:  #ffffff;
+  --orange: #c8520a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-top-bar {
+  height: 5px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-l) 50%, var(--gold) 100%);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,150,46,0.08) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+.hero-glow2 {
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,82,10,0.05) 0%, transparent 70%);
+  bottom: -60px; left: -60px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  padding: 60px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.1s forwards;
+}
+.hero-badge::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--gold);
+}
+
+.hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 12vw, 96px);
+  line-height: 0.92;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.2s forwards;
+}
+.hero-headline .gold { color: var(--gold); }
+
+.hero-sub {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(15px, 3.5vw, 20px);
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 36px;
+  max-width: 480px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.35s forwards;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.45s forwards;
+}
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border: 1px solid rgba(184,150,46,0.35);
+  color: var(--gold-l);
+  border-radius: 3px;
+  background: rgba(184,150,46,0.06);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.2s;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.55s forwards;
+  width: fit-content;
+}
+.hero-cta:hover { background: var(--gold-l); transform: translateY(-2px); }
+.hero-cta .arrow { font-size: 14px; }
+
+.hero-bottom {
+  padding: 0 32px 36px;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.65s forwards;
+}
+.hero-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.kpi {
+  padding: 18px 14px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+.kpi:last-child { border-right: none; }
+.kpi-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.kpi-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 72px 32px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 8vw, 52px);
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  margin-bottom: 32px;
+}
+
+/* ── THESE-BLOCK ── */
+.these {
+  background: var(--navy);
+  padding: 32px;
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+  margin-bottom: 32px;
+}
+.these p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+}
+.these p strong { color: var(--gold); font-style: normal; }
+
+/* ── DREI SÄULEN ── */
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.pillar {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.pillar:hover { border-color: var(--gold); transform: translateX(4px); }
+.pillar-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--gold);
+  line-height: 1;
+}
+.pillar-title {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.pillar-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ── ANTRÄGE TIMELINE ── */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0;
+  position: relative;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: 89px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--rule);
+}
+.tl-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  padding: 20px 16px 20px 0;
+  text-align: right;
+}
+.tl-body {
+  padding: 20px 0 20px 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.tl-item:last-child .tl-body { border-bottom: none; }
+.tl-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  left: 86px;
+  top: 26px;
+}
+.tl-of {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+.tl-title {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.tl-result {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.r-ok { background: rgba(184,150,46,0.12); color: var(--gold); }
+.r-no { background: rgba(200,82,10,0.1); color: var(--orange); }
+.r-mod { background: rgba(13,27,42,0.08); color: var(--navy); border: 1px solid var(--rule); }
+
+/* ── COPY CODE AGENCY ── */
+.agency-block {
+  background: var(--navy);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.agency-header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.agency-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.agency-logo span { color: var(--gold); }
+.agency-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+}
+.agency-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tier {
+  padding: 20px 16px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+}
+.tier:last-child { border-right: none; }
+.tier-icon { font-size: 22px; margin-bottom: 8px; }
+.tier-name {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.tier-desc {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.tier-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--gold);
+}
+.tier:nth-child(2) .tier-price { color: #ff8c3f; }
+.tier:nth-child(3) .tier-price { color: var(--gold-l); }
+
+/* ── UNTERLAGEN ── */
+.docs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.2s, background 0.2s;
+}
+.doc-item:hover { border-color: var(--gold); background: #fdf9f2; }
+.doc-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+}
+.doc-name {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.doc-desc {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.doc-arrow {
+  margin-left: auto;
+  color: var(--gold);
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.doc-item:hover .doc-arrow { opacity: 1; transform: translateX(3px); }
+
+.doc-group-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 20px;
+  margin-bottom: 4px;
+  padding-left: 4px;
+}
+
+/* ── CONTACT ── */
+.contact-block {
+  background: var(--navy);
+  border-radius: 6px;
+  padding: 36px 32px;
+  border-top: 3px solid var(--gold);
+  text-align: center;
+}
+.contact-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.contact-loc {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid rgba(184,150,46,0.4);
+  border-radius: 3px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.contact-link:hover { background: rgba(184,150,46,0.1); border-color: var(--gold); }
+
+.contact-note {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 20px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #080f18;
+  padding: 20px 32px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 1px;
+}
+
+/* ── DIVIDER ── */
+.full-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule), transparent);
+  margin: 0 32px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 <body>
 
-<!-- NAV — wird per JS befüllt -->
-<nav aria-label="Hauptnavigation">
-  <a id="nav-brand" class="nav-brand" href="/texter-portfolio/"></a>
-  <ul class="nav-links" role="list" id="nav-links"></ul>
-</nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top-bar"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
 
-<div class="wrap">
+  <div class="hero-inner">
+    <div class="hero-badge">Frankfurt · Texter · Copy · Conversion</div>
 
-  <!-- HERO -->
-  <header>
-    <p class="eyebrow" id="hero-eyebrow"></p>
-    <h1 id="hero-h1"></h1>
-    <p class="lede" id="hero-lede"></p>
-    <div class="cta-row" id="hero-cta"></div>
-    <p class="portfolio-link-hero" id="hero-portfolio-link"></p>
-    <div class="ai-badge" role="note" id="hero-ai-badge">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5.5" stroke="currentColor" stroke-width="1"/><path d="M6 5v4M6 3.5v.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
-      <span id="ai-badge-text"></span>
+    <h1 class="hero-headline">
+      ANDRÉ<br>
+      <span class="gold">SCHWARZ</span>
+    </h1>
+
+    <p class="hero-sub">
+      Texte, die Handlungen auslösen — dokumentiert, öffentlich, nachprüfbar.
+      Seit 2016.
+    </p>
+
+    <div class="hero-tags">
+      <span class="tag">9 J. öffentl. Schreiben</span>
+      <span class="tag">OBR 10 Kandidat 2026</span>
+      <span class="tag">mindful7777</span>
+      <span class="tag">CROWN v10</span>
+      <span class="tag">KI-Architektur</span>
+      <span class="tag">5 km zum Büro</span>
     </div>
-  </header>
 
-  <!-- LEISTUNGEN -->
-  <section id="leistungen" aria-labelledby="leistungen-heading">
-    <div class="sec-label" id="leistungen-label" aria-hidden="true"></div>
-    <h2 id="leistungen-heading"></h2>
-    <div class="skills" role="list" id="skills-grid"></div>
-  </section>
+    <a href="Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf" class="hero-cta" target="_blank">
+      <span class="arrow">→</span> Bewerbungs-Report öffnen
+    </a>
+  </div>
 
-  <!-- TEASER -->
-  <section aria-labelledby="teaser-heading">
-    <div class="arbeitsproben-teaser">
-      <div>
-        <div class="teaser-count" id="teaser-count"></div>
-        <div class="teaser-title" id="teaser-heading"></div>
-        <p class="teaser-desc" id="teaser-desc"></p>
+  <div class="hero-bottom">
+    <div class="hero-kpis">
+      <div class="kpi">
+        <div class="kpi-val">9</div>
+        <div class="kpi-label">Jahre öffentl.<br>Schreiben</div>
       </div>
-      <a id="teaser-cta" class="btn btn-gold"></a>
+      <div class="kpi">
+        <div class="kpi-val">6</div>
+        <div class="kpi-label">Anträge<br>stvv.frankfurt.de</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val">5km</div>
+        <div class="kpi-label">zum Büro<br>Ferdinand-Happ-Str.</div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ARBEITEN -->
-  <section id="arbeiten" aria-labelledby="arbeiten-heading">
-    <div class="sec-label" id="arbeiten-label" aria-hidden="true"></div>
-    <h2 id="arbeiten-heading"></h2>
-    <div style="margin-top:28px" id="arbeiten-pdf"></div>
-    <div class="work" id="cards-grid"></div>
-  </section>
+<!-- KERNTHESE -->
+<section class="section reveal">
+  <div class="section-label">Kapitel 01</div>
+  <div class="section-title">DIE KERNTHESE</div>
+  <div class="rule"></div>
 
-  <!-- BEWERBUNGSSTRIP -->
-  <section aria-label="Bewerbungsunterlagen">
-    <div class="bewerbung-strip" id="bewerbung-strip"></div>
-  </section>
+  <div class="these">
+    <p>
+      Roman Mayer sucht jemanden, der versteht, dass ein Satz entweder eine Handlung auslöst — oder nicht.
+      Ich bringe dieses Verständnis aus <strong>drei unerwarteten Quellen</strong> mit.
+    </p>
+  </div>
 
-  <!-- WERTE -->
-  <section id="werte" aria-labelledby="werte-heading">
-    <div class="sec-label" id="werte-label" aria-hidden="true"></div>
-    <h2 id="werte-heading"></h2>
-    <div class="values" id="values-grid"></div>
-  </section>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div>
+        <div class="pillar-title">9 Jahre öffentliches Schreiben</div>
+        <div class="pillar-text">Ortsbeirat 10 Frankfurt am Main — Anträge, die öffentlich abgestimmt wurden und scheitern konnten. Alle nachlesbar auf stvv.frankfurt.de. Kein Schreiben im Schonraum.</div>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div>
+        <div class="pillar-title">mindful7777 — Conversion-Psychologie in Reinform</div>
+        <div class="pillar-text">Hypnose-Audio-Plattform DACH. Jedes Skript folgt der ABS-Formel: Attention → Bypass → Stimulate. Dasselbe Prinzip wie Pattern Interrupt, Pace-and-Lead und CTA — nur in einem anderen Medium.</div>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div>
+        <div class="pillar-title">CROWN v10 — Denken in Optimierungsschleifen</div>
+        <div class="pillar-text">Datengetriebenes Analyse-System mit Kelly-Kriterium, SQLite und Multi-Threading. Für einen Physiker wie Roman Mayer die Sprache, die er versteht: Hypothese → Test → Messung → Optimierung.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- KONTAKT -->
-  <section class="final" id="kontakt" aria-labelledby="kontakt-heading">
-    <div class="sec-label" id="kontakt-label" style="justify-content:center" aria-hidden="true"></div>
-    <h2 id="kontakt-heading"></h2>
-    <p id="kontakt-p"></p>
-    <div class="final-actions" id="kontakt-actions"></div>
-  </section>
+<div class="full-divider"></div>
 
-</div>
+<!-- POLITISCHE BIOGRAFIE -->
+<section class="section reveal">
+  <div class="section-label">Kapitel 02</div>
+  <div class="section-title">9 JAHRE ÖFFENTLICHES SCHREIBEN</div>
+  <div class="rule"></div>
 
-<!-- FOOTER -->
-<footer id="site-footer"></footer>
+  <p style="font-size:15px; line-height:1.8; color:var(--muted); margin-bottom:32px;">
+    Von 2016 bis 2026 ununterbrochen im Ortsbeirat 10 Frankfurt aktiv — als Redakteur,
+    Mitgründer und zuletzt als Kandidat. Nicht Theorie. Handwerk unter Abstimmungsdruck.
+  </p>
 
-<!-- CONTENT-DATEI laden (hier Sprache wechseln) -->
-<script src="content.de.js"></script>
+  <div class="timeline">
 
-<!-- RENDER ENGINE — nie anfassen -->
+    <div class="tl-item">
+      <div class="tl-year">Sept.<br>2016</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 145/10</div>
+        <div class="tl-title">Englische Begriffe in der Stadtverwaltung</div>
+        <span class="tl-result r-no">Abgelehnt</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Nov.<br>2016</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 188/10</div>
+        <div class="tl-title">Frühkindl. Deutschunterricht für Flüchtlingskinder</div>
+        <span class="tl-result r-mod">Modifiziert angenommen</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Jan.<br>2017</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 232/10</div>
+        <div class="tl-title">Weinstraße zur Einbahnstraße — 5× zurückgestellt</div>
+        <span class="tl-result r-ok">Nachfolger angenommen</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Nov.<br>2017</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 425/10</div>
+        <div class="tl-title">Graffiti-Galerie GrünGürtel — Nachfassantrag</div>
+        <span class="tl-result r-ok">Einstimmig angenommen</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Sept.<br>2018</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 592/10</div>
+        <div class="tl-title">Beschilderung Kreuzstraße / Alt-Preungesheim</div>
+        <span class="tl-result r-mod">Zurückgezogen</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Juli<br>2019</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">OF 805/10</div>
+        <div class="tl-title">Frankfurt frischt auf — Balkone & Terrassen begrünen</div>
+        <span class="tl-result r-ok">Einstimmig angenommen</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2020–<br>2026</div>
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <div class="tl-of">FREIE WÄHLER FRANKFURT</div>
+        <div class="tl-title">Mitgründer — Aufbau, Wahlprogramm, Kandidatur</div>
+        <span class="tl-result r-ok">Listenplatz 2 OBR 10 · Platz 4 StVV</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- COPY CODE AGENCY -->
+<section class="section reveal">
+  <div class="section-label">Kapitel 03</div>
+  <div class="section-title">COPY CODE AGENCY</div>
+  <div class="rule"></div>
+
+  <p style="font-size:15px; line-height:1.8; color:var(--muted); margin-bottom:24px;">
+    Gemeinsam mit Tomasz Szafrański (Fullstack Developer) biete ich
+    integrierte Conversion-Lösungen — Code und Copy aus einer Hand.
+  </p>
+
+  <div class="agency-block">
+    <div class="agency-header">
+      <div class="agency-logo">Copy Code <span>Agency</span></div>
+      <div class="agency-sub">Code · Copy · Cash — Frankfurt · Germany</div>
+    </div>
+    <div class="agency-tiers">
+      <div class="tier">
+        <div class="tier-icon">⚡</div>
+        <div class="tier-name">Quick Win</div>
+        <div class="tier-desc">Landingpage + Copy<br>5–7 Tage</div>
+        <div class="tier-price">€299</div>
+      </div>
+      <div class="tier">
+        <div class="tier-icon">🚀</div>
+        <div class="tier-name">SaaS-Lösung</div>
+        <div class="tier-desc">Funnel + Automatisierung<br>3–4 Wochen</div>
+        <div class="tier-price">€799</div>
+      </div>
+      <div class="tier">
+        <div class="tier-icon">🏢</div>
+        <div class="tier-name">Enterprise</div>
+        <div class="tier-desc">Vollplattform · KI<br>ab 6 Wochen</div>
+        <div class="tier-price">€2.499</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- UNTERLAGEN -->
+<section class="section reveal">
+  <div class="section-label">Kapitel 04</div>
+  <div class="section-title">ALLE UNTERLAGEN</div>
+  <div class="rule"></div>
+
+  <div class="docs-grid">
+
+    <div class="doc-group-label">Bewerbung</div>
+    <a href="Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📄</div>
+      <div>
+        <div class="doc-name">Bewerbungs-Report — Roman Mayer GmbH</div>
+        <div class="doc-desc">PDF · DMC-Stil · 6 Seiten · Juni 2026</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+
+    <div class="doc-group-label">Portfolio & Lebenslauf</div>
+    <a href="Portfolio_Andre_Schwarz_v2.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📁</div>
+      <div>
+        <div class="doc-name">Portfolio André Schwarz v2</div>
+        <div class="doc-desc">PDF · 10 Nischen-Illustrationen</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="Lebenslauf_Andre_Schwarz_DE.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📄</div>
+      <div>
+        <div class="doc-name">Lebenslauf</div>
+        <div class="doc-desc">PDF · Deutsch · ATS v5</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+
+    <div class="doc-group-label">Politische Schreibarbeit</div>
+    <a href="antraege.html" class="doc-item" target="_blank">
+      <div class="doc-icon">🏛️</div>
+      <div>
+        <div class="doc-name">6 Ortsbeirat-Anträge OBR 10</div>
+        <div class="doc-desc">HTML · stvv.frankfurt.de · 2016–2019</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">🗳️</div>
+      <div>
+        <div class="doc-name">Wahlprogramm Freie Wähler Frankfurt 2026</div>
+        <div class="doc-desc">PDF · Mitgegründet · Mitgeschrieben</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+
+    <div class="doc-group-label">Arbeitsproben</div>
+    <a href="arbeitsproben.html" class="doc-item" target="_blank">
+      <div class="doc-icon">✍️</div>
+      <div>
+        <div class="doc-name">Schreibarbeitsproben</div>
+        <div class="doc-desc">HTML · Verschiedene Nischen</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="oekostrom-landingpage.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📄</div>
+      <div>
+        <div class="doc-name">Ökostrom-Landingpage</div>
+        <div class="doc-desc">PDF · Landingpage Copy</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="recruiting-8-sprachen.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📄</div>
+      <div>
+        <div class="doc-name">Recruiting — 8 Sprachen</div>
+        <div class="doc-desc">PDF · Mehrsprachige Copy</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="Energiebranche_Glossar.pdf" class="doc-item" target="_blank">
+      <div class="doc-icon">📄</div>
+      <div>
+        <div class="doc-name">Energiebranche Glossar</div>
+        <div class="doc-desc">PDF · Fachtext</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+    <a href="crown-valuebet.html" class="doc-item" target="_blank">
+      <div class="doc-icon">⚙️</div>
+      <div>
+        <div class="doc-name">CROWN v10 — Value-Bet-System</div>
+        <div class="doc-desc">HTML · SQLite · Kelly-Kriterium · Telegram-API</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+
+    <div class="doc-group-label">Research</div>
+    <a href="NotebookLM_Briefing_Andre_Schwarz.md" class="doc-item" target="_blank">
+      <div class="doc-icon">📋</div>
+      <div>
+        <div class="doc-name">Research-Briefing (NotebookLM)</div>
+        <div class="doc-desc">Markdown · Alle Quellen kompiliert</div>
+      </div>
+      <div class="doc-arrow">→</div>
+    </a>
+
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- KONTAKT -->
+<section class="section reveal">
+  <div class="section-label">Kontakt</div>
+  <div class="section-title">IN KONTAKT TRETEN</div>
+  <div class="rule"></div>
+
+  <div class="contact-block">
+    <div class="contact-name">ANDRÉ SCHWARZ</div>
+    <div class="contact-loc">Frankfurt-Preungesheim · 60435 · ~5 km zur Roman Mayer GmbH</div>
+    <div class="contact-links">
+      <a href="mailto:andre.schwarz1@t-online.de" class="contact-link">
+        📧 andre.schwarz1@t-online.de
+      </a>
+      <a href="tel:+4915256044541" class="contact-link">
+        📞 0152 5604 4541
+      </a>
+    </div>
+    <p class="contact-note">Für ein 20-minütiges Gespräch stehe ich jederzeit zur Verfügung.</p>
+  </div>
+</section>
+
+<footer>
+  © André Schwarz · Frankfurt · Juni 2026 · github.com/intelligentresponder-max/texter-portfolio
+</footer>
+
 <script>
-(function() {
-
-  const C = CONTENT;
-  const $ = id => document.getElementById(id);
-
-  // ── META ─────────────────────────────────────────────────
-  document.documentElement.lang = C.meta.lang;
-  document.title = C.meta.title;
-  setMeta("description", C.meta.description);
-  setMeta("keywords", C.meta.keywords);
-  setMeta("author", "André Schwarz");
-  setMeta("ai-content-disclosure", C.meta.aiDisclosure);
-  setOG("og:title", C.meta.ogTitle);
-  setOG("og:description", C.meta.ogDescription);
-
-  // JSON-LD strukturierte Daten
-  const ld = document.createElement("script");
-  ld.type = "application/ld+json";
-  ld.text = JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      { "@type": "Person", "@id": "#person", "name": "André Schwarz", "jobTitle": "Freier Texter und Conversion Copywriter", "url": "https://intelligentresponder-max.github.io/texter-portfolio/", "email": "andre.schwarz1@t-online.de", "address": { "@type": "PostalAddress", "addressLocality": "Frankfurt am Main", "addressCountry": "DE" }, "knowsLanguage": ["de","en"], "sameAs": ["https://github.com/intelligentresponder-max","https://frankfurt-energie.online"] },
-      { "@type": "ProfessionalService", "name": "André Schwarz — Freier Texter Frankfurt", "provider": {"@id": "#person"}, "areaServed": {"@type": "City", "name": "Frankfurt am Main"}, "serviceType": C.leistungen.items.map(i => i.h3) },
-      { "@type": "WebSite", "url": "https://intelligentresponder-max.github.io/texter-portfolio/", "name": "André Schwarz — Freier Texter Frankfurt", "inLanguage": C.meta.lang }
-    ]
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
   });
-  document.head.appendChild(ld);
-
-  // ── NAV ──────────────────────────────────────────────────
-  $("nav-brand").textContent = C.nav.brand;
-  $("nav-brand").title = C.nav.brand + " — Freier Texter Frankfurt";
-  const nl = $("nav-links");
-  C.nav.links.forEach(l => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${l.href}">${l.label}</a>`;
-    nl.appendChild(li);
-  });
-  const liCta = document.createElement("li");
-  liCta.innerHTML = `<a href="${C.nav.cta.href}" class="nav-cta">${C.nav.cta.label}</a>`;
-  nl.appendChild(liCta);
-  const liLang = document.createElement("li");
-  liLang.innerHTML = `<a href="${C.nav.langSwitch.href}" class="lang-btn" title="Switch to English">${C.nav.langSwitch.flag} ${C.nav.langSwitch.label}</a>`;
-  nl.appendChild(liLang);
-
-  // ── HERO ─────────────────────────────────────────────────
-  $("hero-eyebrow").textContent = C.hero.eyebrow;
-  $("hero-h1").innerHTML = `${C.hero.h1_plain}<br><em>${C.hero.h1_em}</em>`;
-  $("hero-lede").textContent = C.hero.lede;
-  $("hero-cta").innerHTML = `
-    <a href="${C.hero.cta_primary.href}" class="btn btn-gold">${C.hero.cta_primary.label}</a>
-    <a href="${C.hero.cta_secondary.href}" class="btn btn-ghost">${C.hero.cta_secondary.label}</a>
-    ${pdfBanner(C.hero.cta_pdf.href, C.hero.cta_pdf.label)}
-  `;
-  $("hero-portfolio-link").innerHTML = `${C.hero.portfolio_url_label} <a href="${location.href}">${location.host}${location.pathname}</a> &nbsp;·&nbsp; <a href="${C.hero.portfolio_url_link.href}">${C.hero.portfolio_url_link.label}</a>`;
-  $("ai-badge-text").textContent = C.hero.ai_badge;
-
-  // ── LEISTUNGEN ───────────────────────────────────────────
-  $("leistungen-label").textContent = C.leistungen.label;
-  $("leistungen-heading").textContent = C.leistungen.h2;
-  $("skills-grid").innerHTML = C.leistungen.items.map(i => `
-    <div class="skill" role="listitem">
-      <div class="num" aria-hidden="true">${i.num}</div>
-      <h3>${i.h3}</h3>
-      <p>${i.p}</p>
-    </div>`).join("");
-
-  // ── TEASER ───────────────────────────────────────────────
-  $("teaser-count").textContent = C.teaser.count;
-  $("teaser-heading").textContent = C.teaser.h2;
-  $("teaser-desc").textContent = C.teaser.desc;
-  const tc = $("teaser-cta");
-  tc.href = C.teaser.cta.href;
-  tc.textContent = C.teaser.cta.label;
-
-  // ── ARBEITEN ─────────────────────────────────────────────
-  $("arbeiten-label").textContent = C.arbeiten.label;
-  $("arbeiten-heading").textContent = C.arbeiten.h2;
-  $("arbeiten-pdf").innerHTML = pdfBanner(C.arbeiten.pdf_banner.href, C.arbeiten.pdf_banner.label);
-  $("cards-grid").innerHTML = C.arbeiten.cards.map(card => {
-    const meta = card.meta.map(m =>
-      m.href ? `<a href="${m.href}"${m.external?' target="_blank" rel="noopener"':''}>${m.label}</a>` : m.label
-    ).join(" · ");
-    return `
-    <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-      <span class="tag">${card.tag}</span>
-      <h3 itemprop="name">${card.h3}</h3>
-      <p itemprop="description">${card.p}</p>
-      <div class="meta">${meta}</div>
-    </article>`;
-  }).join("");
-
-  // ── BEWERBUNGSSTRIP ──────────────────────────────────────
-  $("bewerbung-strip").innerHTML = `
-    <div>
-      <strong>${C.bewerbung.label}</strong>
-      <p>${C.bewerbung.text}<br><a href="${C.bewerbung.url_href}">${C.bewerbung.url}</a></p>
-    </div>
-    ${pdfBanner(C.bewerbung.pdf.href, C.bewerbung.pdf.label)}
-  `;
-
-  // ── WERTE ────────────────────────────────────────────────
-  $("werte-label").textContent = C.werte.label;
-  $("werte-heading").textContent = C.werte.h2;
-  $("values-grid").innerHTML = C.werte.items.map(i => `
-    <div class="value">
-      <h3>${i.h3}</h3>
-      <p>${i.p}</p>
-    </div>`).join("");
-
-  // ── KONTAKT ──────────────────────────────────────────────
-  $("kontakt-label").textContent = C.kontakt.label;
-  $("kontakt-heading").innerHTML = `${C.kontakt.h2_line1}<br>${C.kontakt.h2_line2}`;
-  $("kontakt-p").textContent = C.kontakt.p;
-  $("kontakt-actions").innerHTML = `
-    <a href="${C.kontakt.cta_primary.href}" class="btn btn-gold">${C.kontakt.cta_primary.label}</a>
-    ${pdfBanner(C.kontakt.cta_pdf.href, C.kontakt.cta_pdf.label)}
-  `;
-
-  // ── FOOTER ───────────────────────────────────────────────
-  const links = C.footer.links.map(l =>
-    `<a href="${l.href}"${l.external?' target="_blank" rel="noopener"':''}>${l.label}</a>`
-  ).join("");
-  $("site-footer").innerHTML = `
-    <div class="wrap">
-      <div><strong style="color:var(--paper)">${C.footer.name}</strong> · ${C.footer.role} · ${C.footer.city} · <a href="${C.footer.email.href}">${C.footer.email.label}</a> · <a href="${C.footer.phone.href}">${C.footer.phone.label}</a></div>
-      <div class="footer-links">${links}</div>
-      <div class="footer-pdf"><a href="${C.footer.pdf.href}" target="_blank" rel="noopener">${C.footer.pdf.label}</a></div>
-      <p class="footer-ai">${C.footer.ai_disclosure}</p>
-    </div>
-  `;
-
-  // ── HELPERS ──────────────────────────────────────────────
-  function pdfBanner(href, label) {
-    return `<a href="${href}" target="_blank" rel="noopener" class="pdf-banner">
-      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M2 0h7l5 5v11H2V0z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 9h6M4 12h4" stroke="currentColor" stroke-width="1"/></svg>
-      ${label}
-    </a>`;
-  }
-  function setMeta(name, content) {
-    let el = document.querySelector(`meta[name="${name}"]`);
-    if (!el) { el = document.createElement("meta"); el.name = name; document.head.appendChild(el); }
-    el.content = content;
-  }
-  function setOG(prop, content) {
-    let el = document.querySelector(`meta[property="${prop}"]`);
-    if (!el) { el = document.createElement("meta"); el.setAttribute("property", prop); document.head.appendChild(el); }
-    el.content = content;
-  }
-
-})();
+}, { threshold: 0.08 });
+reveals.forEach(r => obs.observe(r));
 </script>
-
 </body>
 </html>
