@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://intelligentresponder-max.github.io/texter-portfolio/sitemap.xml
