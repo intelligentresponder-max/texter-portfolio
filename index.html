@@ -1,469 +1,332 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>André Schwarz — An Roman Mayer</title>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="DE-HE">
+<meta name="geo.placename" content="Frankfurt am Main">
+<!-- Meta-Tags werden per JS aus content.*.js gesetzt -->
+<meta name="description" content="André Schwarz — Freier Texter und Copywriter aus Frankfurt am Main. Direct Response Copy, Ghostwriting und Landingpages. 9 Jahre Schreiben unter echtem Druck.">
+<meta name="keywords" content="Texter Frankfurt, Copywriter Frankfurt, Direct Response Copywriting, Ghostwriter Frankfurt, Landingpage Texter, freier Texter">
+<meta property="og:title" content="André Schwarz — Freier Texter &amp; Copywriter Frankfurt">
+<meta property="og:description" content="Direct Response Copy, Ghostwriting und Landingpages. 9 Jahre Schreiben unter echtem Druck — für Parlamente, Hotels und Märkte.">
+<meta property="og:url" content="https://intelligentresponder-max.github.io/texter-portfolio/">
+<meta property="og:locale" content="de_DE">
+<title>André Schwarz — Freier Texter Frankfurt</title>
+<link rel="canonical" href="https://intelligentresponder-max.github.io/texter-portfolio/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --ink:   #0f0e0c;
-  --paper: #f7f3ec;
-  --gold:  #9a7b2f;
-  --gold-l:#c4a24a;
-  --muted: #7a7060;
-  --rule:  #ddd5c4;
-  --navy:  #0d1b2a;
-  --white: #ffffff;
-}
-html { scroll-behavior: smooth; }
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Lora', Georgia, serif;
-  font-size: 17px;
-  line-height: 1.85;
-}
-
-/* ── LETTER ── */
-.letter {
-  max-width: 660px;
-  margin: 0 auto;
-  padding: 72px 28px 96px;
-  opacity: 0;
-  animation: appear 0.7s 0.1s ease forwards;
-}
-@keyframes appear {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── META ── */
-.meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
-  color: var(--muted);
-  letter-spacing: 0.5px;
-  margin-bottom: 48px;
-}
-.meta-r { text-align: right; }
-
-/* ── RULES ── */
-.rule-gold {
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold) 0%, transparent 70%);
-  margin: 36px 0;
-}
-.rule-soft {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--rule), transparent);
-  margin: 44px 0;
-}
-
-/* ── TYPE ── */
-.salut {
-  font-size: 19px;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-p { margin-bottom: 20px; }
-p.lead {
-  font-size: 19px;
-  font-style: italic;
-  margin-bottom: 24px;
-}
-strong { font-weight: 600; }
-em { font-style: italic; }
-
-/* ── PULL ── */
-.pull {
-  border-left: 3px solid var(--gold);
-  padding: 2px 0 2px 22px;
-  margin: 32px 0;
-  font-size: 17.5px;
-  font-style: italic;
-  line-height: 1.7;
-}
-
-/* ── DARK BLOCK ── */
-.dark {
-  background: var(--navy);
-  border-radius: 5px;
-  padding: 28px 32px;
-  margin: 36px 0;
-}
-.dark-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-l);
-  margin-bottom: 16px;
-}
-.dark-item {
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 0 12px;
-  margin-bottom: 12px;
-  align-items: start;
-}
-.dark-item:last-child { margin-bottom: 0; }
-.di-arrow {
-  color: var(--gold-l);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  margin-top: 3px;
-}
-.di-text {
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(247,243,236,0.75);
-  margin: 0;
-}
-.di-text strong { color: var(--white); }
-
-/* ── ANTRÄGE ── */
-.antraege {
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 28px 0;
-}
-.a-row {
-  display: grid;
-  grid-template-columns: 78px 1fr auto;
-  gap: 0 14px;
-  padding: 11px 16px;
-  border-bottom: 1px solid var(--rule);
-  align-items: center;
-}
-.a-row:last-child { border-bottom: none; }
-.a-of {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
-  color: var(--gold);
-  letter-spacing: 0.5px;
-}
-.a-title { font-size: 13px; }
-.a-badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
-  padding: 2px 7px;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-.ok  { background: rgba(154,123,47,0.12); color: var(--gold); }
-.no  { background: rgba(180,50,30,0.08); color: #a0402a; }
-.mod { background: rgba(13,27,42,0.07); color: var(--navy); border: 1px solid var(--rule); }
-
-/* ── DOCS ── */
-.docs { display: flex; flex-direction: column; gap: 6px; margin: 24px 0; }
-.doc {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 15px;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  text-decoration: none;
-  color: var(--ink);
-  font-size: 14px;
-  transition: border-color 0.2s, background 0.15s;
-}
-.doc:hover { border-color: var(--gold); background: rgba(154,123,47,0.04); }
-.doc-icon { font-size: 14px; flex-shrink: 0; width: 22px; text-align: center; }
-.doc-name { flex: 1; font-family: 'Lora', serif; }
-.doc-arr {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--gold);
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-.doc:hover .doc-arr { opacity: 1; }
-.doc-group {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 16px;
-  margin-bottom: 2px;
-  padding-left: 2px;
-}
-
-/* ── SIGNATUR ── */
-.sig { margin-top: 48px; }
-.sig-gruss { margin-bottom: 32px; }
-.sig-name {
-  font-family: 'Lora', serif;
-  font-size: 21px;
-  font-style: italic;
-  margin-bottom: 4px;
-}
-.sig-contact {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.9;
-}
-.sig-contact a { color: var(--gold); text-decoration: none; }
-.sig-contact a:hover { color: var(--gold-l); }
-
-/* ── PS ── */
-.ps {
-  margin-top: 36px;
-  padding: 20px 24px;
-  background: rgba(154,123,47,0.07);
-  border-left: 2px solid var(--gold);
-  font-size: 14px;
-  line-height: 1.75;
-  color: var(--muted);
-}
-.ps strong { color: var(--ink); }
-
-/* ── FOOTER ── */
-footer {
-  text-align: center;
-  padding: 28px 32px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  color: var(--rule);
-  letter-spacing: 1px;
-  border-top: 1px solid var(--rule);
-  margin-top: 8px;
-}
-
-@media (max-width: 580px) {
-  .letter { padding: 44px 20px 72px; }
-  body { font-size: 16px; }
-  .meta { grid-template-columns: 1fr; }
-  .meta-r { text-align: left; }
-  .a-row { grid-template-columns: 1fr; gap: 3px; }
-  .dark { padding: 22px 18px; }
-}
+:root{--ink:#0c0a08;--ink-soft:#161310;--paper:#f4ede0;--gold:#c9a227;--gold-bright:#e8c14f;--muted:#9b9085;--line:rgba(201,162,39,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Spline Sans',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 80% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(700px 600px at -10% 100%,rgba(201,162,39,.06),transparent 60%)}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-family:'Fraunces',serif;font-size:1rem;color:var(--gold);text-decoration:none}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:rgba(201,162,39,.15);border:1px solid var(--line);color:var(--gold)!important;padding:6px 14px;border-radius:2px;transition:.2s!important}
+.nav-cta:hover{background:rgba(201,162,39,.25)!important;border-color:var(--gold)!important}
+.lang-btn{cursor:pointer;font-size:.85rem!important;border:1px solid var(--line);padding:4px 10px;border-radius:2px;transition:.2s!important}
+.lang-btn:hover{border-color:var(--gold)!important;color:var(--gold)!important}
+.pdf-banner{display:inline-flex;align-items:center;gap:10px;background:rgba(201,162,39,.12);border:1px solid var(--line);border-radius:2px;padding:10px 18px;text-decoration:none;font-family:'Spline Sans Mono',monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);transition:.25s}
+.pdf-banner:hover{background:rgba(201,162,39,.22);border-color:var(--gold)}
+header{padding:100px 0 90px}
+.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:rise .8s .1s forwards}
+h1{font-family:'Fraunces',serif;font-weight:600;line-height:1.02;font-size:clamp(2.8rem,7vw,5.4rem);letter-spacing:-.02em;opacity:0;animation:rise .9s .25s forwards}
+h1 em{font-style:italic;color:var(--gold-bright)}
+.lede{margin-top:30px;max-width:620px;font-size:clamp(1.05rem,2vw,1.3rem);color:#d8cdbd;opacity:0;animation:rise .9s .45s forwards}
+.cta-row{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;opacity:0;animation:rise .9s .6s forwards}
+.btn{display:inline-block;padding:15px 30px;border-radius:2px;font-weight:600;font-size:.95rem;text-decoration:none;transition:.25s}
+.btn-gold{background:var(--gold);color:var(--ink)}.btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper)}.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
+.portfolio-link-hero{margin-top:16px;opacity:0;animation:rise .9s .75s forwards;font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--muted)}
+.portfolio-link-hero a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,162,39,.3);padding-bottom:1px;transition:.2s}
+.portfolio-link-hero a:hover{color:var(--gold-bright);border-color:var(--gold)}
+.ai-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:2px;padding:8px 14px;margin-top:14px;font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:#6b6560;opacity:0;animation:rise .9s .9s forwards}
+.ai-badge span{color:#9b9085}
+section{padding:70px 0}
+.sec-label{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.sec-label::before{content:"";width:34px;height:1px;background:var(--gold)}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.01em;line-height:1.1}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;margin-top:46px;background:var(--line);border:1px solid var(--line)}
+.skill{background:var(--ink);padding:34px 28px;transition:.3s}.skill:hover{background:var(--ink-soft)}
+.skill .num{font-family:'Spline Sans Mono',monospace;color:var(--gold);font-size:.8rem;letter-spacing:.1em}
+.skill h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:14px 0 10px}
+.skill p{color:var(--muted);font-size:.93rem}
+.arbeitsproben-teaser{background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.03));border:1px solid var(--line);border-radius:4px;padding:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;margin-top:46px;transition:.3s}
+.arbeitsproben-teaser:hover{border-color:rgba(201,162,39,.45)}
+.teaser-count{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.teaser-title{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;color:var(--paper);margin-bottom:8px}
+.teaser-desc{font-size:.88rem;color:var(--muted);max-width:460px;line-height:1.7}
+.work{display:grid;gap:22px;margin-top:46px}
+.card{border:1px solid var(--line);border-radius:3px;padding:38px 36px;background:linear-gradient(180deg,rgba(255,255,255,.015),transparent);transition:.35s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:.35s}
+.card:hover{border-color:rgba(201,162,39,.45);transform:translateY(-3px)}.card:hover::before{transform:scaleY(1)}
+.card .tag{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.55rem;margin:12px 0 12px;color:var(--paper)}
+.card p{color:#cabfb0;max-width:760px;line-height:1.75}
+.card .meta{margin-top:18px;font-size:.85rem;color:var(--muted);font-family:'Spline Sans Mono',monospace}
+.card .meta a{color:var(--gold);text-decoration:none;transition:.2s}.card .meta a:hover{color:var(--gold-bright)}
+.bewerbung-strip{background:rgba(201,162,39,.06);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:28px 32px;margin-top:46px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.bewerbung-strip p{font-size:.9rem;color:var(--muted);max-width:500px;line-height:1.7}
+.bewerbung-strip strong{color:var(--paper)}
+.bewerbung-strip a{color:var(--gold);text-decoration:none}.bewerbung-strip a:hover{color:var(--gold-bright)}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-top:46px}
+.value h3{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:1.4rem;color:var(--gold-bright);margin-bottom:10px}
+.value p{color:#cabfb0;font-size:.95rem}
+.final{text-align:center;padding:100px 0 80px}
+.final h2{max-width:680px;margin:0 auto 18px}
+.final p{color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.8}
+.final-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center}
+footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;color:var(--muted);font-size:.85rem;font-family:'Spline Sans Mono',monospace}
+footer a{color:var(--gold);text-decoration:none;transition:.2s}.footer a:hover{color:var(--gold-bright)}
+.footer-links{margin-top:12px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.footer-pdf{margin-top:14px}
+.footer-ai{margin-top:16px;font-size:.72rem;color:#4a4540;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){nav{padding:12px 20px}.nav-cta{display:none}header{padding:70px 0 50px}section{padding:50px 0}.card{padding:28px 24px}.arbeitsproben-teaser,.bewerbung-strip{padding:24px}}
 </style>
 </head>
 <body>
-<div class="letter">
 
-  <div class="meta">
-    <div>André Schwarz<br>Frankfurt-Preungesheim · 60435</div>
-    <div class="meta-r">Juni 2026<br>Bewerbung als Copywriter</div>
-  </div>
+<!-- NAV — wird per JS befüllt -->
+<nav aria-label="Hauptnavigation">
+  <a id="nav-brand" class="nav-brand" href="/texter-portfolio/"></a>
+  <ul class="nav-links" role="list" id="nav-links"></ul>
+</nav>
 
-  <div class="rule-gold"></div>
+<div class="wrap">
 
-  <div class="salut">Hallo Roman,</div>
-
-  <p class="lead">
-    ein Text, der nicht verkauft, ist teure Dekoration.<br>
-    Das ist die Grundlage, auf der ich seit 9 Jahren schreibe.
-  </p>
-
-  <p>
-    Du suchst jemanden, der versteht, dass Texte keine Dekoration sind —
-    sondern Werkzeuge mit messbarem Ergebnis.
-    Jemanden, der Verkaufspsychologie nicht aus dem Kurs kennt,
-    sondern aus der Praxis.
-  </p>
-
-  <p>
-    Ich komme aus einer Richtung, die du vermutlich selten siehst.
-  </p>
-
-  <div class="rule-soft"></div>
-
-  <!-- WEINSTRASSE -->
-  <p>
-    Von 2016 bis 2026 war ich Ghostwriter und Redakteur im
-    <strong>Ortsbeirat 10 Frankfurt</strong> — alle Texte öffentlich,
-    alle abstimmungsrelevant, alle auf stvv.frankfurt.de nachlesbar.
-  </p>
-
-  <div class="pull">
-    Einer meiner Anträge wurde fünfmal vertagt.<br>
-    Ich habe ihn nicht erneut eingereicht —<br>
-    ich habe das <strong>Framing geändert.</strong><br>
-    Einstimmige Annahme.
-  </div>
-
-  <p>
-    Nicht lauter werden. Das Framing ändern, bis der Widerstand bricht.
-    Das ist dasselbe Prinzip, das du deinen Kunden verkaufst —
-    ich hab's in der Praxis gelernt, bevor ich wusste, wie es heißt.
-  </p>
-
-  <div class="antraege">
-    <div class="a-row">
-      <div class="a-of">OF 145/10</div>
-      <div class="a-title">Englische Begriffe in der Stadtverwaltung</div>
-      <div class="a-badge no">Abgelehnt</div>
+  <!-- HERO -->
+  <header>
+    <p class="eyebrow" id="hero-eyebrow"></p>
+    <h1 id="hero-h1"></h1>
+    <p class="lede" id="hero-lede"></p>
+    <div class="cta-row" id="hero-cta"></div>
+    <p class="portfolio-link-hero" id="hero-portfolio-link"></p>
+    <div class="ai-badge" role="note" id="hero-ai-badge">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5.5" stroke="currentColor" stroke-width="1"/><path d="M6 5v4M6 3.5v.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+      <span id="ai-badge-text"></span>
     </div>
-    <div class="a-row">
-      <div class="a-of">OF 188/10</div>
-      <div class="a-title">Frühkindl. Deutschunterricht Flüchtlingskinder</div>
-      <div class="a-badge mod">Modifiziert angenommen</div>
+  </header>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen" aria-labelledby="leistungen-heading">
+    <div class="sec-label" id="leistungen-label" aria-hidden="true"></div>
+    <h2 id="leistungen-heading"></h2>
+    <div class="skills" role="list" id="skills-grid"></div>
+  </section>
+
+  <!-- TEASER -->
+  <section aria-labelledby="teaser-heading">
+    <div class="arbeitsproben-teaser">
+      <div>
+        <div class="teaser-count" id="teaser-count"></div>
+        <div class="teaser-title" id="teaser-heading"></div>
+        <p class="teaser-desc" id="teaser-desc"></p>
+      </div>
+      <a id="teaser-cta" class="btn btn-gold"></a>
     </div>
-    <div class="a-row">
-      <div class="a-of">OF 232/10</div>
-      <div class="a-title">Weinstraße — 5× vertagt, dann neu gerahmt</div>
-      <div class="a-badge ok">Einstimmig angenommen</div>
-    </div>
-    <div class="a-row">
-      <div class="a-of">OF 425/10</div>
-      <div class="a-title">Graffiti-Galerie GrünGürtel — Nachfassantrag</div>
-      <div class="a-badge ok">Einstimmig angenommen</div>
-    </div>
-    <div class="a-row">
-      <div class="a-of">OF 592/10</div>
-      <div class="a-title">Beschilderung Kreuzstraße</div>
-      <div class="a-badge mod">Zurückgezogen</div>
-    </div>
-    <div class="a-row">
-      <div class="a-of">OF 805/10</div>
-      <div class="a-title">Frankfurt frischt auf — Balkone begrünen</div>
-      <div class="a-badge ok">Einstimmig angenommen</div>
-    </div>
-  </div>
+  </section>
 
-  <div class="rule-soft"></div>
+  <!-- ARBEITEN -->
+  <section id="arbeiten" aria-labelledby="arbeiten-heading">
+    <div class="sec-label" id="arbeiten-label" aria-hidden="true"></div>
+    <h2 id="arbeiten-heading"></h2>
+    <div style="margin-top:28px" id="arbeiten-pdf"></div>
+    <div class="work" id="cards-grid"></div>
+  </section>
 
-  <!-- MINDFUL7777 -->
-  <p>
-    Dazu komme ich aus einer zweiten unerwarteten Richtung:
-    Ich habe eine <strong>Hypnose-Audio-Plattform</strong> für den DACH-Markt aufgebaut.
-    Jedes Skript folgt der ABS-Formel —
-    <em>Attention → Bypass → Stimulate.</em>
-  </p>
+  <!-- BEWERBUNGSSTRIP -->
+  <section aria-label="Bewerbungsunterlagen">
+    <div class="bewerbung-strip" id="bewerbung-strip"></div>
+  </section>
 
-  <p>
-    Phase B: kritischen Denkfilter des Hörers umgehen,
-    bevor die Kernbotschaft gesetzt wird —
-    durch Rhythmus, Metaphern, Fraktionierung.
-    Wenn das kein Conversion-Training ist, weiß ich es nicht.
-    Dasselbe System. Anderes Medium.
-  </p>
+  <!-- WERTE -->
+  <section id="werte" aria-labelledby="werte-heading">
+    <div class="sec-label" id="werte-label" aria-hidden="true"></div>
+    <h2 id="werte-heading"></h2>
+    <div class="values" id="values-grid"></div>
+  </section>
 
-  <div class="rule-soft"></div>
-
-  <!-- PHYSIKER-TRIGGER -->
-  <p>
-    Du liebst Messwerte. Ich auch.
-    Deshalb habe ich <strong>CROWN v10</strong> gebaut:
-    ein Analyse-System mit Kelly-Kriterium, SQLite, Multi-Threading, Telegram-API.
-    Budgetoptimierung nach mathematischem Modell.
-    Hypothese → Test → Messung → Optimierung.
-    Genau so behandle ich Texte.
-  </p>
-
-  <div class="rule-soft"></div>
-
-  <!-- BEWEIS-BLOCK -->
-  <div class="dark">
-    <div class="dark-label">Was ich konkret mitbringe</div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>9 Jahre Texten unter Abstimmungsdruck</strong> — öffentlich, nachprüfbar, mit echten Konsequenzen</p>
-    </div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>Verkaufspsychologie aus der Praxis</strong> — ABS-Framework, Framing, Einwand-Absorption</p>
-    </div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>Nischen-Vielseitigkeit</strong> — Energie, Politik, Hotellerie, Gesundheit, KI/SaaS. Nicht ausgebildet — durch echte Zielgruppen gelernt</p>
-    </div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>Datengetriebenes Denken</strong> — Kelly-Kriterium, KPI-Tracking, messbare Optimierungsschleifen</p>
-    </div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>Cambridge CAE C1 Englisch</strong> — US-Direct-Response-Kanon im Original studiert</p>
-    </div>
-    <div class="dark-item">
-      <div class="di-arrow">→</div>
-      <p class="di-text"><strong>5 km vom Büro</strong> — Ferdinand-Happ-Str., Frankfurt-Preungesheim. Vor Ort. Innerhalb von 4 Wochen vollständig verfügbar.</p>
-    </div>
-  </div>
-
-  <div class="rule-soft"></div>
-
-  <!-- SCHLUSSSATZ -->
-  <p>
-    Ich bewerbe mich nicht, weil ich einen Job brauche.
-    Ich bewerbe mich, weil du der einzige Copywriter in Frankfurt bist,
-    bei dem ich handwerkliche Meisterschaft lernen kann —
-    nicht in 8 Wochen, sondern mit System.
-  </p>
-
-  <p>
-    Lass uns in einem kurzen Gespräch herausfinden,
-    wie schnell ich für deine Kunden Texte schreibe, die verkaufen.
-  </p>
-
-  <!-- UNTERLAGEN -->
-  <div class="doc-group">Unterlagen</div>
-  <div class="docs">
-    <a href="Andre_Schwarz_Bewerbung_RomanMayer_v2.pdf" class="doc" target="_blank">
-      <span class="doc-icon">📄</span>
-      <span class="doc-name">Bewerbungs-Report im DMC-Stil — 6 Seiten PDF</span>
-      <span class="doc-arr">→</span>
-    </a>
-    <a href="portfolio.html" class="doc">
-      <span class="doc-icon">📁</span>
-      <span class="doc-name">Portfolio — 4 Nischen mit Storytelling</span>
-      <span class="doc-arr">→</span>
-    </a>
-    <a href="arbeitsproben.html" class="doc">
-      <span class="doc-icon">✍️</span>
-      <span class="doc-name">Alle Arbeitsproben</span>
-      <span class="doc-arr">→</span>
-    </a>
-    <a href="cv.html" class="doc">
-      <span class="doc-icon">📋</span>
-      <span class="doc-name">Lebenslauf (DE/EN)</span>
-      <span class="doc-arr">→</span>
-    </a>
-    <a href="antraege.html" class="doc">
-      <span class="doc-icon">🏛️</span>
-      <span class="doc-name">6 Ortsbeirat-Anträge — stvv.frankfurt.de</span>
-      <span class="doc-arr">→</span>
-    </a>
-    <a href="Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf" class="doc" target="_blank">
-      <span class="doc-icon">🗳️</span>
-      <span class="doc-name">Wahlprogramm Freie Wähler Frankfurt 2026</span>
-      <span class="doc-arr">→</span>
-    </a>
-  </div>
-
-  <!-- SIGNATUR -->
-  <div class="sig">
-    <p class="sig-gruss">Viele Grüße,</p>
-    <div class="sig-name">André Schwarz</div>
-    <div class="sig-contact">
-      <a href="mailto:andre.schwarz1@t-online.de">andre.schwarz1@t-online.de</a><br>
-      <a href="tel:+4915256044541">0152 5604 4541</a><br>
-      Frankfurt-Preungesheim · 60435
-    </div>
-  </div>
-
-  <div class="ps">
-    <strong>P.S.</strong> — Dieses Anschreiben ist selbst eine Arbeitsprobe.
-    Hook. Proof. Reframe. CTA.
-    Wenn es dich nicht überzeugt hat, brauchen wir kein Gespräch.
-  </div>
+  <!-- KONTAKT -->
+  <section class="final" id="kontakt" aria-labelledby="kontakt-heading">
+    <div class="sec-label" id="kontakt-label" style="justify-content:center" aria-hidden="true"></div>
+    <h2 id="kontakt-heading"></h2>
+    <p id="kontakt-p"></p>
+    <div class="final-actions" id="kontakt-actions"></div>
+  </section>
 
 </div>
 
-<footer>
-  © André Schwarz · Frankfurt · Juni 2026 · intelligentresponder-max.github.io/texter-portfolio
-</footer>
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+
+<!-- CONTENT-DATEI laden (hier Sprache wechseln) -->
+<script src="content.de.js"></script>
+
+<!-- RENDER ENGINE — nie anfassen -->
+<script>
+(function() {
+
+  const C = CONTENT;
+  const $ = id => document.getElementById(id);
+
+  // ── META ─────────────────────────────────────────────────
+  document.documentElement.lang = C.meta.lang;
+  document.title = C.meta.title;
+  setMeta("description", C.meta.description);
+  setMeta("keywords", C.meta.keywords);
+  setMeta("author", "André Schwarz");
+  setMeta("ai-content-disclosure", C.meta.aiDisclosure);
+  setOG("og:title", C.meta.ogTitle);
+  setOG("og:description", C.meta.ogDescription);
+
+  // JSON-LD strukturierte Daten
+  const ld = document.createElement("script");
+  ld.type = "application/ld+json";
+  ld.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Person", "@id": "#person", "name": "André Schwarz", "jobTitle": "Freier Texter und Conversion Copywriter", "url": "https://intelligentresponder-max.github.io/texter-portfolio/", "email": "andre.schwarz1@t-online.de", "address": { "@type": "PostalAddress", "addressLocality": "Frankfurt am Main", "addressCountry": "DE" }, "knowsLanguage": ["de","en"], "sameAs": ["https://github.com/intelligentresponder-max","https://frankfurt-energie.online"] },
+      { "@type": "ProfessionalService", "name": "André Schwarz — Freier Texter Frankfurt", "provider": {"@id": "#person"}, "areaServed": {"@type": "City", "name": "Frankfurt am Main"}, "serviceType": C.leistungen.items.map(i => i.h3) },
+      { "@type": "WebSite", "url": "https://intelligentresponder-max.github.io/texter-portfolio/", "name": "André Schwarz — Freier Texter Frankfurt", "inLanguage": C.meta.lang }
+    ]
+  });
+  document.head.appendChild(ld);
+
+  // ── NAV ──────────────────────────────────────────────────
+  $("nav-brand").textContent = C.nav.brand;
+  $("nav-brand").title = C.nav.brand + " — Freier Texter Frankfurt";
+  const nl = $("nav-links");
+  C.nav.links.forEach(l => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${l.href}">${l.label}</a>`;
+    nl.appendChild(li);
+  });
+  const liCta = document.createElement("li");
+  liCta.innerHTML = `<a href="${C.nav.cta.href}" class="nav-cta">${C.nav.cta.label}</a>`;
+  nl.appendChild(liCta);
+  const liLang = document.createElement("li");
+  liLang.innerHTML = `<a href="${C.nav.langSwitch.href}" class="lang-btn" title="Switch to English">${C.nav.langSwitch.flag} ${C.nav.langSwitch.label}</a>`;
+  nl.appendChild(liLang);
+
+  // ── HERO ─────────────────────────────────────────────────
+  $("hero-eyebrow").textContent = C.hero.eyebrow;
+  $("hero-h1").innerHTML = `${C.hero.h1_plain}<br><em>${C.hero.h1_em}</em>`;
+  $("hero-lede").textContent = C.hero.lede;
+  $("hero-cta").innerHTML = `
+    <a href="${C.hero.cta_primary.href}" class="btn btn-gold">${C.hero.cta_primary.label}</a>
+    <a href="${C.hero.cta_secondary.href}" class="btn btn-ghost">${C.hero.cta_secondary.label}</a>
+    ${pdfBanner(C.hero.cta_pdf.href, C.hero.cta_pdf.label)}
+  `;
+  $("hero-portfolio-link").innerHTML = `${C.hero.portfolio_url_label} <a href="${location.href}">${location.host}${location.pathname}</a> &nbsp;·&nbsp; <a href="${C.hero.portfolio_url_link.href}">${C.hero.portfolio_url_link.label}</a>`;
+  $("ai-badge-text").textContent = C.hero.ai_badge;
+
+  // ── LEISTUNGEN ───────────────────────────────────────────
+  $("leistungen-label").textContent = C.leistungen.label;
+  $("leistungen-heading").textContent = C.leistungen.h2;
+  $("skills-grid").innerHTML = C.leistungen.items.map(i => `
+    <div class="skill" role="listitem">
+      <div class="num" aria-hidden="true">${i.num}</div>
+      <h3>${i.h3}</h3>
+      <p>${i.p}</p>
+    </div>`).join("");
+
+  // ── TEASER ───────────────────────────────────────────────
+  $("teaser-count").textContent = C.teaser.count;
+  $("teaser-heading").textContent = C.teaser.h2;
+  $("teaser-desc").textContent = C.teaser.desc;
+  const tc = $("teaser-cta");
+  tc.href = C.teaser.cta.href;
+  tc.textContent = C.teaser.cta.label;
+
+  // ── ARBEITEN ─────────────────────────────────────────────
+  $("arbeiten-label").textContent = C.arbeiten.label;
+  $("arbeiten-heading").textContent = C.arbeiten.h2;
+  $("arbeiten-pdf").innerHTML = pdfBanner(C.arbeiten.pdf_banner.href, C.arbeiten.pdf_banner.label);
+  $("cards-grid").innerHTML = C.arbeiten.cards.map(card => {
+    const meta = card.meta.map(m =>
+      m.href ? `<a href="${m.href}"${m.external?' target="_blank" rel="noopener"':''}>${m.label}</a>` : m.label
+    ).join(" · ");
+    return `
+    <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
+      <span class="tag">${card.tag}</span>
+      <h3 itemprop="name">${card.h3}</h3>
+      <p itemprop="description">${card.p}</p>
+      <div class="meta">${meta}</div>
+    </article>`;
+  }).join("");
+
+  // ── BEWERBUNGSSTRIP ──────────────────────────────────────
+  $("bewerbung-strip").innerHTML = `
+    <div>
+      <strong>${C.bewerbung.label}</strong>
+      <p>${C.bewerbung.text}<br><a href="${C.bewerbung.url_href}">${C.bewerbung.url}</a></p>
+    </div>
+    ${pdfBanner(C.bewerbung.pdf.href, C.bewerbung.pdf.label)}
+  `;
+
+  // ── WERTE ────────────────────────────────────────────────
+  $("werte-label").textContent = C.werte.label;
+  $("werte-heading").textContent = C.werte.h2;
+  $("values-grid").innerHTML = C.werte.items.map(i => `
+    <div class="value">
+      <h3>${i.h3}</h3>
+      <p>${i.p}</p>
+    </div>`).join("");
+
+  // ── KONTAKT ──────────────────────────────────────────────
+  $("kontakt-label").textContent = C.kontakt.label;
+  $("kontakt-heading").innerHTML = `${C.kontakt.h2_line1}<br>${C.kontakt.h2_line2}`;
+  $("kontakt-p").textContent = C.kontakt.p;
+  $("kontakt-actions").innerHTML = `
+    <a href="${C.kontakt.cta_primary.href}" class="btn btn-gold">${C.kontakt.cta_primary.label}</a>
+    ${pdfBanner(C.kontakt.cta_pdf.href, C.kontakt.cta_pdf.label)}
+  `;
+
+  // ── FOOTER ───────────────────────────────────────────────
+  const links = C.footer.links.map(l =>
+    `<a href="${l.href}"${l.external?' target="_blank" rel="noopener"':''}>${l.label}</a>`
+  ).join("");
+  $("site-footer").innerHTML = `
+    <div class="wrap">
+      <div><strong style="color:var(--paper)">${C.footer.name}</strong> · ${C.footer.role} · ${C.footer.city} · <a href="${C.footer.email.href}">${C.footer.email.label}</a> · <a href="${C.footer.phone.href}">${C.footer.phone.label}</a></div>
+      <div class="footer-links">${links}</div>
+      <div class="footer-pdf"><a href="${C.footer.pdf.href}" target="_blank" rel="noopener">${C.footer.pdf.label}</a></div>
+      <p class="footer-ai">${C.footer.ai_disclosure}</p>
+    </div>
+  `;
+
+  // ── HELPERS ──────────────────────────────────────────────
+  function pdfBanner(href, label) {
+    return `<a href="${href}" target="_blank" rel="noopener" class="pdf-banner">
+      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M2 0h7l5 5v11H2V0z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v5h5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 9h6M4 12h4" stroke="currentColor" stroke-width="1"/></svg>
+      ${label}
+    </a>`;
+  }
+  function setMeta(name, content) {
+    let el = document.querySelector(`meta[name="${name}"]`);
+    if (!el) { el = document.createElement("meta"); el.name = name; document.head.appendChild(el); }
+    el.content = content;
+  }
+  function setOG(prop, content) {
+    let el = document.querySelector(`meta[property="${prop}"]`);
+    if (!el) { el = document.createElement("meta"); el.setAttribute("property", prop); document.head.appendChild(el); }
+    el.content = content;
+  }
+
+})();
+</script>
+
 </body>
 </html>
