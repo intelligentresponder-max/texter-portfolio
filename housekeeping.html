@@ -361,6 +361,21 @@ nav {
   letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: .2s;
 }
 .btn-reset-day:hover { background: rgba(201,162,39,.22); }
+.btn-export {
+  background: rgba(26,111,168,.15); border: 1px solid rgba(26,111,168,.4);
+  color: #6ab0e0; padding: 9px 18px; border-radius: 2px;
+  font-family: 'Spline Sans Mono', monospace; font-size: .72rem;
+  letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: .2s;
+}
+.btn-export:hover { background: rgba(26,111,168,.28); }
+.btn-import {
+  background: rgba(42,122,75,.15); border: 1px solid rgba(42,122,75,.4);
+  color: #6ad4a0; padding: 9px 18px; border-radius: 2px;
+  font-family: 'Spline Sans Mono', monospace; font-size: .72rem;
+  letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: .2s;
+}
+.btn-import:hover { background: rgba(42,122,75,.28); }
+#import-file { display: none; }
 
 /* FOOTER */
 .tool-footer {
@@ -473,6 +488,9 @@ nav {
     <div class="room-grid" id="grid-n5"></div>
 
     <div class="reset-row">
+      <button class="btn-export" onclick="exportData()">⬇ Stand exportieren</button>
+      <button class="btn-import" onclick="document.getElementById('import-file').click()">⬆ Stand importieren</button>
+      <input type="file" id="import-file" accept=".json" onchange="importData(event)">
       <button class="btn-reset-day" onclick="resetDay()">Neuer Tag — Reinigung zurücksetzen</button>
       <button class="btn-reset" onclick="resetAll()">Komplett zurücksetzen</button>
     </div>
@@ -830,6 +848,50 @@ function resetAll() {
   state = {}; staff = [];
   saveState(state); saveStaffData(staff);
   renderRooms(); renderPersonal(); renderOverview();
+}
+
+// ── EXPORT / IMPORT ──────────────────────────────────────────
+function exportData() {
+  const payload = {
+    version: 1,
+    exported: new Date().toISOString(),
+    state: state,
+    staff: staff,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const d = new Date();
+  const stamp = d.toISOString().slice(0,10);
+  a.href = url;
+  a.download = 'housekeeping-' + stamp + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const payload = JSON.parse(e.target.result);
+      if (!payload.state || !payload.staff) throw new Error('Ungültiges Format');
+      if (!confirm('Stand vom ' + (payload.exported ? payload.exported.slice(0,10) : '?') + ' laden? Aktueller Stand wird überschrieben.')) return;
+      state = payload.state;
+      staff = payload.staff;
+      saveState(state);
+      saveStaffData(staff);
+      renderRooms();
+      renderPersonal();
+      renderOverview();
+      alert('✓ Stand erfolgreich geladen.');
+    } catch(err) {
+      alert('Fehler beim Laden: ' + err.message);
+    }
+    event.target.value = '';
+  };
+  reader.readAsText(file);
 }
 
 // ── INIT ─────────────────────────────────────────────────────
