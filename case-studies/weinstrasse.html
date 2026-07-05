@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Weinbahnstraße — André Schwarz</title>
+<meta name="description" content="Wie ein strategischer Text-Pivot ein fünfmal vertagtes Problem in eine einstimmige Lösung verwandelte. Case Study André Schwarz, Ortsbeirat Frankfurt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0a08;--ink-soft:#161310;--paper:#f4ede0;--gold:#c9a227;--gold-bright:#e8c14f;--muted:#9b9085;--line:rgba(201,162,39,.22);--clean:#2a7a4b;--warn:#e67e22;--danger:#c0392b;--radius:3px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--paper);font-family:'Spline Sans',sans-serif;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 80% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(700px 600px at -10% 100%,rgba(201,162,39,.06),transparent 60%);}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;}
+.nav-brand{font-family:'Fraunces',serif;font-size:.95rem;color:var(--gold);text-decoration:none;}
+.nav-back{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.2s;}
+.nav-back:hover{color:var(--gold);}
+
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 28px 100px;}
+
+/* HERO */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);}
+.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;}
+.hero h1 em{font-style:italic;color:var(--gold-bright);}
+.hero-quote{margin-top:28px;padding:22px 28px;border-left:3px solid var(--gold);background:rgba(201,162,39,.06);border-radius:0 3px 3px 0;}
+.hero-quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:#d8cdbd;line-height:1.7;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:48px 0;}
+.stat-box{background:var(--ink);padding:26px 22px;}
+.stat-label{font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.stat-val{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--gold-bright);line-height:1;}
+.stat-sub{font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--muted);margin-top:6px;}
+
+/* SECTIONS */
+.section{padding:48px 0;border-bottom:1px solid var(--line);}
+.section:last-child{border-bottom:none;}
+.sec-num{font-family:'Spline Sans Mono',monospace;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section h2{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:500;margin-bottom:22px;letter-spacing:-.01em;}
+.section p{color:#cabfb0;margin-bottom:16px;font-size:.97rem;}
+.section p:last-child{margin-bottom:0;}
+.section strong{color:var(--paper);}
+
+/* TIMELINE */
+.timeline{margin:28px 0;position:relative;}
+.timeline::before{content:'';position:absolute;left:17px;top:0;bottom:0;width:1px;background:var(--line);}
+.tl-item{display:flex;gap:24px;margin-bottom:28px;position:relative;}
+.tl-dot{width:35px;height:35px;border-radius:50%;border:1px solid var(--line);background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--muted);z-index:1;}
+.tl-dot.gold{border-color:var(--gold);color:var(--gold);background:rgba(201,162,39,.08);}
+.tl-dot.green{border-color:#2a7a4b;color:#4ecb82;background:rgba(42,122,75,.08);}
+.tl-dot.red{border-color:#c0392b;color:#e87070;background:rgba(192,57,43,.08);}
+.tl-body{}
+.tl-date{font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--muted);margin-bottom:4px;}
+.tl-title{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--paper);margin-bottom:6px;}
+.tl-desc{font-size:.88rem;color:#9b9085;line-height:1.65;}
+
+/* ABS TABLE */
+.abs-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:28px 0;}
+.abs-row{display:grid;grid-template-columns:80px 1fr 1fr;background:var(--ink);}
+.abs-row.header{background:rgba(201,162,39,.06);}
+.abs-cell{padding:18px 16px;font-size:.88rem;border-right:1px solid var(--line);}
+.abs-cell:last-child{border-right:none;}
+.abs-phase{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--gold-bright);}
+.abs-header{font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
+.abs-content{color:#cabfb0;line-height:1.6;}
+
+/* TRANSFER BOX */
+.transfer{background:linear-gradient(135deg,rgba(42,122,75,.08),rgba(201,162,39,.04));border:1px solid rgba(42,122,75,.3);border-left:3px solid var(--clean);border-radius:0 4px 4px 0;padding:32px 36px;margin:28px 0;}
+.transfer-label{font-family:'Spline Sans Mono',monospace;font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:#4ecb82;margin-bottom:16px;}
+.transfer h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--paper);margin-bottom:14px;}
+.transfer-items{display:grid;gap:12px;}
+.transfer-item{display:flex;gap:14px;align-items:flex-start;}
+.transfer-num{font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--gold);min-width:24px;margin-top:3px;}
+.transfer-text{font-size:.9rem;color:#cabfb0;line-height:1.7;}
+.transfer-text strong{color:var(--paper);}
+
+/* IMPACT */
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.impact-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.impact-icon{font-size:1.4rem;margin-bottom:10px;}
+.impact-title{font-family:'Fraunces',serif;font-size:1rem;color:var(--paper);margin-bottom:6px;}
+.impact-desc{font-size:.84rem;color:var(--muted);line-height:1.65;}
+
+/* BACK */
+.back-section{padding-top:48px;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:10px;font-family:'Spline Sans Mono',monospace;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:12px 24px;border-radius:var(--radius);transition:.2s;}
+.back-link:hover{border-color:var(--gold);background:rgba(201,162,39,.08);}
+
+@media(max-width:640px){.abs-row{grid-template-columns:60px 1fr;}.abs-row .abs-cell:last-child{display:none;}.impact-grid{grid-template-columns:1fr;}.stats{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="../index.html">André Schwarz</a>
+  <a class="nav-back" href="../antraege.html">← Alle Anträge</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Case Study · Ortsbeirat 10 · Frankfurt-Preungesheim · OF 380/10</div>
+    <h1>Die Weinbahnstraße —<br><em>Text, der Fakten schafft.</em></h1>
+    <div class="hero-quote">
+      <p>Fünfmal vertagt. Einmal neu geschrieben. Einstimmig angenommen. Anwohner und alle Fraktionen haben sich bedankt. Der Verkehr ist spürbar besser geworden.</p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-label">Vertagungen</div>
+      <div class="stat-val">5×</div>
+      <div class="stat-sub">Erster Anlauf OF 232/10</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Ergebnis</div>
+      <div class="stat-val">100%</div>
+      <div class="stat-sub">Einstimmig angenommen</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Zeitraum</div>
+      <div class="stat-val">~1 Jahr</div>
+      <div class="stat-sub">Jan 2017 → Nov 2017</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Wirkung</div>
+      <div class="stat-val">Real</div>
+      <div class="stat-sub">Einbahnstraße heute in Kraft</div>
+    </div>
+  </div>
+
+  <!-- 1. AUSGANGSLAGE -->
+  <div class="section">
+    <div class="sec-num">01 · Die Ausgangslage</div>
+    <h2>Ein Problem, das alle sahen — und niemand löste</h2>
+    <p>Die Weinbahnstraße in Frankfurt-Preungesheim war seit Jahren ein Nadelöhr. Beidseitig parkende Autos machten das Durchfahren in beide Richtungen kaum möglich — Rettungsfahrzeuge, Lieferverkehr, Anwohner: alle betroffen, alle frustriert.</p>
+    <p>Im Januar 2017 wurde der erste Antrag gestellt: <strong>OF 232/10</strong>. Die Forderung war klar, die Begründung solide. Trotzdem wurde der Antrag fünfmal in Folge vertagt. Nicht weil das Problem falsch war — sondern weil der Text den Widerstand im Gremium nicht überwinden konnte.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot red">✕</div>
+        <div class="tl-body">
+          <div class="tl-date">Januar 2017</div>
+          <div class="tl-title">Antrag OF 232/10 — Einreichung</div>
+          <div class="tl-desc">Erster Anlauf. Klare Forderung, sachliche Begründung. Ergebnis: vertagt.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot red">↻</div>
+        <div class="tl-body">
+          <div class="tl-date">Februar — Oktober 2017</div>
+          <div class="tl-title">Fünf Sitzungen — fünf Vertagungen</div>
+          <div class="tl-desc">Derselbe Antrag, immer wieder auf der Tagesordnung. Immer wieder auf die nächste Sitzung verschoben. Das Gremium konnte sich nicht einigen — oder wollte es nicht.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot gold">→</div>
+        <div class="tl-body">
+          <div class="tl-date">Oktober 2017</div>
+          <div class="tl-title">Strategischer Rückzug — Neustart</div>
+          <div class="tl-desc">Statt den gleichen Text ein sechstes Mal vorzulegen: Rückzug von OF 232/10. Neuschreibung als OF 380/10 mit veränderter Strategie.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot green">✓</div>
+        <div class="tl-body">
+          <div class="tl-date">07. November 2017</div>
+          <div class="tl-title">OF 380/10 — Einstimmig angenommen</div>
+          <div class="tl-desc">Keine Gegenstimme, keine Enthaltung. Alle Fraktionen stimmten zu. Die Einbahnstraßenregelung wurde beschlossen und umgesetzt.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STRATEGIE -->
+  <div class="section">
+    <div class="sec-num">02 · Die Strategie</div>
+    <h2>Was sich geändert hat — und warum</h2>
+    <p>Der Fehler beim ersten Anlauf war nicht das Anliegen, sondern der Blickwinkel. OF 232/10 argumentierte aus der Perspektive der Weinbahnstraße selbst: Engpass, Blockade, Problem. Das Gremium dachte sofort an Einschränkung — und lehnte ab.</p>
+    <p>OF 380/10 änderte den Fokus. Statt auf das Problem zeigte der neue Text auf den <strong>Nutzen für ein größeres Gebiet</strong>: Die Einbahnstraße würde die Homburger Landstraße entlasten und das gesamte Wohnquartier beruhigen. Zusätzlich: Fotos, die die Engstelle unbestreitbar dokumentierten. Kein Spielraum mehr für argumentative Ausflüchte.</p>
+    <p>Das Gremium bekam nicht mehr einen Antrag zur Abstimmung — es bekam eine <strong>logische Konsequenz</strong>, der man sich kaum entziehen konnte.</p>
+
+    <div class="abs-grid">
+      <div class="abs-row header">
+        <div class="abs-cell"><span class="abs-header">Phase</span></div>
+        <div class="abs-cell"><span class="abs-header">Im Antrag OF 380/10</span></div>
+        <div class="abs-cell"><span class="abs-header">Im Copywriting</span></div>
+      </div>
+      <div class="abs-row">
+        <div class="abs-cell"><span class="abs-phase">A</span></div>
+        <div class="abs-cell abs-content">Fotos der blockierten Fahrspur — visueller Beweis, der sofort überzeugt</div>
+        <div class="abs-cell abs-content">Der Hook: eine Headline, die den Leser sofort anspricht und nicht loslässt</div>
+      </div>
+      <div class="abs-row">
+        <div class="abs-cell"><span class="abs-phase">B</span></div>
+        <div class="abs-cell abs-content">Reframing: weg von „Einschränkung", hin zu „Entlastung des Quartiers"</div>
+        <div class="abs-cell abs-content">Pacing & Leading: Widerstand durch Storytelling und Benefit-Stack umgehen</div>
+      </div>
+      <div class="abs-row">
+        <div class="abs-cell"><span class="abs-phase">S</span></div>
+        <div class="abs-cell abs-content">Klare Handlungsaufforderung: Einbahnstraße als logische, alternativlose Lösung</div>
+        <div class="abs-cell abs-content">CTA: die unwiderstehliche Aufforderung, die der Leser als eigene Entscheidung erlebt</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. ERGEBNIS -->
+  <div class="section">
+    <div class="sec-num">03 · Das Ergebnis</div>
+    <h2>Einstimmig — und danach bedankt</h2>
+    <p>Am 7. November 2017 wurde OF 380/10 ohne Gegenstimme angenommen. Alle Fraktionen stimmten zu — darunter auch jene, die OF 232/10 monatelang blockiert hatten.</p>
+    <p>Was danach kam, ist das eigentliche Ergebnis: Die Einbahnstraßenregelung wurde umgesetzt. Der Verkehr in der Weinbahnstraße und den angrenzenden Straßen wurde <strong>spürbar besser</strong>. Anwohner meldeten sich zurück. Alle beteiligten Fraktionen sprachen ihren Dank aus — auch jene, die zunächst dagegen waren.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">🗳️</div>
+        <div class="impact-title">100 % Zustimmung</div>
+        <div class="impact-desc">Einstimmige Annahme im Ortsbeirat 10 — keine Gegenstimme, keine Enthaltung.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🚗</div>
+        <div class="impact-title">Spürbarer Effekt</div>
+        <div class="impact-desc">Die Einbahnstraßenregelung ist heute in Kraft und verbessert den Verkehrsfluss nachweislich.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🤝</div>
+        <div class="impact-title">Fraktionsübergreifender Dank</div>
+        <div class="impact-desc">Anwohner und alle politischen Fraktionen — auch frühere Gegner — sprachen ihren Dank aus.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">📋</div>
+        <div class="impact-title">Dauerhafter Beschluss</div>
+        <div class="impact-desc">Kein Kompromiss, kein Provisorium — ein rechtskräftiger Beschluss mit realer Wirkung.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. TRANSFER -->
+  <div class="section">
+    <div class="sec-num">04 · Der Transfer</div>
+    <h2>Was das mit Copywriting zu tun hat</h2>
+    <p>Ein politischer Antrag ist eine Sales Page für eine Idee. Das Publikum ist kritisch, öffentlich und rechenschaftspflichtig. Jedes Wort kann angefochten werden. Und am Ende gibt es nur eine Frage: Stimmen sie zu oder nicht?</p>
+    <p>Die Weinbahnstraße hat mich gelehrt, was guten Werbetext ausmacht — nicht im Lehrbuch, sondern unter echtem Druck:</p>
+
+    <div class="transfer">
+      <div class="transfer-label">Transfer → Copywriting</div>
+      <h3>Was ich daraus mitbringe</h3>
+      <div class="transfer-items">
+        <div class="transfer-item">
+          <div class="transfer-num">01</div>
+          <div class="transfer-text"><strong>Iterative Optimierung:</strong> Wenn ein Text nicht funktioniert, wird er nicht lauter wiederholt — er wird neu gedacht. OF 232/10 war nicht falsch, er war nur nicht der richtige Text für dieses Publikum.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">02</div>
+          <div class="transfer-text"><strong>Reframing statt Beharren:</strong> Der Leser kauft keine Einschränkung, er kauft einen Nutzen. Der Schwenk von „Einbahnstraße einführen" zu „Quartier entlasten" hat den Widerstand gebrochen — nicht das Argument selbst.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">03</div>
+          <div class="transfer-text"><strong>Visueller Beweis schlägt verbale Überzeugung:</strong> Die Fotos haben in Sekunden getan, was Argumente in zehn Sitzungen nicht geschafft haben. Im Werbetext: Social Proof, Zahlen, Vorher-Nachher.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">04</div>
+          <div class="transfer-text"><strong>Nachhaltigkeit der Wirkung:</strong> Ein guter Text erzeugt nicht nur die Unterschrift — er erzeugt das Ergebnis, für das der Leser danach dankbar ist. Das ist der Unterschied zwischen einem Abschluss und einem Kunden.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-section">
+    <a class="back-link" href="../antraege.html">← Alle Anträge ansehen</a>
+    &nbsp;&nbsp;
+    <a class="back-link" href="../index.html">Portfolio →</a>
+  </div>
+
+</div><!-- /wrap -->
+
+<footer style="position:relative;z-index:1;border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:.8rem;font-family:'Spline Sans Mono',monospace;">
+  <div class="wrap" style="padding-bottom:0;">
+    André Schwarz · Freier Texter · Frankfurt am Main · <a href="mailto:andre.schwarz1@t-online.de" style="color:var(--gold);text-decoration:none;">andre.schwarz1@t-online.de</a>
+  </div>
+</footer>
+
+</body>
+</html>
