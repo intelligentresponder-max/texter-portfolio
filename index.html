@@ -230,7 +230,7 @@ footer a{color:var(--gold);text-decoration:none;transition:.2s}.footer a:hover{c
     ${pdfBanner(C.hero.cta_pdf.href, C.hero.cta_pdf.label)}
   `;
   $("hero-portfolio-link").innerHTML = `${C.hero.portfolio_url_label} <a href="${location.href}">${location.host}${location.pathname}</a> &nbsp;·&nbsp; <a href="${C.hero.portfolio_url_link.href}">${C.hero.portfolio_url_link.label}</a>`;
-  $("ai-badge-text").textContent = C.hero.ai_badge;
+  if(C.hero.ai_badge){$("ai-badge-text").textContent=C.hero.ai_badge;}else{$("hero-ai-badge").style.display="none";}
 
   // ── LEISTUNGEN ───────────────────────────────────────────
   $("leistungen-label").textContent = C.leistungen.label;

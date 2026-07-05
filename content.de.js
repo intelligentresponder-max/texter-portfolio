@@ -5,7 +5,7 @@
  * und übersetze nur die Textwerte (rechts vom Doppelpunkt).
  * NICHTS an der Struktur oder den Keys ändern.
  *
- * Letzte Aktualisierung: Juni 2026
+ * Letzte Aktualisierung: Juli 2026
  * Autor: André Schwarz
  */
 
@@ -39,13 +39,13 @@ const CONTENT = {
     eyebrow: "Freier Texter · Frankfurt am Main · Conversion Copy · DE / EN",
     h1_plain: "Texte, die nicht nur gut klingen —",
     h1_em:    "sondern verkaufen.",
-    lede: "Mein Hintergrund liegt im Direktvertrieb. Ich weiß aus erster Hand, welche Worte aus einem Interessenten einen Kunden machen — weil ich genau das jahrelang getan habe, bevor ich es aufgeschrieben habe.",
-    cta_primary:   { label: "Projekt anfragen",         href: "#kontakt" },
-    cta_secondary: { label: "Alle Arbeitsproben",       href: "arbeitsproben.html" },
-    cta_pdf:       { label: "Portfolio PDF",            href: "./Portfolio_Andre_Schwarz_v2.pdf" },
+    lede: "Roman Mayer sucht einen Copywriter, der Produkte versteht und sie klar beschreibt. Ich bringe beides mit: neun Jahre Schreiberfahrung in technischen, politischen und vertrieblichen Kontexten — plus einen Direktvertriebshintergrund, der mir sagt, welche Worte aus Interesse Kaufentscheidungen machen.",
+    cta_primary:   { label: "Projekt anfragen",   href: "#kontakt" },
+    cta_secondary: { label: "Alle Arbeitsproben", href: "arbeitsproben.html" },
+    cta_pdf:       { label: "Portfolio PDF",       href: "./Portfolio_Andre_Schwarz_v2.pdf" },
     portfolio_url_label: "Portfolio-Landingpage:",
     portfolio_url_link:  { label: "15 Projekte mit Belegen →", href: "arbeitsproben.html" },
-    ai_badge: "KI-unterstützt erstellt · Vollständig geprüft und freigegeben von André Schwarz · Gemäß Google E-E-A-T 2026",
+    ai_badge: "",
   },
 
   // ── LEISTUNGEN ─────────────────────────────────────────────
@@ -88,15 +88,15 @@ const CONTENT = {
   arbeiten: {
     label: "Ausgewählte Arbeiten",
     h2: "Arbeitsproben",
-    pdf_banner: { label: "Alle 10 Nischen als PDF — Portfolio herunterladen", href: "./Portfolio_Andre_Schwarz_v2.pdf" },
+    pdf_banner: { label: "Alle Nischen als PDF — Portfolio herunterladen", href: "./Portfolio_Andre_Schwarz_v2.pdf" },
     cards: [
       {
         tag: "Hotellerie · Gästekommunikation",
         h3: "Willkommensbuch — Turmhotel Frankfurt",
-        p: "Mehrsprachiges Willkommensbuch und Gästekommunikation für ein Frankfurter Stadthotel. Texte, die Orientierung geben und gleichzeitig die Marke tragen.",
+        p: "Mehrsprachiges Willkommensbuch (30 Sprachen) und vollständige Gästekommunikation für ein Frankfurter Stadthotel. Check-in, WLAN, Notfälle, Sehenswürdigkeiten — handwerklich lokalisiert für jede Kultur, nicht maschinell übersetzt.",
         meta: [
           { label: "Showcase →", href: "willkommensbuch.html" },
-          { label: "Konzept · Text · Mehrsprachig (DE / EN)" },
+          { label: "Konzept · Text · 30 Sprachen" },
         ],
       },
       {
@@ -118,21 +118,21 @@ const CONTENT = {
         ],
       },
       {
-        tag: "Hotellerie · Mehrsprachig · 30 Sprachen",
-        h3: "Willkommensbuch in 30 Sprachen",
-        p: "Handwerklich lokalisiert für jede Kultur. Jede Sprache führt den Gast durch Check-in, WiFi, Notfälle, Parken, Frühstück, Business und Sehenswürdigkeiten.",
+        tag: "Hotellerie · Digitalisierung · Konzept",
+        h3: "Digitalisierungs-Roadmap Turmhotel Frankfurt",
+        p: "Strategiepapier für die digitale Transformation eines Frankfurter Stadthotels: PMS-Evaluation, Prozessoptimierung, Staff-App-Konzept. Komplexe Materie in eine klare Entscheidungsvorlage für die Geschäftsführung überführt.",
         meta: [
-          { label: "Showcase →", href: "willkommensbuch.html" },
-          { label: "30 Sprachen · Lokalisiert · Gästeerlebnis" },
+          { label: "Alle Dokumente →", href: "arbeitsproben.html" },
+          { label: "Strategietext · Konzept · auf Anfrage" },
         ],
       },
       {
-        tag: "Tech · Produkt & Konzept",
-        h3: "CROWN v10 — Value-Betting-Analyse-System",
-        p: "Konzeption und textliche Ausarbeitung: Multi-Threading, Kelly-Criterion, Telegram-Bot, SQLite. Technische Themen klar und verständlich vermittelt.",
+        tag: "Tech · Produktkommunikation · Konzept",
+        h3: "CROWN v10 — Komplexe Technik klar erklärt",
+        p: "Produkttext für ein datengetriebenes Analyse-System mit Multi-Threading, Kelly-Criterion und Telegram-Integration. Zeigt: Technische Sachverhalte so aufbereiten, dass sie auch ohne Vorkenntnisse überzeugen.",
         meta: [
           { label: "Arbeitsprobe →", href: "crown-valuebet.html" },
-          { label: "Produkttext · Technik verständlich erklärt" },
+          { label: "Produkttext · Technik verständlich · B2C" },
         ],
       },
       {
@@ -175,10 +175,10 @@ const CONTENT = {
       {
         tag: "Fachtext · Strategie · Recht",
         h3: "Strategiepapiere & juristische Korrespondenz",
-        p: "Digitalisierungs-Roadmap Turmhotel Frankfurt sowie juristische Korrespondenz als Bevollmächtigter (§823 BGB, §1 HaftPflG). Dokumente auf Anfrage.",
+        p: "Juristische Korrespondenz als Bevollmächtigter (§823 BGB, §1 HaftPflG) sowie Vereinsgründung mit KfW-Businessplan. Präzise Sprache, die rechtlich standhält.",
         meta: [
           { label: "Alle Dokumente →", href: "arbeitsproben.html" },
-          { label: "Strategietext · Juristisch · auf Anfrage" },
+          { label: "Juristisch · Fachtext · auf Anfrage" },
         ],
       },
     ],
@@ -203,8 +203,8 @@ const CONTENT = {
         p: "Ich denke vom Kunden Ihres Kunden her — nicht vom Lehrbuch. Jeder Satz hat eine Aufgabe. Direktvertrieb-Erfahrung macht den Unterschied.",
       },
       {
-        h3: "Pünktlich & verlässlich",
-        p: "Klare Absprachen, eingehaltene Deadlines, keine Floskeln. Frankfurt am Main · 100 % Homeoffice möglich.",
+        h3: "Deadline ist Deadline",
+        p: "Keine Nachverhandlung, kein stilles Verschieben. Wer mir ein Datum gibt, bekommt die Datei zu diesem Datum — oder vorher.",
       },
       {
         h3: "Zweisprachig DE/EN",
