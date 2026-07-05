@@ -1,10 +1,6 @@
 /**
  * TEXTER-PORTFOLIO — Inhaltsdatei DEUTSCH
  * ========================================
- * Zum Übersetzen: Kopiere diese Datei als content.en.js
- * und übersetze nur die Textwerte (rechts vom Doppelpunkt).
- * NICHTS an der Struktur oder den Keys ändern.
- *
  * Letzte Aktualisierung: Juli 2026
  * Autor: André Schwarz
  */
@@ -15,11 +11,11 @@ const CONTENT = {
   meta: {
     lang: "de",
     title: "André Schwarz — Freier Texter Frankfurt | Conversion Copy & Verkaufstexte",
-    description: "Freier Texter Frankfurt am Main. Verkaufstexte, Landingpages, politische Programme, juristische Texte. Cambridge C1, Direktvertrieb-Hintergrund. Zweisprachig DE/EN.",
-    keywords: "Texter Frankfurt, Copywriter Frankfurt, Verkaufstexte, Landingpage Texter, Conversion Copy, Ghostwriter Frankfurt",
+    description: "Werbetexte, die den Leser überzeugen — für Landingpages, Sales-Emails, Facebook-Ads und Newsletter. Direktvertrieb-Hintergrund. Frankfurt am Main.",
+    keywords: "Texter Frankfurt, Copywriter Frankfurt, Verkaufstexte, Landingpage Texter, Conversion Copy, Ghostwriter Frankfurt, Bewerbung Roman Mayer, Digitalisierung Hotellerie",
     ogTitle: "André Schwarz — Freier Texter Frankfurt | Conversion Copy",
-    ogDescription: "Verkaufstexte, Landingpages, politische Programme. Cambridge C1. Direktvertrieb. Frankfurt am Main.",
-    aiDisclosure: "KI-unterstützt erstellt · Vollständig geprüft und freigegeben von André Schwarz · Gemäß Google E-E-A-T 2026",
+    ogDescription: "Werbetexte für Coaches, Berater und Agenturen. Direktvertrieb. Frankfurt am Main. Cambridge C1.",
+    aiDisclosure: "",
   },
 
   // ── NAV ────────────────────────────────────────────────────
@@ -37,9 +33,9 @@ const CONTENT = {
   // ── HERO ───────────────────────────────────────────────────
   hero: {
     eyebrow: "Freier Texter · Frankfurt am Main · Conversion Copy · DE / EN",
-    h1_plain: "Texte, die nicht nur gut klingen —",
-    h1_em:    "sondern verkaufen.",
-    lede: "Roman Mayer sucht einen Copywriter, der Produkte versteht und sie klar beschreibt. Ich bringe beides mit: neun Jahre Schreiberfahrung in technischen, politischen und vertrieblichen Kontexten — plus einen Direktvertriebshintergrund, der mir sagt, welche Worte aus Interesse Kaufentscheidungen machen.",
+    h1_plain: "Ich habe jahrelang selbst verkauft —",
+    h1_em:    "jetzt schreibe ich, wie es geht.",
+    lede: "Finanzprodukte, Ökostrom, direkt beim Kunden. Ich kenne den Moment, in dem ein Satz entweder Vertrauen aufbaut oder den Lead verliert. Dieses Wissen steckt in jedem Text, den ich schreibe — für Landingpages, Ads, E-Mails und alles, was verkaufen soll, nicht nur klingen.",
     cta_primary:   { label: "Projekt anfragen",   href: "#kontakt" },
     cta_secondary: { label: "Alle Arbeitsproben", href: "arbeitsproben.html" },
     cta_pdf:       { label: "Portfolio PDF",       href: "./Portfolio_Andre_Schwarz_v2.pdf" },
@@ -56,22 +52,22 @@ const CONTENT = {
       {
         num: "01",
         h3: "Verkaufstexte",
-        p: "Landingpages, Produktbeschreibungen und E-Mail-Strecken, optimiert auf Abschluss — nicht auf Applaus.",
+        p: "Landingpages, Facebook-Ads, Sales-Emails und Newsletter — optimiert auf Abschluss, nicht auf Applaus. Ein Text, der nicht verkauft, ist teure Dekoration.",
       },
       {
         num: "02",
-        h3: "Energie & Versorger",
-        p: "Als aktiver Energieberater kenne ich Tarife, Kundeneinwände und die Sprache der Branche aus eigener Praxis.",
+        h3: "Coaching & Consulting",
+        p: "Werbetexte für Coaches, Berater und Agenturen — Zielgruppenverständnis, das über die Oberfläche hinausgeht: Was bewegt den Leser wirklich? Was hält ihn davon ab zu kaufen?",
       },
       {
         num: "03",
-        h3: "Hotellerie",
-        p: "Gästekommunikation und Website-Texte aus eigener Praxis im Hotelbetrieb — mehrsprachig bis 30 Sprachen.",
+        h3: "Komplexe Produkte",
+        p: "Werbetexte für erklärungsbedürftige Produkte — technische Sachverhalte so aufbereitet, dass sie auch ohne Vorkenntnisse überzeugen.",
       },
       {
         num: "04",
-        h3: "Politik & Verwaltung",
-        p: "Anträge, Programme und Positionspapiere für den Ortsbeirat Frankfurt — präzise für ein anspruchsvolles Publikum.",
+        h3: "Psychologie & Überzeugung",
+        p: "Ich verstehe, was Menschen dazu bringt zu handeln. Das ist die Basis jedes Werbetexts — und der Grund, warum meine Texte nicht nur klingen, sondern wirken.",
       },
     ],
   },
@@ -80,7 +76,7 @@ const CONTENT = {
   teaser: {
     count: "Portfolio · 15 Projekte · PDFs & Live-Seiten · Frankfurt am Main",
     h2: "Alle Arbeitsproben auf einen Blick",
-    desc: "Politische Anträge, Ökostrom-Landingpages, KfW-Businesspläne, Vereinsgründungen, juristische Schreiben — alle mit direkten PDF-Links und Belegen.",
+    desc: "Wahlprogramme, Landingpages, politische Anträge, Hoteldokumentation in 30 Sprachen — alle mit direkten PDF-Links und nachweisbaren Ergebnissen.",
     cta: { label: "Alle ansehen →", href: "arbeitsproben.html" },
   },
 
@@ -91,72 +87,73 @@ const CONTENT = {
     pdf_banner: { label: "Alle Nischen als PDF — Portfolio herunterladen", href: "./Portfolio_Andre_Schwarz_v2.pdf" },
     cards: [
       {
-        tag: "Hotellerie · Gästekommunikation",
+        tag: "Hotellerie · Gästekommunikation · 30 Sprachen",
         h3: "Willkommensbuch — Turmhotel Frankfurt",
-        p: "Mehrsprachiges Willkommensbuch (30 Sprachen) und vollständige Gästekommunikation für ein Frankfurter Stadthotel. Check-in, WLAN, Notfälle, Sehenswürdigkeiten — handwerklich lokalisiert für jede Kultur, nicht maschinell übersetzt.",
+        p: "Mehrsprachiges Willkommensbuch (30 Sprachen) für ein Frankfurter Stadthotel. Check-in, WLAN, Notfälle, Sehenswürdigkeiten — handwerklich lokalisiert für jede Kultur, nicht maschinell übersetzt.",
         meta: [
           { label: "Showcase →", href: "willkommensbuch.html" },
           { label: "Konzept · Text · 30 Sprachen" },
         ],
       },
       {
-        tag: "Politik · Programmtext · Frankfurt",
+        tag: "Politik · Programmtext · Ghostwriting Frankfurt",
         h3: "Wahlprogramm — Freie Wähler Frankfurt 2026",
-        p: "Vollständige Neuschreibung des Wahlprogramms zur Frankfurter Kommunalwahl März 2026. Was übergeben wurde, war eine Copy-paste-Sammlung. Die Version, die heute im Internet steht, ist meine.",
+        p: "Vollständige Neuschreibung des Wahlprogramms zur Frankfurter Kommunalwahl März 2026. Stadtentwicklung, Verkehr, Soziales, Sicherheit — recherchiert, strukturiert, in politisch tragfähige Sprache übersetzt. Die Version, die heute im Internet steht, ist meine.",
         meta: [
           { label: "PDF ansehen →", href: "./Wahlprogramm-Freie-Waehler-Frankfurt-2026.pdf", external: true },
-          { label: "Programmtext · Ghostwriting Frankfurt" },
+          { label: "Programmtext · Ghostwriting" },
         ],
       },
       {
-        tag: "Politik · Verwaltungssprache · Ortsbeirat",
-        h3: "Anträge im Ortsbeirat 10 — BFF Frankfurt",
-        p: "Politische Anträge als Copywriter für den Ortsbeirat 10. Einstimmig angenommen — einer sogar fraktionsübergreifend von allen Parteien.",
+        tag: "Politik · Antragstexte · Ortsbeirat Frankfurt",
+        h3: "Die Weinbahnstraße — Text, der Fakten schafft",
+        p: "Jahrelang konnten sich die Altparteien nicht einigen, in welche Richtung die Einbahnstraße gehen soll. Bei unserem Antrag war das anders — wir gaben die Richtung vor. Fünfmal vertagt, einmal neu geschrieben, einstimmig angenommen. Anwohner und alle Fraktionen haben sich bedankt.",
         meta: [
-          { label: "Anträge ansehen →", href: "antraege.html" },
-          { label: "Antragstext · Argumentation · Amtsdeutsch" },
+          { label: "Case Study →", href: "case-studies/weinstrasse.html" },
+          { label: "Alle Anträge →", href: "antraege.html" },
+          { label: "Antragstexte · Argumentation · nachweisbare Ergebnisse" },
         ],
       },
       {
-        tag: "Hotellerie · Digitalisierung · Konzept",
-        h3: "Digitalisierungs-Roadmap Turmhotel Frankfurt",
-        p: "Strategiepapier für die digitale Transformation eines Frankfurter Stadthotels: PMS-Evaluation, Prozessoptimierung, Staff-App-Konzept. Komplexe Materie in eine klare Entscheidungsvorlage für die Geschäftsführung überführt.",
+        tag: "Fachtext · Komplexe Materie · Entscheidungsvorlage",
+        h3: "Komplexe Materie einfach erklärt — Turmhotel Frankfurt",
+        p: "PMS-Evaluation, Prozessanalyse, digitale Transformation — aufbereitet als klare Entscheidungsvorlage für die Geschäftsführung. Zeigt: Ich arbeite mich in fremde Themengebiete ein und bringe das Ergebnis auf den Punkt.",
         meta: [
           { label: "Alle Dokumente →", href: "arbeitsproben.html" },
-          { label: "Strategietext · Konzept · auf Anfrage" },
+          { label: "Fachtext · Recherche · auf Anfrage" },
         ],
       },
       {
-        tag: "Tech · Produktkommunikation · Konzept",
-        h3: "CROWN v10 — Komplexe Technik klar erklärt",
-        p: "Produkttext für ein datengetriebenes Analyse-System mit Multi-Threading, Kelly-Criterion und Telegram-Integration. Zeigt: Technische Sachverhalte so aufbereiten, dass sie auch ohne Vorkenntnisse überzeugen.",
+        tag: "Tech · Produktkommunikation · Komplexe Themen",
+        h3: "Technische Systeme klar erklären — CROWN v10",
+        p: "Produkttext für ein datengetriebenes Analyse-System mit Multi-Threading, Kelly-Criterion und Telegram-Integration — technische Tiefe, verständlich geschrieben. Komplexe Materie so aufbereitet, dass sie auch ohne Vorkenntnisse überzeugt.",
         meta: [
           { label: "Arbeitsprobe →", href: "crown-valuebet.html" },
           { label: "Produkttext · Technik verständlich · B2C" },
         ],
       },
       {
-        tag: "Web · Bilingual · Social Impact",
+        tag: "Zielgruppenverständnis · Erklärungstext · Bilingual",
         h3: "BanglaHilfe Deutschland",
-        p: "Zweisprachige Service-Plattform (Deutsch / Bengali) für bangladeschische Zuwanderer. Verständliche Texte, die behördliche Hürden erklären.",
+        p: "Zweisprachige Plattform (Deutsch / Bengali): Behördenwege, Visa, Sozialleistungen — erklärt für Menschen, die komplexe Inhalte in einfacher Sprache brauchen. Zeigt Zielgruppenverständnis jenseits der Komfortzone.",
         meta: [
           { label: "Live →", href: "https://intelligentresponder-max.github.io/bangla-hilfe", external: true },
-          { label: "DE / Bengali · Lead-Magnete" },
+          { label: "Erklärungstext · Zielgruppenverständnis · DE/Bengali" },
         ],
       },
       {
-        tag: "Web · Wellness · GEO-optimiert 2026",
-        h3: "mindful7777 — Wellness & Selbsthypnose",
-        p: "Content-Strategie von Anfang an auf GEO (Generative Engine Optimization) ausgelegt — strukturiert, zitierfähig, für KI-gestützte Suche 2026.",
+        tag: "Sales-Funnel · Coaching · Wellness",
+        h3: "mindful7777 — Sales-Funnel für ein Coaching-Produkt",
+        p: "Kompletter Sales-Funnel für ein Wellness- und Selbsthypnose-Angebot: Lead-Magnet, Landingpage, E-Mail-Sequenz, Gumroad-Shop. Vom ersten Kontakt bis zum Kauf — jeder Schritt durchdacht und getextet.",
         meta: [
           { label: "Live →", href: "https://intelligentresponder-max.github.io/mindful7777", external: true },
-          { label: "GEO 2026 · Wellness · Gumroad" },
+          { label: "Sales-Funnel · Lead-Magnet · E-Mail-Copy" },
         ],
       },
       {
-        tag: "Agentur · Conversion Copy · KI",
+        tag: "Agentur · Conversion Copy · KI-Produkte",
         h3: "Copy Code Agency",
-        p: "Agentur für digitale Produkte mit Fullstack-Entwickler: KI-CV-Optimizer, Value Bet SaaS, IT-Recruiting-Plattform. Meine Rolle: Conversion Copy, Brand & SEO.",
+        p: "Digitalagentur mit Fullstack-Entwickler-Partner: KI-CV-Optimizer, Value Bet SaaS, IT-Recruiting-Plattform. Meine Rolle: Conversion Copy, Brand und SEO. Zeigt: Ich arbeite mit Entwicklern auf Augenhöhe.",
         meta: [
           { label: "Live →", href: "https://intelligentresponder-max.github.io/copy-code-agency-website/", external: true },
           { label: "Conversion Copy · KI-Integration" },
@@ -165,9 +162,8 @@ const CONTENT = {
       {
         tag: "Energie · Verkaufstext · Mehrsprachig",
         h3: "Energie & Ökostrom — Verkaufstexte (ASGlobal)",
-        p: "Ökostrom-Landingpage gegen Greenwashing, Energiemarkt-Glossar A–Z und Recruiting-Dokument in acht Sprachen. Aus eigener Praxis als Energieberater.",
+        p: "Ökostrom-Landingpage, Energiemarkt-Glossar A–Z und Recruiting-Dokument in acht Sprachen. Aus eigener Praxis als Energieberater — Branchensprache, die sitzt.",
         meta: [
-          { label: "Landingpage →", href: "./oekostrom-landingpage.pdf", external: true },
           { label: "Live →", href: "https://frankfurt-energie.online", external: true },
           { label: "Verkaufstext · DE + 7 Sprachen" },
         ],
@@ -175,7 +171,7 @@ const CONTENT = {
       {
         tag: "Fachtext · Strategie · Recht",
         h3: "Strategiepapiere & juristische Korrespondenz",
-        p: "Juristische Korrespondenz als Bevollmächtigter (§823 BGB, §1 HaftPflG) sowie Vereinsgründung mit KfW-Businessplan. Präzise Sprache, die rechtlich standhält.",
+        p: "Juristische Korrespondenz als Bevollmächtigter sowie Vereinsgründung mit KfW-Businessplan. Präzise Sprache, die rechtlich standhält — und trotzdem lesbar bleibt.",
         meta: [
           { label: "Alle Dokumente →", href: "arbeitsproben.html" },
           { label: "Juristisch · Fachtext · auf Anfrage" },
@@ -200,7 +196,7 @@ const CONTENT = {
     items: [
       {
         h3: "Vom Kunden her gedacht",
-        p: "Ich denke vom Kunden Ihres Kunden her — nicht vom Lehrbuch. Jeder Satz hat eine Aufgabe. Direktvertrieb-Erfahrung macht den Unterschied.",
+        p: "Ich denke vom Kunden Ihres Kunden her — nicht vom Lehrbuch. Jeder Satz hat eine Aufgabe. Direktvertrieb-Erfahrung macht den Unterschied zwischen Texten, die klingen, und Texten, die kaufen lassen.",
       },
       {
         h3: "Deadline ist Deadline",
@@ -208,7 +204,7 @@ const CONTENT = {
       },
       {
         h3: "Zweisprachig DE/EN",
-        p: "Deutsch und Englisch — Cambridge C1 Advanced. Erfahrung mit Projekten in bis zu 30 Sprachen.",
+        p: "Deutsch und Englisch — Cambridge C1 Advanced. Ich lese US-Direct-Response-Vorlagen im Original und weiß, was Ogilvy, Sugarman und Caples meinen.",
       },
     ],
   },
@@ -233,13 +229,13 @@ const CONTENT = {
     links: [
       { label: "Alle Arbeitsproben", href: "arbeitsproben.html" },
       { label: "Anträge",            href: "antraege.html" },
+      { label: "Weinbahnstraße Case Study", href: "case-studies/weinstrasse.html" },
       { label: "Willkommensbuch",    href: "willkommensbuch.html" },
       { label: "CROWN v10",          href: "crown-valuebet.html" },
       { label: "GitHub",             href: "https://github.com/intelligentresponder-max", external: true },
-      { label: "Energie",            href: "https://frankfurt-energie.online", external: true },
     ],
     pdf: { label: "📄 Portfolio als PDF", href: "./Portfolio_Andre_Schwarz_v2.pdf" },
-    ai_disclosure: "Inhalt dieser Website wurde mit KI-Unterstützung erstellt und vollständig von André Schwarz geprüft, überarbeitet und als eigene Arbeit freigegeben. Gemäß Google E-E-A-T und Helpful Content Guidelines 2026.",
+    ai_disclosure: "KI-unterstützt · geprüft und freigegeben von André Schwarz · E-E-A-T 2026.",
   },
 
 };
