@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Mehrsprachiges Willkommensbuch — André Schwarz</title>
+<meta name="description" content="Wie ein Wegweiser in 16 Sprachen entsteht, der auch nach der Übersetzung noch funktioniert. Case Study André Schwarz, Turm Hotel Frankfurt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0a08;--ink-soft:#161310;--paper:#f4ede0;--gold:#c9a227;--gold-bright:#e8c14f;--muted:#9b9085;--line:rgba(201,162,39,.22);--clean:#2a7a4b;--warn:#e67e22;--danger:#c0392b;--radius:3px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--paper);font-family:'Spline Sans',sans-serif;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 80% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(700px 600px at -10% 100%,rgba(201,162,39,.06),transparent 60%);}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;}
+.nav-brand{font-family:'Fraunces',serif;font-size:.95rem;color:var(--gold);text-decoration:none;}
+.nav-back{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.2s;}
+.nav-back:hover{color:var(--gold);}
+
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 28px 100px;}
+
+/* HERO */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);}
+.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;}
+.hero h1 em{font-style:italic;color:var(--gold-bright);}
+.hero-quote{margin-top:28px;padding:22px 28px;border-left:3px solid var(--gold);background:rgba(201,162,39,.06);border-radius:0 3px 3px 0;}
+.hero-quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:#d8cdbd;line-height:1.7;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:48px 0;}
+.stat-box{background:var(--ink);padding:26px 22px;}
+.stat-label{font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.stat-val{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--gold-bright);line-height:1;}
+.stat-sub{font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--muted);margin-top:6px;}
+
+/* SECTIONS */
+.section{padding:48px 0;border-bottom:1px solid var(--line);}
+.section:last-child{border-bottom:none;}
+.sec-num{font-family:'Spline Sans Mono',monospace;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section h2{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:500;margin-bottom:22px;letter-spacing:-.01em;}
+.section p{color:#cabfb0;margin-bottom:16px;font-size:.97rem;}
+.section p:last-child{margin-bottom:0;}
+.section strong{color:var(--paper);}
+
+/* QUOTE BLOCK */
+.qblock{margin:26px 0;padding:24px 28px;border-left:3px solid var(--gold);background:rgba(201,162,39,.05);border-radius:0 3px 3px 0;}
+.qblock p{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:#d8cdbd;line-height:1.7;margin-bottom:10px;}
+.qsrc{font-family:'Spline Sans Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.qnote{font-size:.88rem;color:#9b9085;line-height:1.7;margin-top:14px;}
+
+/* LANG TABLE */
+.lang-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:28px 0;}
+.lang-row{display:grid;grid-template-columns:120px 1fr;background:var(--ink);}
+.lang-row.header{background:rgba(201,162,39,.06);}
+.lang-cell{padding:14px 16px;font-size:.88rem;border-right:1px solid var(--line);}
+.lang-cell:last-child{border-right:none;}
+.lang-name{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--gold-bright);}
+.lang-head{font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
+.lang-text{color:#cabfb0;line-height:1.6;}
+.lang-text.rtl{direction:rtl;text-align:right;}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0;}
+.chip{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#cabfb0;border:1px solid var(--line);border-radius:99px;padding:6px 14px;background:rgba(255,255,255,.02);}
+.chip.checked{border-color:rgba(42,122,75,.5);color:#7fdca6;background:rgba(42,122,75,.08);}
+
+/* TRANSFER BOX */
+.transfer{background:linear-gradient(135deg,rgba(42,122,75,.08),rgba(201,162,39,.04));border:1px solid rgba(42,122,75,.3);border-left:3px solid var(--clean);border-radius:0 4px 4px 0;padding:32px 36px;margin:28px 0;}
+.transfer-label{font-family:'Spline Sans Mono',monospace;font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:#4ecb82;margin-bottom:16px;}
+.transfer h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--paper);margin-bottom:14px;}
+.transfer-items{display:grid;gap:12px;}
+.transfer-item{display:flex;gap:14px;align-items:flex-start;}
+.transfer-num{font-family:'Spline Sans Mono',monospace;font-size:.65rem;color:var(--gold);min-width:24px;margin-top:3px;}
+.transfer-text{font-size:.9rem;color:#cabfb0;line-height:1.7;}
+.transfer-text strong{color:var(--paper);}
+
+/* IMPACT */
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.impact-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.impact-icon{font-size:1.4rem;margin-bottom:10px;}
+.impact-title{font-family:'Fraunces',serif;font-size:1rem;color:var(--paper);margin-bottom:6px;}
+.impact-desc{font-size:.84rem;color:var(--muted);line-height:1.65;}
+
+/* SOURCE */
+.source{margin-top:26px;padding:16px 20px;border:1px dashed var(--line);border-radius:var(--radius);font-size:.82rem;color:var(--muted);}
+.source a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line);}
+.source a:hover{color:var(--gold-bright);}
+
+/* BACK */
+.back-section{padding-top:48px;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:10px;font-family:'Spline Sans Mono',monospace;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:12px 24px;border-radius:var(--radius);transition:.2s;}
+.back-link:hover{border-color:var(--gold);background:rgba(201,162,39,.08);}
+
+@media(max-width:640px){.lang-row{grid-template-columns:88px 1fr;}.impact-grid{grid-template-columns:1fr;}.stats{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="../index.html">André Schwarz</a>
+  <a class="nav-back" href="../index.html">← Alle Arbeiten</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Case Study · Turm Hotel Frankfurt · Gästekommunikation</div>
+    <h1>Das Willkommensbuch —<br><em>Sprache, die die Übersetzung überlebt.</em></h1>
+    <div class="hero-quote">
+      <p>Ein Gast kommt nachts um halb eins an. Er spricht kein Deutsch. Er steht vor einer verschlossenen Tür. Der Text, der ihm jetzt hilft, muss in jeder Sprache funktionieren — nicht nur in meiner.</p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-label">Sprachen live</div>
+      <div class="stat-val">16</div>
+      <div class="stat-sub">Alle öffentlich einsehbar</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Selbst geprüft</div>
+      <div class="stat-val">3</div>
+      <div class="stat-sub">DE · EN · FR</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Grundlage</div>
+      <div class="stat-val">4 Jahre</div>
+      <div class="stat-sub">Rezeption Turm Hotel</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">Status</div>
+      <div class="stat-val">Live</div>
+      <div class="stat-sub">Im Einsatz am Haus</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="sec-num">01 · Die Ausgangslage</div>
+    <h2>Ein Haus, das man nicht erklären kann — sondern zeigen muss</h2>
+    <p>Das Turm Hotel hat zwei Gebäude, zwei Aufzüge und einen Weg ins Nebenhaus, den man nicht errät. Wer nach 22 Uhr ankommt, findet keine besetzte Rezeption vor. Wer die Sprache nicht spricht, findet auch keine Erklärung.</p>
+    <p>Die Standardlösung wäre ein Grundriss gewesen. Ein Plan mit Etagen, Pfeilen und Zimmernummern. Das Problem: <strong>Ein Gast mit Koffer um halb eins nachts liest keinen Grundriss.</strong> Er schaut sich um und sucht etwas, das er wiedererkennt.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="sec-num">02 · Die Entscheidung</div>
+    <h2>Nicht beschreiben, wo etwas liegt — sondern woran man es erkennt</h2>
+    <p>Ich habe die Wegbeschreibung im Entwicklungsprozess bewusst umgebaut: weg von Etagen und Himmelsrichtungen, hin zu <strong>physischen Ankern</strong>, die ein Gast tatsächlich sieht. Ein Spiegel. Rote Kinosessel. Ein Notausgang.</p>
+
+    <div class="qblock">
+      <p>„Gehen Sie neben dem Spiegel die Treppe hinunter, durch den Gang mit den roten Kinosesseln."</p>
+      <div class="qsrc">Wegweiser · Nebengebäude · Deutsch</div>
+      <p class="qnote">Kein Etagenhinweis, keine Himmelsrichtung. Zwei Gegenstände, die im Haus tatsächlich stehen. Diesen Satz schreibt niemand, der den Weg nur auf dem Plan kennt.</p>
+    </div>
+
+    <div class="qblock">
+      <p>„Bitte drücken Sie die Aufzugtür wieder fest zu, wenn Sie oben aussteigen."</p>
+      <div class="qsrc">Wegweiser · Hauptgebäude · Deutsch</div>
+      <p class="qnote">Dieser Satz steht dort, weil dieser Aufzug sonst oben stehen bleibt — und der nächste Gast unten wartet. Vier Jahre Rezeption in einer Zeile.</p>
+    </div>
+
+    <div class="qblock">
+      <p>„Warten Sie auf den Piepton bzw. das grüne Licht – beides bestätigt, dass die Karte erkannt wurde. Ziehen Sie die Tür leicht zu sich und treten Sie ein."</p>
+      <div class="qsrc">Gästeportal · Nachteingang · Deutsch</div>
+      <p class="qnote">„Ziehen Sie die Tür leicht zu sich" steht da, weil Gäste an dieser Tür instinktiv drücken — und dann glauben, die Karte sei defekt.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="sec-num">03 · Der eigentliche Hebel</div>
+    <h2>Konkrete Gegenstände überleben jede Übersetzung. Formulierungen nicht.</h2>
+    <p>Hier liegt der Kern der Sache. Ein Satz wie „im rückwärtigen Gebäudeteil, Ebene minus eins" zerfällt in der Maschinenübersetzung — je nach Sprache wird daraus etwas Falsches, Umständliches oder schlicht Unverständliches.</p>
+    <p><strong>Ein Spiegel bleibt ein Spiegel. Ein roter Kinosessel bleibt ein roter Kinosessel.</strong> In jeder Sprache, in jedem Alphabet, in jeder Schreibrichtung. Genau deshalb habe ich die deutschen Ausgangssätze so gebaut, dass sie aus überprüfbaren Substantiven bestehen und nicht aus Redewendungen.</p>
+    <p>Das Ergebnis lässt sich Zeile für Zeile gegenprüfen — hier derselbe Satz in allen 16 Sprachen:</p>
+
+    <div class="lang-grid">
+      <div class="lang-row header">
+        <div class="lang-cell lang-head">Sprache</div>
+        <div class="lang-cell lang-head">Derselbe Satz</div>
+      </div>
+      <div class="lang-row"><div class="lang-cell lang-name">Deutsch</div><div class="lang-cell lang-text">Gehen Sie neben dem Spiegel die Treppe hinunter, durch den Gang mit den roten Kinosesseln.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">English</div><div class="lang-cell lang-text">Go down the stairs next to the mirror, through the hallway with the red cinema seats.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Français</div><div class="lang-cell lang-text">Descendez les escaliers à côté du miroir, par le couloir avec les fauteuils de cinéma rouges.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Español</div><div class="lang-cell lang-text">Baje las escaleras junto al espejo, por el pasillo con los asientos de cine rojos.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Italiano</div><div class="lang-cell lang-text">Scendi le scale accanto allo specchio, attraverso il corridoio con le poltrone da cinema rosse.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Português</div><div class="lang-cell lang-text">Desça as escadas ao lado do espelho, pelo corredor com os assentos de cinema vermelhos.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Русский</div><div class="lang-cell lang-text">Спуститесь по лестнице рядом с зеркалом, через коридор с красными кинокреслами.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Українська</div><div class="lang-cell lang-text">Спустіться сходами поруч із дзеркалом, через коридор із червоними кінокріслами.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Polski</div><div class="lang-cell lang-text">Zejdź po schodach obok lustra, przez korytarz z czerwonymi fotelami kinowymi.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Čeština</div><div class="lang-cell lang-text">Sestupte po schodech vedle zrcadla, chodbou s červenými kinosedadly.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Română</div><div class="lang-cell lang-text">Coborâți scările de lângă oglindă, pe coridorul cu fotolii de cinema roșii.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Srpski</div><div class="lang-cell lang-text">Siđite niz stepenice pored ogledala, kroz hodnik sa crvenim bioskopskim stolicama.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">Hrvatski</div><div class="lang-cell lang-text">Siđite niz stepenice pored ogledala, kroz hodnik s crvenim kino sjedalima.</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">日本語</div><div class="lang-cell lang-text">鏡の横の階段を下り、赤いシネマシートのある廊下を通り抜けてください。</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">中文</div><div class="lang-cell lang-text">请从镜子旁的楼梯下去，穿过有红色影院座椅的走廊。</div></div>
+      <div class="lang-row"><div class="lang-cell lang-name">العربية</div><div class="lang-cell lang-text rtl">انزل الدرج بجانب المرآة، عبر الممر الذي يحتوي على كراسي السينما الحمراء.</div></div>
+    </div>
+
+    <p>Der Anker bleibt in jeder Fassung erhalten — <strong>Spiegel, Treppe, roter Kinosessel</strong>. Auch im Japanischen, im Chinesischen, im Arabischen mit umgekehrter Leserichtung. Genau das war die Absicht.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="sec-num">04 · Ehrlichkeit zum Verfahren</div>
+    <h2>Was maschinell entstanden ist — und was ich selbst verantworte</h2>
+    <p>Ich schreibe hier auf, wie es tatsächlich gelaufen ist, nicht wie es am besten klingt:</p>
+    <p>Die Übersetzungen sind <strong>maschinell erstellt</strong> und anschließend durch einen Doppelcheck der eingesetzten Coding-Agenten gelaufen. Drei Fassungen habe ich <strong>selbst gelesen und freigegeben</strong>: Deutsch, Englisch, Französisch.</p>
+
+    <div class="chips">
+      <span class="chip checked">✓ Deutsch — selbst gelesen</span>
+      <span class="chip checked">✓ English — selbst gelesen</span>
+      <span class="chip checked">✓ Français — selbst gelesen</span>
+      <span class="chip">Español</span>
+      <span class="chip">Italiano</span>
+      <span class="chip">Português</span>
+      <span class="chip">Русский</span>
+      <span class="chip">Українська</span>
+      <span class="chip">Polski</span>
+      <span class="chip">Čeština</span>
+      <span class="chip">Română</span>
+      <span class="chip">Srpski</span>
+      <span class="chip">Hrvatski</span>
+      <span class="chip">日本語</span>
+      <span class="chip">中文</span>
+      <span class="chip">العربية</span>
+    </div>
+
+    <p>Der entscheidende Punkt ist nicht, dass ich sechzehn Sprachen spreche — das tue ich nicht. Der Punkt ist, dass ich <strong>den deutschen Ausgangstext so gebaut habe, dass die Maschine ihn nicht kaputt machen kann</strong>. Wer mit Redewendungen, Wortspielen und Verschachtelungen anfängt, bekommt sechzehn unbrauchbare Fassungen. Wer mit überprüfbaren Gegenständen anfängt, bekommt sechzehn brauchbare.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="sec-num">05 · Wirkung</div>
+    <h2>Was das Haus davon hat</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">🌙</div>
+        <div class="impact-title">Weniger Nachtanrufe</div>
+        <div class="impact-desc">Gäste, die nach Rezeptionsschluss ankommen, finden allein ins Haus und aufs Zimmer.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🗣️</div>
+        <div class="impact-title">Keine Sprachbarriere</div>
+        <div class="impact-desc">Der Weg ist in 16 Sprachen abrufbar — ohne dass jemand an der Rezeption stehen muss.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">📱</div>
+        <div class="impact-title">Sofort verfügbar</div>
+        <div class="impact-desc">Ein Link, mobil optimiert. Kein Ausdruck, kein Aushang, keine App-Installation.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon">🔧</div>
+        <div class="impact-title">Änderbar in Minuten</div>
+        <div class="impact-desc">Neue Sprache oder geänderter Weg: eine Zeile im Code, sofort live in allen Fassungen.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="sec-num">06 · Der Transfer</div>
+    <div class="transfer">
+      <div class="transfer-label">Was ich daraus mitbringe</div>
+      <h3>Sprache, die dort ankommt, wo der Empfänger steht</h3>
+      <div class="transfer-items">
+        <div class="transfer-item">
+          <div class="transfer-num">01</div>
+          <div class="transfer-text"><strong>Ich schreibe vom Empfänger her, nicht vom Absender.</strong> Nicht „wie beschreibe ich das Haus" — sondern „was sieht der Gast, wenn er dasteht".</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">02</div>
+          <div class="transfer-text"><strong>Ich wähle Wörter nach ihrer nachprüfbaren Bedeutung.</strong> Nicht, weil sie gut klingen — sondern weil sie eindeutig sind und auch unter Übersetzung nicht zerfallen.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">03</div>
+          <div class="transfer-text"><strong>Ich baue Texte, die nachher noch funktionieren.</strong> Nach der Maschine, nach dem Copy-Paste, nach dem Umbau — nicht nur im Originaldokument.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-num">04</div>
+          <div class="transfer-text"><strong>Ich sage, was ich geprüft habe — und was nicht.</strong> Drei Sprachen selbst gelesen, dreizehn maschinell mit Doppelcheck. Das steht hier so, weil es so ist.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="source">
+    <strong>Quellen zum Nachprüfen:</strong><br>
+    Wegweiser in 16 Sprachen (live): <a href="https://intelligentresponder-max.github.io/turmhotel/wegweiser.html" target="_blank" rel="noopener">turmhotel/wegweiser.html</a><br>
+    Gästeportal Turm Hotel (live): <a href="https://intelligentresponder-max.github.io/turmhotel/" target="_blank" rel="noopener">intelligentresponder-max.github.io/turmhotel</a><br>
+    Haus: Turm Hotel, Eschersheimer Landstraße 20, 60322 Frankfurt am Main
+  </div>
+
+  <div class="back-section">
+    <a class="back-link" href="../index.html">← Zurück zur Übersicht</a>
+  </div>
+
+</div>
+</body>
+</html>

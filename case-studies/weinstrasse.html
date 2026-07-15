@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study: Weinbahnstraße — André Schwarz</title>
-<meta name="description" content="Wie ein strategischer Text-Pivot ein fünfmal vertagtes Problem in eine einstimmige Lösung verwandelte. Case Study André Schwarz, Ortsbeirat Frankfurt.">
+<title>Case Study: Weinstraße — André Schwarz</title>
+<meta name="description" content="Wie ein strategischer Text-Pivot ein mehrfach vertagtes Problem in eine einstimmige Lösung verwandelte. Case Study André Schwarz, Ortsbeirat Frankfurt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -86,6 +86,19 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
 .impact-title{font-family:'Fraunces',serif;font-size:1rem;color:var(--paper);margin-bottom:6px;}
 .impact-desc{font-size:.84rem;color:var(--muted);line-height:1.65;}
 
+/* STANCE */
+.stance{margin:28px 0;padding:26px 30px;border-left:3px solid var(--gold);background:rgba(201,162,39,.05);border-radius:0 3px 3px 0;}
+.stance-label{font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.stance p{font-size:.95rem;color:#cabfb0;margin-bottom:12px;}
+.stance p:last-child{margin-bottom:0;}
+.stance strong{color:var(--gold-bright);font-weight:600;}
+.stance-out{padding-top:12px;border-top:1px solid var(--line);color:#9b9085;font-size:.88rem;}
+
+/* SOURCE */
+.source{margin-top:26px;padding:16px 20px;border:1px dashed var(--line);border-radius:var(--radius);font-size:.82rem;color:var(--muted);line-height:1.9;}
+.source a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line);}
+.source a:hover{color:var(--gold-bright);}
+
 /* BACK */
 .back-section{padding-top:48px;text-align:center;}
 .back-link{display:inline-flex;align-items:center;gap:10px;font-family:'Spline Sans Mono',monospace;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:12px 24px;border-radius:var(--radius);transition:.2s;}
@@ -105,18 +118,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
 
   <div class="hero">
     <div class="eyebrow">Case Study · Ortsbeirat 10 · Frankfurt-Preungesheim · OF 380/10</div>
-    <h1>Die Weinbahnstraße —<br><em>Text, der Fakten schafft.</em></h1>
+    <h1>Die Weinstraße —<br><em>Text, der Fakten schafft.</em></h1>
     <div class="hero-quote">
-      <p>Fünfmal vertagt. Einmal neu geschrieben. Einstimmig angenommen. Anwohner und alle Fraktionen haben sich bedankt. Der Verkehr ist spürbar besser geworden.</p>
+      <p>Mehrfach vertagt. Einmal neu geschrieben. Einstimmig angenommen. Anwohner und alle Fraktionen haben sich bedankt. Der Verkehr ist spürbar besser geworden.</p>
     </div>
   </div>
 
   <!-- STATS -->
   <div class="stats">
     <div class="stat-box">
-      <div class="stat-label">Vertagungen</div>
-      <div class="stat-val">5×</div>
-      <div class="stat-sub">Erster Anlauf OF 232/10</div>
+      <div class="stat-label">Anläufe</div>
+      <div class="stat-val">2×</div>
+      <div class="stat-sub">OF 232/10 → 380/10</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">Ergebnis</div>
@@ -139,8 +152,20 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
   <div class="section">
     <div class="sec-num">01 · Die Ausgangslage</div>
     <h2>Ein Problem, das alle sahen — und niemand löste</h2>
-    <p>Die Weinbahnstraße in Frankfurt-Preungesheim war seit Jahren ein Nadelöhr. Beidseitig parkende Autos machten das Durchfahren in beide Richtungen kaum möglich — Rettungsfahrzeuge, Lieferverkehr, Anwohner: alle betroffen, alle frustriert.</p>
-    <p>Im Januar 2017 wurde der erste Antrag gestellt: <strong>OF 232/10</strong>. Die Forderung war klar, die Begründung solide. Trotzdem wurde der Antrag fünfmal in Folge vertagt. Nicht weil das Problem falsch war — sondern weil der Text den Widerstand im Gremium nicht überwinden konnte.</p>
+    <p>Die Weinstraße in Frankfurt-Preungesheim war seit Jahren ein Nadelöhr. Ein- bis zweispurig befahrbar, beidseitig zugeparkt — Rettungsfahrzeuge, Lieferverkehr, Anwohner: alle betroffen, alle frustriert.</p>
+
+    <p><strong>Das Bemerkenswerte daran:</strong> Der Ortsbeirat 10 existierte lange vor uns. Fraktionen aller Couleur saßen jahrelang in diesem Gremium — und niemand hatte den Antrag gestellt. Niemand hatte recherchiert, ob es überhaupt schon einen laufenden Vorstoß in dieser Sache gab. Das Problem lag offen auf der Straße. Es fehlte nur jemand, der zuhörte und es aufschrieb.</p>
+
+    <p>Bei der Kommunalwahl am 6. März 2016 zogen die Bürger Für Frankfurt (BFF) erstmals in Fraktionsstärke in den Ortsbeirat 10 ein — mit zwei Mandaten: <strong>Werner Rudloff</strong> (Fraktionsvorsitzender) und <strong>Andreas Göhler</strong> (Stellvertreter). Ich stand auf Listenplatz 3 und wurde nicht gewählt.</p>
+
+    <div class="stance">
+      <div class="stance-label">Zur Einordnung</div>
+      <p>Ich stand zweimal auf einer Wahlliste — 2016 für den Ortsbeirat 10, 2026 für die Stadtverordnetenversammlung. Beide Male habe ich den vorderen Platz nicht beansprucht.</p>
+      <p>Nicht aus Bescheidenheit, sondern aus Berechnung: <strong>Ein Mandat kostet Sitzungen. Ich wollte die Arbeit, nicht den Stuhl.</strong></p>
+      <p class="stance-out">In dieser Zeit entstanden über 60 Anträge, rund drei Viertel angenommen. Ab 2022 saß der Vertreter, für den ich schrieb, fraktionslos im Gremium — eine Stimme von neunzehn, ohne Bündnis. Auch dann trugen die Texte: Der Antrag, um den es hier geht, wurde einstimmig beschlossen — nach mehreren Vertagungen.</p>
+    </div>
+
+    <p>Im Januar 2017 wurde der erste Antrag gestellt: <strong>OF 232/10</strong>. Die Forderung war klar, die Begründung solide. Trotzdem wurde der Antrag mehrfach in Folge vertagt. Nicht weil das Problem falsch war — sondern weil der Text den Widerstand im Gremium nicht überwinden konnte.</p>
 
     <div class="timeline">
       <div class="tl-item">
@@ -155,7 +180,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
         <div class="tl-dot red">↻</div>
         <div class="tl-body">
           <div class="tl-date">Februar — Oktober 2017</div>
-          <div class="tl-title">Fünf Sitzungen — fünf Vertagungen</div>
+          <div class="tl-title">Mehrere Sitzungen — mehrere Vertagungen</div>
           <div class="tl-desc">Derselbe Antrag, immer wieder auf der Tagesordnung. Immer wieder auf die nächste Sitzung verschoben. Das Gremium konnte sich nicht einigen — oder wollte es nicht.</div>
         </div>
       </div>
@@ -182,7 +207,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
   <div class="section">
     <div class="sec-num">02 · Die Strategie</div>
     <h2>Was sich geändert hat — und warum</h2>
-    <p>Der Fehler beim ersten Anlauf war nicht das Anliegen, sondern der Blickwinkel. OF 232/10 argumentierte aus der Perspektive der Weinbahnstraße selbst: Engpass, Blockade, Problem. Das Gremium dachte sofort an Einschränkung — und lehnte ab.</p>
+    <p>Der Fehler beim ersten Anlauf war nicht das Anliegen, sondern der Blickwinkel. OF 232/10 argumentierte aus der Perspektive der Weinstraße selbst: Engpass, Blockade, Problem. Das Gremium dachte sofort an Einschränkung — und lehnte ab.</p>
     <p>OF 380/10 änderte den Fokus. Statt auf das Problem zeigte der neue Text auf den <strong>Nutzen für ein größeres Gebiet</strong>: Die Einbahnstraße würde die Homburger Landstraße entlasten und das gesamte Wohnquartier beruhigen. Zusätzlich: Fotos, die die Engstelle unbestreitbar dokumentierten. Kein Spielraum mehr für argumentative Ausflüchte.</p>
     <p>Das Gremium bekam nicht mehr einen Antrag zur Abstimmung — es bekam eine <strong>logische Konsequenz</strong>, der man sich kaum entziehen konnte.</p>
 
@@ -190,7 +215,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
       <div class="abs-row header">
         <div class="abs-cell"><span class="abs-header">Phase</span></div>
         <div class="abs-cell"><span class="abs-header">Im Antrag OF 380/10</span></div>
-        <div class="abs-cell"><span class="abs-header">Im Copywriting</span></div>
+        <div class="abs-cell"><span class="abs-header">In der Sprache</span></div>
       </div>
       <div class="abs-row">
         <div class="abs-cell"><span class="abs-phase">A</span></div>
@@ -215,7 +240,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
     <div class="sec-num">03 · Das Ergebnis</div>
     <h2>Einstimmig — und danach bedankt</h2>
     <p>Am 7. November 2017 wurde OF 380/10 ohne Gegenstimme angenommen. Alle Fraktionen stimmten zu — darunter auch jene, die OF 232/10 monatelang blockiert hatten.</p>
-    <p>Was danach kam, ist das eigentliche Ergebnis: Die Einbahnstraßenregelung wurde umgesetzt. Der Verkehr in der Weinbahnstraße und den angrenzenden Straßen wurde <strong>spürbar besser</strong>. Anwohner meldeten sich zurück. Alle beteiligten Fraktionen sprachen ihren Dank aus — auch jene, die zunächst dagegen waren.</p>
+    <p>Was danach kam, ist das eigentliche Ergebnis: Die Einbahnstraßenregelung wurde umgesetzt — mit der Fahrtrichtung, die wir vorgegeben hatten: <strong>von der Ortsmitte an der Homburger Landstraße hin zur Ausfallstraße Gießener Straße</strong>. Genau so, wie es die städtebauliche Logik des Viertels vorgibt: Verkehr raus aus dem Wohngebiet, rauf auf die dafür gebaute Straße.</p>
+    <p>Der Verkehr in der Weinstraße und den angrenzenden Straßen wurde <strong>spürbar besser</strong>. Anwohner meldeten sich zurück. Alle beteiligten Fraktionen sprachen ihren Dank aus — auch jene, die zunächst dagegen waren.</p>
+    <p><strong>Bis heute nachprüfbar:</strong> Die Weinstraße in 60435 Frankfurt-Preungesheim ist als Einbahnstraße im amtlichen Straßenverzeichnis geführt, Tempo 30, Anliegerstraße. Der Beschluss von 2017 steht.</p>
 
     <div class="impact-grid">
       <div class="impact-card">
@@ -244,12 +271,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
   <!-- 4. TRANSFER -->
   <div class="section">
     <div class="sec-num">04 · Der Transfer</div>
-    <h2>Was das mit Copywriting zu tun hat</h2>
+    <h2>Was das mit meiner Arbeit zu tun hat</h2>
     <p>Ein politischer Antrag ist eine Sales Page für eine Idee. Das Publikum ist kritisch, öffentlich und rechenschaftspflichtig. Jedes Wort kann angefochten werden. Und am Ende gibt es nur eine Frage: Stimmen sie zu oder nicht?</p>
-    <p>Die Weinbahnstraße hat mich gelehrt, was guten Werbetext ausmacht — nicht im Lehrbuch, sondern unter echtem Druck:</p>
+    <p>Die Weinstraße hat mich gelehrt, was guten Werbetext ausmacht — nicht im Lehrbuch, sondern unter echtem Druck:</p>
 
     <div class="transfer">
-      <div class="transfer-label">Transfer → Copywriting</div>
+      <div class="transfer-label">Transfer → Meine Arbeit</div>
       <h3>Was ich daraus mitbringe</h3>
       <div class="transfer-items">
         <div class="transfer-item">
@@ -270,6 +297,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,10,8,.94);backdrop-filt
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="source">
+    <strong>Quellen zum Nachprüfen:</strong><br>
+    Kandidatenliste BFF Ortsbeirat 10, Kommunalwahl 06.03.2016 (Listenplatz 3): <a href="https://www.bff-frankfurt.de/artikel/nur-das-ohr-an-der-basis-sorgt-fuer-gute-buergerpolitik-1004" target="_blank" rel="noopener">bff-frankfurt.de</a><br>
+    Gewählte BFF-Mandate OBR 10 (Rudloff / Göhler): <a href="https://www.bff-frankfurt.de/artikel/drei-sitze-im-roemer-21-in-allen-16-ortsbeiraeten-1015" target="_blank" rel="noopener">bff-frankfurt.de</a><br>
+    Kandidatenliste FREIE WÄHLER, Kommunalwahl 15.03.2026 (Listenplatz 4): <a href="https://freiewaehler-frankfurt.de/kommunalwahl-2026/" target="_blank" rel="noopener">freiewaehler-frankfurt.de</a><br>
+    Anträge Ortsbeirat 10 (PARLIS / Frankfurt Gestalten): <a href="https://www.frankfurt-gestalten.de/ortsbeirat/10" target="_blank" rel="noopener">frankfurt-gestalten.de</a><br>
+    Weinstraße heute — Einbahnstraße, Tempo 30, 60435 Frankfurt-Preungesheim: <a href="https://onlinestreet.de/strassen/Weinstra%C3%9Fe.Frankfurt+am+Main.231240.html" target="_blank" rel="noopener">amtliches Straßenverzeichnis</a>
   </div>
 
   <div class="back-section">
